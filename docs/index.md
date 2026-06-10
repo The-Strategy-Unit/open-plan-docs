@@ -15,4 +15,4 @@ This site documents the **OpenPlan Hospital Capacity Conversion Tool**, a modula
 * Status
 * Source code (documentation + implementation)
 
-<span style="font-size: 1.5rem">[:fontawesome-brands-git-alt:](https://github.com/The-Strategy-Unit/health-adjusted-age "Go to repository"){ target="_blank" }</span>
+<span style="font-size: 1.5rem">[:fontawesome-brands-git-alt:](https://github.com/The-Strategy-Unit/open-plan-docs "Go to repository"){ target="_blank" }</span>
