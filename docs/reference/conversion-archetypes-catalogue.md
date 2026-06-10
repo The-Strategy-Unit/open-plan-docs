@@ -1,0 +1,44 @@
+---
+hide:
+  - toc
+  - navigation
+---
+
+# Conversion Archetypes Catalogue
+
+Reusable workload-to-capacity conversion methods shared across functional areas.
+
+**SUMMARY**
+
+* **Flow-space:** _How many patients are in the area at the same time?_
+* **Recovery occupancy:** _How many short-stay beds/spaces are needed during operating hours?_
+* **Bed occupancy:** _How many beds are needed to support overnight and multi-day stays?_
+* **Time utilisation:** _How much procedural time is required?_
+* **Appointment utilisation:** _How many appointment slots are required?_
+* **Session capacity:** _How many treatment sessions can be delivered?_
+
+<div class="compact-table" markdown="1">
+
+| Formula ID             | Archetype Family       | Conversion Archetype         | Generic Formula                                                 | Typical Workload Object                                    | Typical Operational Parameters     | Example Functional Areas                        |
+|------------------------|------------------------|------------------------------|-----------------------------------------------------------------|------------------------------------------------------------|------------------------------------|-------------------------------------------------|
+| FRM_FLOW_SPACE         | occupancy-based        | flow-space occupancy         | occupancy_hours / (annual_operational_hours × utilisation)      | occupancy_hours                                            | operational hours, utilisation     | A&E, SDEC                                       |
+| FRM_RECOVERY_OCCUPANCY | occupancy-based        | recovery occupancy           | occupancy_hours / (annual_operational_hours × occupancy)        | occupancy_hours                                            | operational hours, occupancy       | daycase recovery, maternity assessment          |
+| FRM_BED_OCCUPANCY      | occupancy-based        | bed occupancy                | bed_days / (annual_operational_days × occupancy)                | ward_bed_days, critical_care_bed_days, assessment_bed_days | operational days, occupancy        | inpatient wards, critical care, maternity wards |
+| FRM_TIME_UTIL          | time-based utilisation | procedural time utilisation  | procedure_hours / (annual_operational_hours × utilisation)      | procedure_hours                                            | operational hours, utilisation     | theatres, cath labs, endoscopy procedures       |
+| FRM_APPOINTMENT_UTIL   | time-based utilisation | appointment-slot utilisation | scheduled_time_hours / (annual_operational_hours × utilisation) | consultation_hours, procedure_hours                        | operational hours, utilisation     | OP consultations, OP procedures                 |
+| FRM_SESSION_CAPACITY   | throughput-based       | session capacity             | treatment_sessions / annual_session_capacity_per_bed            | treatment_sessions                                         | sessions per day, operational days | renal daycase                                   |
+
+</div>
+
+<div class="compact-table" markdown="1">
+
+| Archetype              | Description                                                                                                                                                                                                                                                                                                   |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| FRM_FLOW_SPACE         | Used where capacity is constrained by the number of patients that can be accommodated concurrently within an operational period. Typical examples are A&E and SDEC, where demand is driven by arrivals and length of stay, and the primary concern is whether sufficient space exists to absorb patient flow. |
+| FRM_RECOVERY_OCCUPANCY | Used for short-stay areas where patients occupy beds or spaces temporarily before discharge or transfer. Capacity is driven by turnover and occupancy during operational hours rather than overnight bed stock.                                                                                               |
+| FRM_BED_OCCUPANCY      | Used where capacity is constrained by the availability of continuously occupied beds over 24-hour periods. Typical examples are inpatient wards, critical care, and maternity wards, where patients may remain for multiple days and occupancy accumulates overnight.                                         |
+| FRM_TIME_UTIL          | Used where capacity is constrained by the amount of schedulable procedural or treatment time available. Typical examples are theatres, cath labs, endoscopy rooms, and procedure suites, where the key resource is operating time rather than physical occupancy.                                             |
+| FRM_APPOINTMENT_UTIL   | Used where capacity is constrained by the availability of schedulable appointment slots. Typical examples are outpatient consultation and procedure rooms, where workload is generated by appointments and operational performance is influenced by factors such as consultation duration and DNA rates.      |
+| FRM_SESSION_CAPACITY   | Used where capacity is planned and managed in terms of treatment sessions rather than time or occupancy. Typical examples are dialysis and other session-based services where throughput is typically expressed as sessions per chair, bed, or treatment space over a defined period.                         |
+
+</div>

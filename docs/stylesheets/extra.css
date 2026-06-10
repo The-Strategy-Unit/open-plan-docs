@@ -1,0 +1,10 @@
+.compact-table table {
+  font-size: 0.6rem !important; /* smaller font, default is ~0.9rem */
+}
+
+.compact-table th,
+.compact-table td {
+  padding: 0.2rem 0.2rem !important;
+  /* white-space: nowrap; */
+  min-width: 2rem !important;
+}
