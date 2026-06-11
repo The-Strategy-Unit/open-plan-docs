@@ -21,8 +21,6 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install zensical==0.0.45
-      - run: python -c "import zensical; print(zensical.__version__)"
-      - run: python -c "import pandas; import tabulate; print('pandas and tabulate ok')"
       - run: cat zensical.toml
       - run: ls docs/data/
       - run: zensical build --clean 
