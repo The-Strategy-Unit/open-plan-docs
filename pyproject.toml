@@ -1,10 +1,13 @@
 [project]
-name = "open-plan-docs-test"
+name = "open-plan-docs"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "pandas>=3.0.3",
+    "tabulate>=0.10.0",
+]
 
 [dependency-groups]
 dev = [
