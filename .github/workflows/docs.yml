@@ -20,9 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install zensical==0.0.45
-      - run: cat zensical.toml
-      - run: ls docs/data/
+      - run: pip install zensical==0.0.45 pandas tabulate
       - run: zensical build --clean 
       - uses: actions/upload-pages-artifact@v4
         with:
