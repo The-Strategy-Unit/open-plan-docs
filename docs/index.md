@@ -22,6 +22,6 @@ This site documents the **OpenPlan Hospital Capacity Conversion Tool**, a modula
 
 <div class="compact-table" markdown="1">
 
-{{ read_csv("data/fun_area_catalog.csv") }}
+{{ read_csv("docs/data/fun_area_catalog.csv") }}
 
 </div>
