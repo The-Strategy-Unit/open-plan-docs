@@ -1,8 +1,5 @@
 ---
 icon: lucide/rocket
-hide:
-  - toc
-  - navigation
 ---
 
 # About
@@ -19,9 +16,3 @@ This site documents the **OpenPlan Hospital Capacity Conversion Tool**, a modula
 * Source code (documentation + implementation)
 
 <span style="font-size: 1.5rem">[:fontawesome-brands-git-alt:](https://github.com/The-Strategy-Unit/open-plan-docs "Go to repository"){ target="_blank" }</span>
-
-<div class="compact-table" markdown="1">
-
-{{ read_csv("docs/data/fun_area_catalog.csv") }}
-
-</div>
