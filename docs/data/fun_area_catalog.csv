@@ -13,9 +13,9 @@ LABS_CARDIAC_CATH_PROC,time utilisation,schedulable procedural operating time,pr
 ROOMS_ENDOSCOPY_PROC,time utilisation,schedulable procedural operating time,procedure_hours,rooms
 ROOMS_INT_RADIOLOGY_PROC,time utilisation,schedulable procedural operating time,procedure_hours,rooms
 ROOMS_MATERNITY_BIRTH,bed occupancy,continuous occupancy over 24-hour operational periods,birth_room_bed_days,rooms
-ROOMS_OUTPATIENT_CONSULT,appointment utilisation,schedulable clinic consultation time,consultation_hours,rooms
-ROOMS_OUTPATIENT_PROC,appointment utilisation,schedulable procedure room time,procedure_hours,rooms
-ROOMS_OUTPATIENT_VIRTUAL_CONSULT,appointment utilisation,schedulable clinic consultation time,consultation_hours,rooms
+ROOMS_OP_CONSULT,appointment utilisation,schedulable clinic consultation time,consultation_hours,rooms
+ROOMS_OP_PROC,appointment utilisation,schedulable procedure room time,procedure_hours,rooms
+ROOMS_OP_VIRTUAL_CONSULT,appointment utilisation,schedulable clinic consultation time,consultation_hours,rooms
 SPACES_HAEM_ONC,treatment-time utilisation,schedulable treatment-space time,treatment_hours,spaces
 SPACES_SDEC,flow-space occupancy,concurrent occupancy over operational periods,occupancy_hours,spaces
 THEATRES_DAYCASE_PROC,time utilisation,schedulable procedural operating time,procedure_hours,theatres
