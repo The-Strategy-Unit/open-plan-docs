@@ -1,3 +1,7 @@
+---
+title: Spaces SDEC
+---
+
 #### What is a space in SDEC
 
 > A space in SDEC (Same Day Emergency Care) is a clinical area used to assess, diagnose, monitor, and treat patients who require urgent care without needing an overnight hospital admission.

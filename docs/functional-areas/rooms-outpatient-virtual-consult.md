@@ -4,7 +4,7 @@
 
 ---
 #### Capacity outputs
-* OUTPATIENT_VIRTUAL_CONSULT_ROOMS
+* OP_VIRTUAL_CONSULT_ROOMS
 #### Conversion archetype
 * appointment utilisation — FRM_APPOINTMENT_UTIL
 #### Operational constraint
