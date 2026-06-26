@@ -4,7 +4,7 @@
 
 ---
 #### Capacity outputs
-* OUTPATIENT_PROC_ROOMS
+* OP_PROC_ROOMS
 #### Conversion archetype
 * appointment utilisation — FRM_APPOINTMENT_UTIL
 #### Operational constraint
