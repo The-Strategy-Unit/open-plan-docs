@@ -1,0 +1,142 @@
+- functional_area: BAYS_AE
+  subgroup: adult minor
+  classification_ids:
+    - CLASS_AE
+    - CLASS_AGE_ADULT
+    - CLASS_AE_MINOR
+  workload_assumptions:
+    - AE_ADULT_MINOR_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - AE_ADULT_MINOR_UTIL
+    - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_MINOR_AE_BAYS
+
+- functional_area: BAYS_AE
+  subgroup: child minor
+  classification_ids:
+    - CLASS_AE
+    - CLASS_AGE_CHILD
+    - CLASS_AE_MINOR
+  workload_assumptions:
+    - AE_CHILD_MINOR_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - AE_CHILD_MINOR_UTIL
+    - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: CHILD_MINOR_AE_BAYS
+
+- functional_area: BEDS_AE
+  subgroup: adult major
+  classification_ids:
+    - CLASS_AE
+    - CLASS_AGE_ADULT
+    - CLASS_AE_MAJOR
+  workload_assumptions:
+    - AE_ADULT_MAJOR_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - AE_ADULT_MAJOR_UTIL
+    - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_MAJOR_AE_BEDS
+
+- functional_area: BEDS_AE
+  subgroup: child major
+  classification_ids:
+    - CLASS_AE
+    - CLASS_AGE_CHILD
+    - CLASS_AE_MAJOR
+  workload_assumptions:
+    - AE_CHILD_MAJOR_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - AE_CHILD_MAJOR_UTIL
+    - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: CHILD_MAJOR_AE_BEDS
+
+- functional_area: BEDS_AE
+  subgroup: resus
+  classification_ids:
+    - CLASS_AE
+    - CLASS_AE_RESUS
+  workload_assumptions:
+    - AE_RESUS_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - AE_RESUS_UTIL
+    - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: RESUS_AE_BEDS
+
+- functional_area: SPACES_SDEC
+  subgroup: all groups
+  classification_ids:
+    - CLASS_SDEC
+  workload_assumptions:
+    - SDEC_SPACES_LOS
+  formula_id: FRM_FLOW_SPACE
+  operational_assumptions:
+    - SDEC_SPACES_UTIL
+    - SDEC_SPACES_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: SDEC_SPACES
+
+- functional_area: ROOMS_OP_CONSULT
+  subgroup: first attendance
+  classification_ids:
+    - CLASS_OP_ATTEND
+    - CLASS_OP_FACE_TO_FACE
+    - CLASS_OP_FIRST
+  workload_assumptions:
+    - OP_CONSULT_FIRST_TIME
+    - OP_CONSULT_FIRST_DNA_RATE
+    - OP_CONSULT_FIRST_DNA_TIME
+  formula_id: FRM_APPOINTMENT_UTIL
+  operational_assumptions:
+    - OP_CONSULT_UTIL
+    - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: FIRST_OP_CONSULT_ROOMS
+
+- functional_area: ROOMS_OP_CONSULT
+  subgroup: follow-up attendance
+  classification_ids:
+    - CLASS_OP_ATTEND
+    - CLASS_OP_FACE_TO_FACE
+    - CLASS_OP_FOLLOW_UP
+  workload_assumptions:
+    - OP_CONSULT_FOLLOW_UP_TIME
+    - OP_CONSULT_FOLLOW_UP_DNA_RATE
+    - OP_CONSULT_FOLLOW_UP_DNA_TIME
+  formula_id: FRM_APPOINTMENT_UTIL
+  operational_assumptions:
+    - OP_CONSULT_UTIL
+    - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: FOLLOW_UP_OP_CONSULT_ROOMS
+
+- functional_area: ROOMS_OP_VIRTUAL_CONSULT
+  subgroup: all groups
+  classification_ids:
+    - CLASS_OP_ATTEND
+    - CLASS_OP_VIRTUAL
+  workload_assumptions:
+    - OP_VIRTUAL_CONSULT_TIME
+    - OP_VIRTUAL_CONSULT_DNA_RATE
+    - OP_VIRTUAL_CONSULT_DNA_TIME
+  formula_id: FRM_APPOINTMENT_UTIL
+  operational_assumptions:
+    - OP_VIRTUAL_CONSULT_UTIL
+    - OP_VIRTUAL_CONSULT_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: OP_VIRTUAL_CONSULT_ROOMS
+
+- functional_area: ROOMS_OP_PROC
+  subgroup: all groups
+  classification_ids:
+    - CLASS_OP_ATTEND
+    - CLASS_HAS_PROCEDURE
+  workload_assumptions:
+    - OP_PROC_TIME
+    - OP_PROC_DNA_RATE
+    - OP_PROC_DNA_TIME
+  formula_id: FRM_APPOINTMENT_UTIL
+  operational_assumptions:
+    - OP_PROC_UTIL
+    - OP_PROC_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: OP_PROC_ROOMS
