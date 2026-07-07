@@ -41,14 +41,14 @@ $$\text{required daycase recovery beds} = \frac{\text{occupancy hours}} {\text{a
 #### Assumptions
 
 | Subgroup            | Assumption               | Category    | Assumption ID                             |
-| ------------------- | ------------------------ | ----------- | ----------------------------------------- |
-| adult medical       | recovery time            | workload    | DAYCASE_RECOVERY_ADULT_MEDICAL_TIME       |
+|---------------------|--------------------------|-------------|-------------------------------------------|
+| adult medical       | recovery LOS             | workload    | DAYCASE_RECOVERY_ADULT_MEDICAL_LOS        |
 | adult medical       | occupancy                | operational | DAYCASE_RECOVERY_ADULT_MEDICAL_OCC        |
-| adult surgical      | recovery time            | workload    | DAYCASE_RECOVERY_ADULT_SURGICAL_TIME      |
+| adult surgical      | recovery LOS             | workload    | DAYCASE_RECOVERY_ADULT_SURGICAL_LOS       |
 | adult surgical      | occupancy                | operational | DAYCASE_RECOVERY_ADULT_SURGICAL_OCC       |
-| paediatric medical  | recovery time            | workload    | DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_TIME  |
+| paediatric medical  | recovery LOS             | workload    | DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_LOS   |
 | paediatric medical  | occupancy                | operational | DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_OCC   |
-| paediatric surgical | recovery time            | workload    | DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_TIME |
+| paediatric surgical | recovery LOS             | workload    | DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_TIME |
 | paediatric surgical | occupancy                | operational | DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_OCC  |
 | all groups          | annual operational hours | operational | DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS |
 

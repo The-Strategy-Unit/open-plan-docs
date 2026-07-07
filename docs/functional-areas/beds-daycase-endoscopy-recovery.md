@@ -45,8 +45,8 @@ $$\text{required daycase endoscopy recovery beds} = \frac{\text{occupancy hours}
 #### Assumptions
 
 | Subgroup   | Assumption               | Category    | Assumption ID                                       |
-| ---------- | ------------------------ | ----------- | --------------------------------------------------- |
-| all groups | recovery time            | workload    | DAYCASE_ENDOSCOPY_RECOVERY_TIME                     |
+|------------|--------------------------|-------------|-----------------------------------------------------|
+| all groups | recovery LOS             | workload    | DAYCASE_ENDOSCOPY_RECOVERY_LOS                      |
 | all groups | occupancy                | operational | DAYCASE_ENDOSCOPY_RECOVERY_OCC                      |
 | all groups | annual operational hours | operational | DAYCASE_ENDOSCOPY_RECOVERY_ANNUAL_OPERATIONAL_HOURS |
 
