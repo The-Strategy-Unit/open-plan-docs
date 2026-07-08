@@ -83,7 +83,7 @@
 - id: CLASS_ENDOSCOPY
   type: procedures
   definition: Endoscopy procedures
-  logic: primaryprocedure IN {G14,G15,G16,G17,G18,G19,G20 (Oesophagoscopy); G42,G43,G44,G45,G46 (OGD); G54,G55 (Duodenoscopy); G64,G65 (Jejunoscopy); G79,G80 (Ileoscopy); H23,H24,H25,H26,H27,H28,H37,H69,H70,H71 (Sigmoidoscopy); J38,J39,J40,J41,J42,J43,J44,J45 (ERCP); H20,H21,H22,H68 (Colonoscopy); E48,E49,E50,E51 (Bronchoscopy)}
+  logic: primaryprocedure IN {G14,G15,G16,G17,G18,G19,G20 (Oesophagoscopy); G42,G43,G44,G45,G46 (OGD); G54,G55 (Duodenoscopy); G64,G65 (Jejunoscopy); G79,G80 (Ileoscopy); H23,H24,H25,H26,H27,H28,H37,H69,H70,H71 (Sigmoidoscopy); J38,J39,J40,J41,J42,J43,J44,J45 (ERCP); H20,H21,H22,H68 (Colonoscopy); E48,E49,E50,E51 (Bronchoscopy)};
   variables:
   - primaryprocedure
   parent: null
@@ -181,7 +181,7 @@
 - id: CLASS_CARDIAC_CATH
   type: procedures
   definition: Cardiac catheter-based procedures
-  logic: primaryprocedure IN {K63 (Contrast radiology of heart); K75 (Angioplasty); K60 (Cardiac pacemaker); K62 (Therapeutic transluminal operations on heart); K59 (Cardioverter defibrillator introduced through the vein); K57 (Other therapeutic transluminal operations on heart); K73 (Other cardiac pacemaker system through vein); K49 (Transluminal balloon angioplasty)}
+  logic: primaryprocedure IN {K63 (Contrast radiology of heart); K75 (Angioplasty); K60 (Cardiac pacemaker); K62 (Therapeutic transluminal operations on heart); K59 (Cardioverter defibrillator introduced through the vein); K57 (Other therapeutic transluminal operations on heart); K73 (Other cardiac pacemaker system through vein); K49 (Transluminal balloon angioplasty)};
   variables:
   - primaryprocedure
   parent: null
