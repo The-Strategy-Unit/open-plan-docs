@@ -140,3 +140,119 @@
     - OP_PROC_UTIL
     - OP_PROC_ANNUAL_OPERATIONAL_HOURS
   capacity_output: OP_PROC_ROOMS
+
+- functional_area: BEDS_DAYCASE_RECOVERY
+  subgroup: Adult medical
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_AGE_ADULT
+    - MAP_MEDICAL
+  workload_assumptions:
+    - DAYCASE_RECOVERY_ADULT_MEDICAL_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - DAYCASE_RECOVERY_ADULT_MEDICAL_OCC
+    - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_MEDICAL_DAYCASE_RECOVERY_BEDS
+
+- functional_area: BEDS_DAYCASE_RECOVERY
+  subgroup: Adult surgical
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_AGE_ADULT
+    - MAP_SURGICAL
+  workload_assumptions:
+    - DAYCASE_RECOVERY_ADULT_SURGICAL_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - DAYCASE_RECOVERY_ADULT_SURGICAL_OCC
+    - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_SURGICAL_DAYCASE_RECOVERY_BEDS
+
+- functional_area: BEDS_DAYCASE_RECOVERY
+  subgroup: Paediatric medical
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_AGE_CHILD
+    - MAP_MEDICAL
+  workload_assumptions:
+    - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_OCC
+    - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: PAEDIATRIC_MEDICAL_DAYCASE_RECOVERY_BEDS
+
+- functional_area: BEDS_DAYCASE_RECOVERY
+  subgroup: Paediatric surgical
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_AGE_CHILD
+    - MAP_SURGICAL
+  workload_assumptions:
+    - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_OCC
+    - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: PAEDIATRIC_SURGICAL_DAYCASE_RECOVERY_BEDS
+
+- functional_area: BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+  subgroup: All groups
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_ENDOSCOPY
+  workload_assumptions:
+    - DAYCASE_ENDOSCOPY_RECOVERY_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - DAYCASE_ENDOSCOPY_RECOVERY_OCC
+    - DAYCASE_ENDOSCOPY_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: DAYCASE_ENDOSCOPY_RECOVERY_BEDS
+
+- functional_area: ROOMS_ENDOSCOPY_PROC
+  subgroup: All groups
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_ENDOSCOPY
+  workload_assumptions:
+    - ENDOSCOPY_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - ENDOSCOPY_PROC_UTIL
+    - ENDOSCOPY_PROC_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ENDOSCOPY_PROC_ROOMS
+
+- functional_area: BEDS_DAYCASE_RENAL
+  subgroup: All groups
+  classification_ids:
+    - (CLASS_ELECTIVE AND CLASS_ZERO_LOS AND CLASS_RENAL) OR
+    - (CLASS_REGULAR_DAY_NIGHT AND CLASS_RENAL)
+  workload_assumptions:
+    - None
+  formula_id: 
+    - FRM_SESSION_CAPACITY
+  operational_assumptions:
+    - DAYCASE_RENAL_ANNUAL_SESSION_CAPACITY_PER_BED
+  capacity_output: DAYCASE_RENAL_BEDS
+
+- functional_area: SPACES_HAEM_ONC_TRT
+  subgroup: All groups
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_HAEM_ONC
+    - CLASS_HAS_PROCEDURE
+  workload_assumptions:
+    - HAEM_ONC_TREATMENT_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - HAEM_ONC_TREATMENT_UTIL
+    - HAEM_ONC_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: HAEM_ONC_TRT_SPACES
