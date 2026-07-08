@@ -135,7 +135,7 @@
 - id: CLASS_REGULAR_DAY_NIGHT
   type: admission_type
   definition: Regular day/night admissions
-  logic: classpat IN {5,6}
+  logic: classpat IN {5,6};
   variables:
   - classpat
   parent: null
@@ -190,7 +190,7 @@
 - id: CLASS_CARDIOLOGY
   type: specialty
   definition: Cardiology or paediatric cardiology specialties
-  logic: tretspef IN {...}
+  logic: tretspef IN {...};
   variables:
   - tretspef
   parent: null
@@ -199,7 +199,7 @@
 - id: CLASS_INT_RADIOLOGY
   type: specialty
   definition: Interventional radiology or paediatric interventional radiology
-  logic: tretspef IN {811,280}
+  logic: tretspef IN {811,280};
   variables:
   - tretspef
   parent: null
@@ -249,7 +249,7 @@
 - id: CLASS_HAEM_ONC
   type: specialty
   definition: Haematology and oncology specialties
-  logic: tretspef IN {253,303,260,370,800}
+  logic: tretspef IN {253,303,260,370,800};
   variables:
   - tretspef
   parent: null
