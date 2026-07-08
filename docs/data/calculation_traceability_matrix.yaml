@@ -146,7 +146,7 @@
   classification_ids:
     - CLASS_DAYCASE
     - CLASS_AGE_ADULT
-    - MAP_MEDICAL
+    - CLASS_MEDICAL
   workload_assumptions:
     - DAYCASE_RECOVERY_ADULT_MEDICAL_LOS
   formula_id: 
@@ -161,7 +161,7 @@
   classification_ids:
     - CLASS_DAYCASE
     - CLASS_AGE_ADULT
-    - MAP_SURGICAL
+    - CLASS_SURGICAL
   workload_assumptions:
     - DAYCASE_RECOVERY_ADULT_SURGICAL_LOS
   formula_id: 
@@ -176,7 +176,7 @@
   classification_ids:
     - CLASS_DAYCASE
     - CLASS_AGE_CHILD
-    - MAP_MEDICAL
+    - CLASS_MEDICAL
   workload_assumptions:
     - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_LOS
   formula_id: 
@@ -191,7 +191,7 @@
   classification_ids:
     - CLASS_DAYCASE
     - CLASS_AGE_CHILD
-    - MAP_SURGICAL
+    - CLASS_SURGICAL
   workload_assumptions:
     - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_LOS
   formula_id: 
