@@ -17,16 +17,7 @@ Reusable workload-to-capacity conversion methods shared across functional areas.
 * **Session capacity:** _How many treatment sessions can be delivered?_
 
 <div class="compact-table" markdown="1">
-
-| Formula ID             | Archetype Family       | Conversion Archetype         | Generic Formula                                                 | Typical Workload Object                                    | Typical Operational Parameters     | Example Functional Areas                        |
-|------------------------|------------------------|------------------------------|-----------------------------------------------------------------|------------------------------------------------------------|------------------------------------|-------------------------------------------------|
-| FRM_FLOW_SPACE         | occupancy-based        | flow-space occupancy         | occupancy_hours / (annual_operational_hours × utilisation)      | occupancy_hours                                            | operational hours, utilisation     | A&E, SDEC                                       |
-| FRM_RECOVERY_OCCUPANCY | occupancy-based        | recovery occupancy           | occupancy_hours / (annual_operational_hours × occupancy)        | occupancy_hours                                            | operational hours, occupancy       | daycase recovery, maternity assessment          |
-| FRM_BED_OCCUPANCY      | occupancy-based        | bed occupancy                | bed_days / (annual_operational_days × occupancy)                | ward_bed_days, critical_care_bed_days, assessment_bed_days | operational days, occupancy        | inpatient wards, critical care, maternity wards |
-| FRM_TIME_UTIL          | time-based utilisation | procedural time utilisation  | procedure_hours / (annual_operational_hours × utilisation)      | procedure_hours                                            | operational hours, utilisation     | theatres, cath labs, endoscopy procedures       |
-| FRM_APPOINTMENT_UTIL   | time-based utilisation | appointment-slot utilisation | scheduled_time_hours / (annual_operational_hours × utilisation) | consultation_hours, procedure_hours                        | operational hours, utilisation     | OP consultations, OP procedures                 |
-| FRM_SESSION_CAPACITY   | throughput-based       | session capacity             | treatment_sessions / annual_session_capacity_per_bed            | treatment_sessions                                         | sessions per day, operational days | renal daycase                                   |
-
+{{ read_yaml("docs/data/conversion_archetypes_catalog.yaml") }}
 </div>
 
 <div class="compact-table" markdown="1">
