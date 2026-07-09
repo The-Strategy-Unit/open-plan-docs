@@ -11,7 +11,7 @@ The results are contained in the `estimated_capacity_needs.xlsx` file.
 
 In this sheet, each row describes a type of resource.
 
-Because the demand model is _probabilistic_ it generates a range of plausible 
+Because the [demand model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) is _probabilistic_ it generates a range of plausible 
 activity predictions, each of which we convert into capacity estimates. 
 This results in many different plausible capacity estimates which we summarise
 for you into a mean (the average value for that resource across all the estimates) 
