@@ -55,7 +55,7 @@
 - id: CLASS_DAYCASE
   type: scope
   definition: Core daycase spells
-  logic: admimeth = 1 AND classpat = 2
+  logic: admimeth starts with 1 AND classpat = 2
   variables:
   - admimeth
   - classpat
@@ -65,7 +65,7 @@
 - id: CLASS_MEDICAL
   type: specialty
   definition: Medical specialties
-  logic: tretspef IN medical
+  logic: tretspef IN medical specialties - see daycase_tretspef_mapping.xlsx file
   variables:
   - tretspef
   parent: null
@@ -74,7 +74,7 @@
 - id: CLASS_SURGICAL
   type: specialty
   definition: Surgical specialties
-  logic: tretspef IN surgical
+  logic: tretspef IN surgical specialties - see daycase_tretspef_mapping.xlsx file
   variables:
   - tretspef
   parent: null
