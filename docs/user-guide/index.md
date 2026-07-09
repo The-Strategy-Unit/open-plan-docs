@@ -1,5 +1,5 @@
 ---
-icon: lucide/rocket
+icon: lucide/signpost-big
 ---
 # User Guide
 
