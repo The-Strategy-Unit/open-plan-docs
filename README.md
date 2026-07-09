@@ -17,7 +17,7 @@ This section is for internal contributors within the Strategy Unit, and assumes 
 1. Create a new virtual environment with `uv sync --all-extras`
 1. Activate the new virtual environment with `.\.venv\scripts\activate.ps1`
 
-Once you have made your changes, view them locally with the command `uv run zensical`.
+Once you have made your changes, view them locally with the command `uv run zensical serve`.
 
 ## Publishing
 
