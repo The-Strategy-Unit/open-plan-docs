@@ -34,7 +34,7 @@ All spells with a birth episode flag are categorised by type of delivery to one 
 
 Primary workload object: birth room bed days
 
-$$\text{birth room bed days} = \text{birth spells} \times \frac{\text{birth room LOS hours}} {24}$$
+$$\text{birth room bed days} = \text{birth spells} \times \frac{\text{birth room LOS minutes}} {1440}$$
 
 ---
 #### Capacity conversion

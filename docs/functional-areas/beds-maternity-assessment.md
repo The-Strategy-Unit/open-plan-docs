@@ -24,7 +24,7 @@ Maternity assessment activity is defined as zero-day maternity spells without a 
 
 Primary workload object: occupancy hours
 
-$$\text{occupancy hours} = \text{zero day spells} \times \text{zero day LOS hours}$$
+$$\text{occupancy hours} = \text{zero day spells} \times \frac{\text{zero day LOS minutes}} {60}$$
 
 Equivalent to converting fractional zero-day bed-days back into hours.
 
