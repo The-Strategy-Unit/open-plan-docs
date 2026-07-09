@@ -13,7 +13,7 @@ extra_javascript = [
 ]
 extra_css = ["stylesheets/extra.css"]
 nav = [
-    {"About" = "index.md"},
+    {"Welcome" = "index.md"},
     {"Reference" = [
         "reference/index.md",
         {"Model Architecture" = "reference/model-architecture.md"},
