@@ -63,14 +63,14 @@ nav = [
         {"Technical Information" = [
         "technical-information/index.md",
         {"Model Architecture" = "technical-information/model-architecture.md"},
-        {"Components" = "technical-information/conventions.md"},
+        {"Conventions" = "technical-information/conventions.md"},
         {"Registers" = [
-            {"Functional Area Regsiter" = "technical-information/functional-area-catalogue.md"},
+            {"Functional Area Catalogue" = "technical-information/functional-area-catalogue.md"},
             {"Classification Register" = "technical-information/classification-register.md"},
             {"Assumptions Register" = "technical-information/assumptions-register.md"},
             {"Conversion Archetypes Catalogue" = "technical-information/conversion-archetypes-catalogue.md"}
         ]}, 
-        {"Conversion Directory" = "technical-information/calculation-traceability-matrix.md"},
+        {"Calculation Traceability Matrix" = "technical-information/calculation-traceability-matrix.md"},
         {"QA Templates" = "technical-information/qa-templates.md"}
     ]}
 ]

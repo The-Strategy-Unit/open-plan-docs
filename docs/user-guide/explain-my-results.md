@@ -7,5 +7,3 @@ icon: lucide/file-digit
 How to interpret the flat-file download
 
 <Example file for download>
-
-test

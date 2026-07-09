@@ -1,6 +1,6 @@
 ---
-title: Reference
+title: Technical Information
 icon: lucide/book-open-text
 ---
 
-#### Reference
+#### Technical Information
