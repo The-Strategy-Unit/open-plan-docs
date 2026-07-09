@@ -1,5 +1,8 @@
+---
+icon: lucide/book-a
+---
 
-# Abbreviations
+# Glossary
 
 Permitted abbreviations:
 

@@ -6,6 +6,7 @@
 #
 # ============================================================================
 
+
 [project]
 extra_javascript = [
     "javascripts/mathjax.js",
@@ -13,43 +14,64 @@ extra_javascript = [
 ]
 extra_css = ["stylesheets/extra.css"]
 nav = [
-    {"About" = "index.md"},
-    {"Reference" = [
-        "reference/index.md",
-        {"Model Architecture" = "reference/model-architecture.md"},
-        {"Conventions" = "reference/conventions.md"},
-        {"Functional Area Catalogue" = "reference/functional-area-catalogue.md"},
-        {"Classification Register" = "reference/classification-register.md"},
-        {"Assumptions Register" = "reference/assumptions-register.md"},
-        {"Calculation Traceability Matrix" = "reference/calculation-traceability-matrix.md"},
-        {"Conversion Archetypes Catalogue" = "reference/conversion-archetypes-catalogue.md"},
-        {"QA Templates" = "reference/qa-templates.md"},
-        {"Abbreviations" = "reference/abbreviations.md"},
+    {"Home" = "index.md"},
+    {"User Guide" = [
+        "user-guide/index.md",
+        {"Quick Start" = "user-guide/quick-start.md"},
+        {"Methodology" = "user-guide/methodology.md"},
+        {"Explain my Results" = "user-guide/explain-my-results.md"},
+        {"FAQs" = "user-guide/faq.md"},
+        {"Glossary" = "user-guide/glossary.md"}
     ]},
     {"Functional Areas" = [
-        "functional-areas/index.md", 
-        {"Bays A&E" = "functional-areas/bays-ae.md"},
-        {"Beds A&E" = "functional-areas/beds-ae.md"},
-        {"Beds Critical Care" = "functional-areas/beds-critical-care.md"},
-        {"Beds Daycase Endoscopy Recovery" = "functional-areas/beds-daycase-endoscopy-recovery.md"},
-        {"Beds Daycase Recovery" = "functional-areas/beds-daycase-recovery.md"},
-        {"Beds Daycase Renal" = "functional-areas/beds-daycase-renal.md"},
-        {"Beds Inpatient Assessment" = "functional-areas/beds-inpatient-assessment.md"},
-        {"Beds Inpatient Ward" = "functional-areas/beds-inpatient-ward.md"},
-        {"Beds Maternity Assessment" = "functional-areas/beds-maternity-assessment.md"},
-        {"Beds Maternity Ward" = "functional-areas/beds-maternity-ward.md"},
-        {"Labs Cardiac Cath Proc" = "functional-areas/labs-cardiac-cath-proc.md"},
-        {"Rooms Endoscopy Proc" = "functional-areas/rooms-endoscopy-proc.md"},
-        {"Rooms Int Radiology Proc" = "functional-areas/rooms-int-radiology-proc.md"},
-        {"Rooms Maternity Birth" = "functional-areas/rooms-maternity-birth.md"},
-        {"Rooms Outpatient Consult" = "functional-areas/rooms-outpatient-consult.md"},
-        {"Rooms Outpatient Proc" = "functional-areas/rooms-outpatient-proc.md"},
-        {"Rooms Outpatient Virtual Consult" = "functional-areas/rooms-outpatient-virtual-consult.md"},
-        {"Spaces Haem Onc" = "functional-areas/spaces-haem-onc.md"},
-        {"Spaces SDEC" = "functional-areas/spaces-sdec.md"},
-        {"Theatres Daycase Proc" = "functional-areas/theatres-daycase-proc.md"},
-        {"Theatres Inpatient Proc" = "functional-areas/theatres-inpatient-proc.md"},
-        {"Theatres Obstetric Proc" = "functional-areas/theatres-obstetric-proc.md"},
+        "functional-areas/index.md",
+        {"Bays" = [
+            {"Bays A&E" = "functional-areas/bays-ae.md"}
+        ]},
+        {"Beds" = [
+            {"Beds A&E" = "functional-areas/beds-ae.md"},
+            {"Beds Critical Care" = "functional-areas/beds-critical-care.md"},
+            {"Beds Daycase Endoscopy Recovery" = "functional-areas/beds-daycase-endoscopy-recovery.md"},
+            {"Beds Daycase Recovery" = "functional-areas/beds-daycase-recovery.md"},
+            {"Beds Daycase Renal" = "functional-areas/beds-daycase-renal.md"},
+            {"Beds Inpatient Assessment" = "functional-areas/beds-inpatient-assessment.md"},
+            {"Beds Inpatient Ward" = "functional-areas/beds-inpatient-ward.md"},
+            {"Beds Maternity Assessment" = "functional-areas/beds-maternity-assessment.md"},
+            {"Beds Maternity Ward" = "functional-areas/beds-maternity-ward.md"}
+        ]},    
+        {"Labs" = [
+            {"Labs Cardiac Cath Proc" = "functional-areas/labs-cardiac-cath-proc.md"},
+        ]},
+        {"Rooms" = [
+            {"Rooms Endoscopy Proc" = "functional-areas/rooms-endoscopy-proc.md"},
+            {"Rooms Int Radiology Proc" = "functional-areas/rooms-int-radiology-proc.md"},
+            {"Rooms Maternity Birth" = "functional-areas/rooms-maternity-birth.md"},
+            {"Rooms Outpatient Consult" = "functional-areas/rooms-outpatient-consult.md"},
+            {"Rooms Outpatient Proc" = "functional-areas/rooms-outpatient-proc.md"},
+            {"Rooms Outpatient Virtual Consult" = "functional-areas/rooms-outpatient-virtual-consult.md"}
+        ]},
+        {"Spaces" = [
+            {"Spaces Haem Onc" = "functional-areas/spaces-haem-onc.md"},
+            {"Spaces SDEC" = "functional-areas/spaces-sdec.md"},
+        ]},
+        {"Theatres" = [
+            {"Theatres Daycase Proc" = "functional-areas/theatres-daycase-proc.md"},
+            {"Theatres Inpatient Proc" = "functional-areas/theatres-inpatient-proc.md"},
+            {"Theatres Obstetric Proc" = "functional-areas/theatres-obstetric-proc.md"},
+        ]} 
+    ]},
+        {"Technical Information" = [
+        "technical-information/index.md",
+        {"Model Architecture" = "technical-information/model-architecture.md"},
+        {"Components" = "technical-information/conventions.md"},
+        {"Registers" = [
+            {"Functional Area Regsiter" = "technical-information/functional-area-catalogue.md"},
+            {"Classification Register" = "technical-information/classification-register.md"},
+            {"Assumptions Register" = "technical-information/assumptions-register.md"},
+            {"Conversion Archetypes Catalogue" = "technical-information/conversion-archetypes-catalogue.md"}
+        ]}, 
+        {"Conversion Directory" = "technical-information/calculation-traceability-matrix.md"},
+        {"QA Templates" = "technical-information/qa-templates.md"}
     ]}
 ]
 
@@ -215,7 +237,7 @@ features = [
     # Turn on this feature to expand all collapsible sections in the
     # navigation sidebar by default.
     # https://zensical.org/docs/setup/navigation/#navigation-expansion
-    "navigation.expand",
+    #"navigation.expand",
 
     # This feature turns on navigation elements in the footer that allow the
     # user to navigate to a next or previous page.
@@ -256,12 +278,12 @@ features = [
     # When sections are enabled, top-level sections are rendered as groups in
     # the sidebar for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-sections
-    # "navigation.sections",
+    #"navigation.sections",
 
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
