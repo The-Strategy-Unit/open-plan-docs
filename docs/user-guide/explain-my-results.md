@@ -15,7 +15,7 @@ Because the demand model is _probabilistic_ it generates a range of plausible
 activity predictions, each of which we convert into capacity estimates. 
 This results in many different plausible capacity estimates which we summarise
 for you into a mean (the average value for that resource across all the estimates) 
-and a 'confidence interval' (via a 'p10 and a 'p90') which describes the range 
+and a _prediction interval_ (via a `p10` and a `p90`) which describes the range 
 of capacity values that contain 80% of capacity estimates generated.
 
 For more information on this vital 'uncertainty', see [the explanation here](../user-guide/methodology.md).
