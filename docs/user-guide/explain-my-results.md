@@ -18,7 +18,7 @@ for you into a mean (the average value for that resource across all the estimate
 and a _prediction interval_ (via a `p10` and a `p90`) which describes the range 
 of capacity values that contain 80% of capacity estimates generated.
 
-For more information on this vital 'uncertainty', see [the explanation here](../user-guide/methodology.md).
+For more information uncertainty, see [the explanation here](../user-guide/methodology.md).
 
 Let's say for surgical beds you get the following results
 
