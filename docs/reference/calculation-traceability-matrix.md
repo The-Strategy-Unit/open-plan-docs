@@ -10,7 +10,7 @@ The glue table that links classifications, assumptions, archetypes and outputs.
 A CTM row represents a unique workload-to-capacity calculation pathway requiring distinct classifications, assumptions, workload derivation logic or capacity outputs.
 
 <div class="compact-table" markdown="1">
-{{ read_yaml("docs/data/calculation_traceability_matrix.yaml") }}
+{{ pd_read_yaml("docs/data/calculation_traceability_matrix.yaml").fillna("") | convert_to_md_table }}
 </div>
 
 <div class="compact-table" markdown="1">

@@ -17,7 +17,7 @@ Reusable workload-to-capacity conversion methods shared across functional areas.
 * **Session capacity:** _How many treatment sessions can be delivered?_
 
 <div class="compact-table" markdown="1">
-{{ read_yaml("docs/data/conversion_archetypes_catalog.yaml") }}
+{{ pd_read_yaml("docs/data/conversion_archetypes_catalog.yaml").fillna("") | convert_to_md_table }}
 </div>
 
 <div class="compact-table" markdown="1">

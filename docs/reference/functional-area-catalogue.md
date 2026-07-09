@@ -9,7 +9,7 @@ Inventory of capacity domains, operational constraints and associated conversion
 
 <div class="compact-table" markdown="1">
 
-{{ read_csv("docs/data/fun_area_catalog.csv") }}
+{{ pd_read_csv("docs/data/fun_area_catalog.csv").fillna("") | convert_to_md_table }}
 
 </div>
 
