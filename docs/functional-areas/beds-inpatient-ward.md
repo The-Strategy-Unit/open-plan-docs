@@ -35,7 +35,7 @@ Primary workload object: ward bed days
 
 For each subgroup:
 
-$$\text{zero day bed days} = \text{zero day spells} \times \frac{\text{zero day los hours}} {24}$$
+$$\text{zero day bed days} = \text{zero day spells} \times \frac{\text{zero day los minutes}} {1440}$$
 
 $$\text{ward bed days} = \text{overnight bed days} + \text{zero day bed days} - \text{assessment bed days} - \text{critical care bed days}$$
 

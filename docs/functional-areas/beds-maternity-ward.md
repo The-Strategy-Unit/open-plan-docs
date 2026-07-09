@@ -39,7 +39,7 @@ Also included are overnight spells on a maternity ward with no recorded birth ev
 
 Primary workload unit: ward bed days
 
-$$\text{zero day bed days} = \text{zero day spells} \times \frac{\text{zero day LOS hours}} {24}$$
+$$\text{zero day bed days} = \text{zero day spells} \times \frac{\text{zero day LOS minutes}} {1440}$$
 
 $$\text{birth related ward bed days} = \text{birth spell overnight bed days} + \text{zero day bed days} - \text{birth room bed days}$$
 

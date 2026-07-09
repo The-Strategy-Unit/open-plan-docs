@@ -28,7 +28,7 @@ All non-elective inpatient spells are assumed to consume assessment-bed capacity
 
 Primary workload object: assessment bed days
 
-$$\text{assessment bed days} = \text{non elective spells} \times \frac{\text{assessment los hours}} {24}$$
+$$\text{assessment bed days} = \text{non elective spells} \times \frac{\text{assessment los minutes}} {1440}$$
 
 ---
 #### Capacity conversion
