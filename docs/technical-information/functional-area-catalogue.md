@@ -5,7 +5,9 @@ hide:
 
 # Functional Area Catalogue
 
-Inventory of capacity domains, operational constraints and associated conversion archetypes.
+This is a technical inventory of capacity domains, operational constraints and associated conversion archetypes.
+
+You can also explore these on the [Functional Areas tab](../functional-areas/).
 
 <div class="compact-table" markdown="1">
 
