@@ -20,11 +20,16 @@ of capacity values that contain 80% of capacity estimates generated.
 
 For more information on this vital 'uncertainty', see [the explanation here](../user-guide/methodology.md).
 
-To interpret these figures, you could say:
-"Given the inputs I gave to the demand model, the predicted activity would
-require on average 30 ['mean'] adult surgical beds, but 80% of the time the predicted
-activity suggested the need for between 23 ['p10'] and 32 ['p90']beds"
-** This is horrible - someone rewrite this in English for me please!!
+Let's say for surgical beds you get the following results
+
+|                                 | mean | p10 | p90 |
+|---------------------------------|------|-----|-----|
+| adult_elective_surgical_beddays | 30   | 23  | 32  |
+
+
+
+You can interpret this as
+> On average, we'd expect to need about 30 adult surgical beds. Most of the time (8 days out of 10), that need would fall somewhere between 23 and 32 beds.
 
 To see an example results workbook, click here.
 <Example file for download>
