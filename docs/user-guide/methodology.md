@@ -16,6 +16,7 @@ hospital operates, then calculates how many beds, rooms and other resources migh
 be needed to meet that demand.
  
 The essential components needed to perform a conversion are:
+
 - A [funtional area](../technical-information/functional-area-catalogue.md) (a resource and the context in which it is being used
 (e.g. `BEDS_DAYCASE_RECOVERY` is hospital beds that are being used for the recovery
 period following daycase procedures)
@@ -24,24 +25,28 @@ period following daycase procedures)
 - a [conversion formula](../technical-information/conversion-archetypes-catalogue.md)
  
 For example:
+
 - Functional Area: A&E beds (`BEDS_AE`)
 - Classification: adult majors
 - Assumptions: assumed length of stay per episode and hours per day the ward operates
 - Conversion formula (a formula converts this into `ADULT_MAJOR_AE_BEDS`)
  
 To see how all these elements relate to each other, please see the
-[conversion directory](../technical-information/calculation-traceability-matrix.md).
+[calculation traceability matrix](../technical-information/calculation-traceability-matrix.md).
  
-## What if my hospital uses its resources differently?
+## What if our hospital uses its resources differently?
  
 All the activity in the input data is grouped into 'functional areas' that share
 particular resources (for example A&E bays are shared by both adult and
 paediatric patients, so would be grouped together into a funtional area).
 This grouping is not specific to how any individual hospital uses its space and
-resources, but is based on the generic setup of a hospital using the Hospital 2.0
-Schedule of Accommodation.
+resources, but is based on the generic setup of a hospital using the [Hospital 2.0
+Schedule of Accommodation](https://www.gov.uk/government/publications/new-hospital-programme-review-outcome/new-hospital-programme-plan-for-implementation).
  
 In this release, all operational and resource assumptions are set centrally and
 based on expert opinion.
 In future we hope to be able to ingest user-supplied assumptions to allow you
 to tailor the conversions to your hospital's specific characteristics.
+
+## How does the tool deal with uncertainty in the activity predictions?
+
