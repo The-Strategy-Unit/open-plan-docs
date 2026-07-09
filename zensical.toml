@@ -148,9 +148,6 @@ Copyright &copy; 2026 The Strategy Unit.
 [project.theme]
 logo = "assets/su_logo_yellow.svg"
 
-[project.theme.icon]
-repo = "fontawesome/brands/github"
-
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
 
