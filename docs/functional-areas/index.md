@@ -3,8 +3,10 @@ title: Functional Areas
 icon: lucide/package
 ---
 
-A functional area is the modelling construct used to represent a capacity domain within the framework. It combines capacity domain + activity definition + workload derivation + capacity conversion method + assumptions. 
+A _functional area_ is how the model represents a specific type of capacity. It brings together everything needed to model it: what kind of capacity it is, how activity is defined, how workload is calculated, how that workload gets converted into capacity needs, and any assumptions built in.
 
-e.g. BAYS_AE, BEDS_CRITICAL_CARE, ROOMS_MATERNITY_BIRTH, SPACES_SDEC.
+Examples of functional areas include: A&E bays, critical care beds, maternity rooms, same-day emergency care (SDEC) spaces.
 
-For more technical details about the functional areas you can explore the [functional areas register](../technical-information\functional-area-catalogue.md)
+You can explore descriptions of these functional areas in this section.
+
+For a technical summary, see the [functional areas catalogue](../technical-information/functional-area-catalogue.md).
