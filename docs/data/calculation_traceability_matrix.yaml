@@ -11,6 +11,7 @@
     - AE_ADULT_MINOR_UTIL
     - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
   capacity_output: ADULT_MINOR_AE_BAYS
+  care_setting: AAE
 
 - functional_area: BAYS_AE
   subgroup: child minor
@@ -25,6 +26,7 @@
     - AE_CHILD_MINOR_UTIL
     - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
   capacity_output: CHILD_MINOR_AE_BAYS
+  care_setting: AAE
 
 - functional_area: BEDS_AE
   subgroup: adult major
@@ -39,6 +41,7 @@
     - AE_ADULT_MAJOR_UTIL
     - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
   capacity_output: ADULT_MAJOR_AE_BEDS
+  care_setting: AAE
 
 - functional_area: BEDS_AE
   subgroup: child major
@@ -53,6 +56,7 @@
     - AE_CHILD_MAJOR_UTIL
     - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
   capacity_output: CHILD_MAJOR_AE_BEDS
+  care_setting: AAE
 
 - functional_area: BEDS_AE
   subgroup: resus
@@ -66,6 +70,7 @@
     - AE_RESUS_UTIL
     - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
   capacity_output: RESUS_AE_BEDS
+  care_setting: AAE
 
 - functional_area: SPACES_SDEC
   subgroup: all groups
@@ -78,6 +83,7 @@
     - SDEC_SPACES_UTIL
     - SDEC_SPACES_ANNUAL_OPERATIONAL_HOURS
   capacity_output: SDEC_SPACES
+  care_setting: AAE
 
 - functional_area: ROOMS_OP_CONSULT
   subgroup: first attendance
@@ -94,6 +100,7 @@
     - OP_CONSULT_UTIL
     - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
   capacity_output: FIRST_OP_CONSULT_ROOMS
+  care_setting: OP
 
 - functional_area: ROOMS_OP_CONSULT
   subgroup: follow-up attendance
@@ -110,6 +117,7 @@
     - OP_CONSULT_UTIL
     - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
   capacity_output: FOLLOW_UP_OP_CONSULT_ROOMS
+  care_setting: OP
 
 - functional_area: ROOMS_OP_VIRTUAL_CONSULT
   subgroup: all groups
@@ -125,6 +133,7 @@
     - OP_VIRTUAL_CONSULT_UTIL
     - OP_VIRTUAL_CONSULT_ANNUAL_OPERATIONAL_HOURS
   capacity_output: OP_VIRTUAL_CONSULT_ROOMS
+  care_setting: OP
 
 - functional_area: ROOMS_OP_PROC
   subgroup: all groups
@@ -140,6 +149,7 @@
     - OP_PROC_UTIL
     - OP_PROC_ANNUAL_OPERATIONAL_HOURS
   capacity_output: OP_PROC_ROOMS
+  care_setting: OP
 
 - functional_area: BEDS_DAYCASE_RECOVERY
   subgroup: Adult medical
@@ -155,6 +165,7 @@
     - DAYCASE_RECOVERY_ADULT_MEDICAL_OCC
     - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
   capacity_output: ADULT_MEDICAL_DAYCASE_RECOVERY_BEDS
+  care_setting: IP_daycase
 
 - functional_area: BEDS_DAYCASE_RECOVERY
   subgroup: Adult surgical
@@ -170,6 +181,7 @@
     - DAYCASE_RECOVERY_ADULT_SURGICAL_OCC
     - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
   capacity_output: ADULT_SURGICAL_DAYCASE_RECOVERY_BEDS
+  care_setting: IP_daycase
 
 - functional_area: BEDS_DAYCASE_RECOVERY
   subgroup: Paediatric medical
@@ -185,6 +197,7 @@
     - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_OCC
     - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
   capacity_output: PAEDIATRIC_MEDICAL_DAYCASE_RECOVERY_BEDS
+  care_setting: IP_daycase
 
 - functional_area: BEDS_DAYCASE_RECOVERY
   subgroup: Paediatric surgical
@@ -200,6 +213,7 @@
     - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_OCC
     - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
   capacity_output: PAEDIATRIC_SURGICAL_DAYCASE_RECOVERY_BEDS
+  care_setting: IP_daycase
 
 - functional_area: BEDS_DAYCASE_ENDOSCOPY_RECOVERY
   subgroup: All groups
@@ -214,6 +228,7 @@
     - DAYCASE_ENDOSCOPY_RECOVERY_OCC
     - DAYCASE_ENDOSCOPY_RECOVERY_ANNUAL_OPERATIONAL_HOURS
   capacity_output: DAYCASE_ENDOSCOPY_RECOVERY_BEDS
+  care_setting: IP_daycase
 
 - functional_area: ROOMS_ENDOSCOPY_PROC
   subgroup: All groups
@@ -228,6 +243,7 @@
     - ENDOSCOPY_PROC_UTIL
     - ENDOSCOPY_PROC_ANNUAL_OPERATIONAL_HOURS
   capacity_output: ENDOSCOPY_PROC_ROOMS
+  care_setting: IP_daycase
 
 - functional_area: BEDS_DAYCASE_RENAL
   subgroup: All groups
@@ -241,6 +257,7 @@
   operational_assumptions:
     - DAYCASE_RENAL_ANNUAL_SESSION_CAPACITY_PER_BED
   capacity_output: DAYCASE_RENAL_BEDS
+  care_setting: IP_daycase
 
 - functional_area: SPACES_HAEM_ONC_TRT
   subgroup: All groups
@@ -256,3 +273,4 @@
     - HAEM_ONC_TREATMENT_UTIL
     - HAEM_ONC_ANNUAL_OPERATIONAL_HOURS
   capacity_output: HAEM_ONC_TRT_SPACES
+  care_setting: IP_daycase
