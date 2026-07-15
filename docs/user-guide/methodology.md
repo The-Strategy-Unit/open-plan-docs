@@ -55,3 +55,6 @@ These are combined into distributions and summarised for users.
 This capacity conversion tool applies the conversion logic to each of the 256 runs individually, then summarises the result.
 This leads to a mean capacity and a confidence interval, showing the uncertainty that the activity prediction has brought with it. 
 The capacity conversion does not provide any added uncertainty around the assumptions used (in this version).
+
+For more information about how the demand model handles uncertainty, please
+see the [NHP project information site](https://connect.strategyunitwm.nhs.uk/nhp/project_information/)
