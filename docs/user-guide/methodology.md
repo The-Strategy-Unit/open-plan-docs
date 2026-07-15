@@ -50,3 +50,8 @@ to tailor the conversions to your hospital's specific characteristics.
 
 ## How does the tool deal with uncertainty in the activity predictions?
 
+A range of predicted activity results are generated from the OpenPlan demand model - each scenario is rerun 256 times.  
+These are combined into distributions and summarised for users.
+This capacity conversion tool applies the conversion logic to each of the 256 runs individually, then summarises the result.
+This leads to a mean capacity and a confidence interval, showing the uncertainty that the activity prediction has brought with it. 
+The capacity conversion does not provide any added uncertainty around the assumptions used (in this version).
