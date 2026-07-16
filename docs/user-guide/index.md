@@ -3,4 +3,13 @@ icon: lucide/signpost-big
 ---
 # User Guide
 
-Landing page for users
+:lucide-rocket: If you want to know how to use the tool, see our [quick start guide](/docs/user-guide/quick-start.md).
+ 
+:lucide-boxes: For a simple overview of how the tool works, please visit the [methodology](user-guide/methodology.md) page.
+ 
+:lucide-sigma: If you would like the detail on how the tool works, have a look at the
+[technical information](technical-information.md).
+
+:lucide-message-circle-question-mark: Got questions? Check if someone has already asked them! Visit our [frequently asked questions](/docs/user-guide/faq.md) page.
+
+
