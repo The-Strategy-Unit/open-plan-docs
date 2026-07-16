@@ -24,7 +24,7 @@ These include:
 
 All the code is publicly available in the following GitHub repositories:
 
-- [Functional area mapping](https://github.com/The-Strategy-Unit/nhp_functional_area_mapping.git)
+- [Functional area mapping](https://github.com/The-Strategy-Unit/nhp_functional_area_mapping)
 - [Conversion logic](https://github.com/The-Strategy-Unit/nhp_capacity_conversion_logic.git)
 - [User interface]()
 
