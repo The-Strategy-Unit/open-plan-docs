@@ -4,10 +4,9 @@ icon: lucide/file-digit
 
 # Explain my results
 
-Results are delivered as an Excel workbook.
-The cover sheet explains the contents of each sheet in the workbook.
+Results are available as an Excel workbook. The cover sheet explains the contents of each sheet in the workbook.
 
-The results are contained in the `estimated_capacity_needs.xlsx` file.
+The results are contained in the `estimated_capacity_needs` sheet.
 
 In this sheet, each row describes a type of resource.
 
