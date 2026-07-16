@@ -16,11 +16,11 @@ Reusable data elements (like lookups) are held in separate files that are
 audited and version controlled independently.
 These include:
 
-- [Assumptions register](/docs/technical-information/assumptions-register.md)
-- [Classification register](/docs/technical-information/classification-register.md)
-- [Funtional area catalogue](/docs/technical-information/functional-area-catalogue.md)
-- [Conversion archetypes catalogue](/docs/technical-information/conversion-archetypes-catalogue.md)
-- [Calculation traceability matrix](/docs/technical-information/calculation-traceability-matrix.md)
+- [Assumptions register](/docs/technical-information/assumptions-register)
+- [Classification register](/docs/technical-information/classification-register)
+- [Funtional area catalogue](/docs/technical-information/functional-area-catalogue)
+- [Conversion archetypes catalogue](/docs/technical-information/conversion-archetypes-catalogue)
+- [Calculation traceability matrix](/docs/technical-information/calculation-traceability-matrix)
 
 All the code is publicly available in the following GitHub repositories:
 

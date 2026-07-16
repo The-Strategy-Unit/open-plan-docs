@@ -21,7 +21,8 @@ nav = [
         {"Methodology" = "user-guide/methodology.md"},
         {"Explain my Results" = "user-guide/explain-my-results.md"},
         {"FAQs" = "user-guide/faq.md"},
-        {"Glossary" = "user-guide/glossary.md"}
+        {"Glossary" = "user-guide/glossary.md"},
+        {"Contact Us" = "user-guide/contact-us.md"}
     ]},
     {"Functional Areas" = [
         "functional-areas/index.md",
@@ -108,9 +109,7 @@ repo_name = "The-Strategy-Unit/open-plan-docs"
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
-copyright = """
-Copyright &copy; 2026 The Strategy Unit.
-"""
+copyright = "&copy; 2026 <a href='https://www.strategyunitwm.nhs.uk/' target='blank'>The Strategy Unit</a>"
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
