@@ -11,7 +11,7 @@ created using version 4.4 or later of the [OpenPlan demand model](https://connec
  
 ## What does the tool produce?
  
-An Excel workbook containing the mean and 80% confidence intervals of estimated
+An Excel workbook containing the mean and 80% prediction intervals of estimated
 capacity requirements across all the standard groupings (see [here](../technical-information/functional-area-catalogue.md) for details)
 will be available for download.
 This file will also contain the values of all [assumptions](../technical-information/assumptions-register.md)
