@@ -25,7 +25,6 @@ These include:
 All the code is publicly available in the following GitHub repositories:
 
 - [Functional area mapping](https://github.com/The-Strategy-Unit/nhp_functional_area_mapping)
-- [Conversion logic](https://github.com/The-Strategy-Unit/nhp_capacity_conversion_logic.git)
-- [User interface]()
+- [Conversion logic and user interface](https://github.com/The-Strategy-Unit/nhp_capacity_conversion_logic)
 
 Please see our open-source policy [here](https://connect.strategyunitwm.nhs.uk/open-source-policy/).
