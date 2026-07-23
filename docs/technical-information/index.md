@@ -17,7 +17,7 @@ These include:
 
 - [Assumptions register](/docs/technical-information/assumptions-register)
 - [Classification register](/docs/technical-information/classification-register)
-- [Funtional area catalogue](/docs/technical-information/functional-area-catalogue)
+- [Functional area catalogue](/docs/technical-information/functional-area-catalogue)
 - [Conversion archetypes catalogue](/docs/technical-information/conversion-archetypes-catalogue)
 
 These elements are combined as shown in the [calculation traceability matrix](/docs/technical-information/calculation-traceability-matrix).
