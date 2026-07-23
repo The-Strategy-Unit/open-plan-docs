@@ -8,7 +8,7 @@ icon: lucide/message-circle-question-mark
  
 All the activity in the input data is grouped into 'functional areas' that share
 particular resources (for example A&E bays are shared by both adult and
-paediatric patients, so would be grouped together into a funtional area).
+paediatric patients, so would be grouped together into a functional area).
 This grouping is not specific to how any individual hospital uses its space and
 resources, but is based on the generic setup of a hospital using the [Hospital 2.0
 Schedule of Accommodation](https://www.gov.uk/government/publications/new-hospital-programme-review-outcome/new-hospital-programme-plan-for-implementation).
