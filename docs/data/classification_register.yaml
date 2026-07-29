@@ -258,10 +258,13 @@
 - id: CLASS_MATERNITY
   type: scope
   definition: Maternity admissions
-  logic: null
-  variables: null
+  logic: admimeth starts with a 3 OR tretspef is 501 or 560; AND sex is "2"; AND age is between 13 and 55
+  variables: 
+  - tretspef
+  - admimeth
+  - sex
   parent: null
-  notes: null
+  notes: See NHP definition of maternity activity at https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#group
 
 - id: CLASS_NO_BIRTH_EVENT
   type: null
