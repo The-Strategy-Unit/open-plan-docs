@@ -17,7 +17,7 @@ Maternity assessment activity is defined as zero-day maternity spells without a 
 
 | Subgroup   | Classification IDs                                   |
 | ---------- | ---------------------------------------------------- |
-| all groups | CLASS_MATERNITY, CLASS_ZERO_DAY, CLASS_NO_BIRTH_FLAG |
+| all groups | CLASS_MATERNITY, CLASS_ZERO_LOS, CLASS_NO_BIRTH_EVENT |
 
 ---
 #### Workload derivation
