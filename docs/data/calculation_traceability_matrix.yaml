@@ -383,3 +383,23 @@
     - MATERNITY_BIRTH_ROOM_OCC
     - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
   capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_BIRTH_ROOMS
+
+- functional_area: THEATRES_OBSTETRIC_PROC
+  subgroup: All groups
+  classification_ids:
+    - Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_ELECTIVE_CSECTION
+    - Non-Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_NON_ELECTIVE_CSECTION
+  workload_assumptions: 
+    - OBSTETRIC_THEATRE_PROC_TIME 
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - OBSTETRIC_THEATRE_UTIL
+    - OBSTETRIC_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: OBSTETRIC_PROC_THEATRES
