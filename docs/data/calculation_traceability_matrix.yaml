@@ -328,3 +328,58 @@
     - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
   capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_WARD_BEDS
 
+- functional_area: BEDS_MATERNITY_WARD_NO_BIRTH
+  subgroup: All groups
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_NO_BIRTH_EVENT
+    - CLASS_NON_ZERO_LOS
+  workload_assumptions: null
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_NO_BIRTH_OCC
+    - MATERNITY_WARD_NO_BIRTH_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: MATERNITY_WARD_NO_BIRTH_BEDS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Normal delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NORMAL
+  workload_assumptions: 
+    - MATERNITY_NORMAL_DELIVERY_BIRTH_ROOM_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NORMAL_DELIVERY_MATERNITY_BIRTH_ROOMS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Assisted delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_ASSISTED
+  workload_assumptions: 
+    - MATERNITY_ASSISTED_DELIVERY_BIRTH_ROOM_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ASSISTED_DELIVERY_MATERNITY_BIRTH_ROOMS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Non-elective C-section
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NONELECTIVE_CSECTION
+  workload_assumptions: 
+    - MATERNITY_NON_ELECTIVE_C_SECTION_BIRTH_ROOM_LOS 
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_BIRTH_ROOMS
