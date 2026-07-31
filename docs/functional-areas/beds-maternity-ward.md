@@ -59,7 +59,7 @@ $$\text{required maternity ward beds} = \frac{\text{total ward bed days}} {\text
 | ---------------------- | ----------------------- | ----------- | -------------------------------------------------- |
 | normal delivery        | zero day LOS            | workload    | MATERNITY_WARD_NORMAL_DELIVERY_ZERO_DAY_LOS        |
 | assisted delivery      | zero day LOS            | workload    | MATERNITY_WARD_ASSISTED_DELIVERY_ZERO_DAY_LOS      |
-| elective C-section     | zero day LOS            | workload    | MATERNITY_WARD_ELECTIVE_CSECTION_ZERO_DAY_LOS      |
+| elective C-section     | zero day LOS            | workload    | MATERNITY_WARD_ELECTIVE_C_SECTION_ZERO_DAY_LOS       |
 | non-elective C-section | zero day LOS            | workload    | MATERNITY_WARD_NON_ELECTIVE_C_SECTION_ZERO_DAY_LOS |
 | all groups             | occupancy               | operational | MATERNITY_WARD_OCC                                 |
 | all groups             | annual operational days | operational | MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS             |
