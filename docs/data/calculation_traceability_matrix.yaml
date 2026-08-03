@@ -256,3 +256,150 @@
     - HAEM_ONC_TREATMENT_UTIL
     - HAEM_ONC_ANNUAL_OPERATIONAL_HOURS
   capacity_output: HAEM_ONC_TRT_SPACES
+
+- functional_area: BEDS_MATERNITY_ASSESSMENT
+  subgroup: All groups
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_ZERO_LOS
+    - CLASS_NO_BIRTH_EVENT
+  workload_assumptions:
+    - MATERNITY_ASSESSMENT_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_RECOVERY_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_ASSESSMENT_OCC
+    - MATERNITY_ASSESSMENT_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: MATERNITY_ASSESSMENT_BEDS
+
+- functional_area: BEDS_MATERNITY_WARD_BIRTH
+  subgroup: Normal delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NORMAL
+  workload_assumptions:
+    - MATERNITY_WARD_NORMAL_DELIVERY_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_OCC
+    - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NORMAL_DELIVERY_MATERNITY_WARD_BEDS
+
+- functional_area: BEDS_MATERNITY_WARD_BIRTH
+  subgroup: Assisted delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_ASSISTED
+  workload_assumptions:
+    - MATERNITY_ASSISTED_DELIVERY_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_OCC
+    - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ASSISTED_DELIVERY_MATERNITY_WARD_BEDS
+
+- functional_area: BEDS_MATERNITY_WARD_BIRTH
+  subgroup: Elective C-section
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_ELECTIVE_CSECTION
+  workload_assumptions:
+    - MATERNITY_WARD_ELECTIVE_C_SECTION_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_OCC
+    - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ELECTIVE_C_SECTION_MATERNITY_WARD_BEDS
+
+- functional_area: BEDS_MATERNITY_WARD_BIRTH
+  subgroup: Non-Elective C-section
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NONELECTIVE_CSECTION
+  workload_assumptions:
+    - MATERNITY_NON_ELECTIVE_C_SECTION_BIRTH_ROOM_LOS 
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_OCC
+    - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_WARD_BEDS
+
+- functional_area: BEDS_MATERNITY_WARD_NO_BIRTH
+  subgroup: All groups
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_NO_BIRTH_EVENT
+    - CLASS_NON_ZERO_LOS
+  workload_assumptions: null
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_WARD_NO_BIRTH_OCC
+    - MATERNITY_WARD_NO_BIRTH_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: MATERNITY_WARD_NO_BIRTH_BEDS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Normal delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NORMAL
+  workload_assumptions: 
+    - MATERNITY_NORMAL_DELIVERY_BIRTH_ROOM_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NORMAL_DELIVERY_MATERNITY_BIRTH_ROOMS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Assisted delivery
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_ASSISTED
+  workload_assumptions: 
+    - MATERNITY_ASSISTED_DELIVERY_BIRTH_ROOM_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ASSISTED_DELIVERY_MATERNITY_BIRTH_ROOMS
+
+- functional_area: ROOMS_MATERNITY_BIRTH
+  subgroup: Non-elective C-section
+  classification_ids:
+    - CLASS_MATERNITY
+    - CLASS_BIRTH_NONELECTIVE_CSECTION
+  workload_assumptions: 
+    - MATERNITY_NON_ELECTIVE_C_SECTION_BIRTH_ROOM_LOS 
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - MATERNITY_BIRTH_ROOM_OCC
+    - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_BIRTH_ROOMS
+
+- functional_area: THEATRES_OBSTETRIC_PROC
+  subgroup: All groups
+  classification_ids:
+    - Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_ELECTIVE_CSECTION
+    - Non-Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_NON_ELECTIVE_CSECTION
+  workload_assumptions: 
+    - OBSTETRIC_THEATRE_PROC_TIME 
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - OBSTETRIC_THEATRE_UTIL
+    - OBSTETRIC_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: OBSTETRIC_PROC_THEATRES
