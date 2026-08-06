@@ -216,7 +216,7 @@
 
 - id: CLASS_OP_FACE_TO_FACE
   type: attendance_type
-  definition: null
+  definition: atentype NOT IN 21, 22
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -224,7 +224,7 @@
 
 - id: CLASS_OP_FIRST
   type: attendance_type
-  definition: null
+  definition: atentype IN 1, 21
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -232,7 +232,7 @@
 
 - id: CLASS_OP_FOLLOW_UP
   type: attendance_type
-  definition: null
+  definition: atentype NOT IN 1, 21
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -240,7 +240,7 @@
 
 - id: CLASS_OP_VIRTUAL
   type: attendance_type
-  definition: null
+  definition: atentype IN 21, 22
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
