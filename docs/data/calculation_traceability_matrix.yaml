@@ -242,6 +242,186 @@
     - DAYCASE_RENAL_ANNUAL_SESSION_CAPACITY_PER_BED
   capacity_output: DAYCASE_RENAL_BEDS
 
+- functional_area: BEDS_CRITICAL_CARE
+  subgroup: adult
+  classification_ids:
+    - CLASS_AGE_ADULT
+  workload_assumptions:
+    - CRITICAL_CARE_ADULT_PERCENT_OVERNIGHT_BED_DAYS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - CRITICAL_CARE_ADULT_OCC
+    - CRITICAL_CARE_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_CRITICAL_CARE_BEDS
+
+- functional_area: BEDS_CRITICAL_CARE
+  subgroup: paediatric
+  classification_ids:
+    - CLASS_AGE_PAEDIATRIC
+  workload_assumptions:
+    - CRITICAL_CARE_PAEDIATRIC_PERCENT_OVERNIGHT_BED_DAYS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - CRITICAL_CARE_PAEDIATRIC_OCC
+    - CRITICAL_CARE_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_CRITICAL_CARE_BEDS
+
+- functional_area: BEDS_INPATIENT_ASSESSMENT
+  subgroup: adult
+  classification_ids:
+    - CLASS_AGE_ADULT
+    - CLASS_NON_ELECTIVE
+    - CLASS_MEDICAL
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - INPATIENT_ASSESSMENT_ADULT_NON_ELECTIVE_MEDICAL_LOS
+    - INPATIENT_ASSESSMENT_ADULT_NON_ELECTIVE_SURGICAL_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - INPATIENT_ASSESSMENT_ADULT_OCC
+    - INPATIENT_ASSESSMENT_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_INPATIENT_ASSESSMENT_BEDS
+
+- functional_area: BEDS_INPATIENT_ASSESSMENT
+  subgroup: paediatric
+  classification_ids:
+    - CLASS_AGE_PAEDIATRIC
+    - CLASS_NON_ELECTIVE
+    - CLASS_MEDICAL
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - INPATIENT_ASSESSMENT_PAEDIATRIC_NON_ELECTIVE_MEDICAL_LOS
+    - INPATIENT_ASSESSMENT_PAEDIATRIC_NON_ELECTIVE_SURGICAL_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - INPATIENT_ASSESSMENT_PAEDIATRIC_OCC
+    - INPATIENT_ASSESSMENT_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_INPATIENT_ASSESSMENT_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: adult elective medical
+  classification_ids:
+    - CLASS_AGE_ADULT
+    - CLASS_ELECTIVE
+    - CLASS_MEDICAL
+  workload_assumptions:
+    - WARD_ADULT_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_ADULT_ELECTIVE_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_ELECTIVE_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: adult elective surgical
+  classification_ids:
+    - CLASS_AGE_ADULT
+    - CLASS_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - WARD_ADULT_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_ADULT_ELECTIVE_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_ELECTIVE_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: adult non-elective medical
+  classification_ids:
+    - CLASS_AGE_ADULT
+    - CLASS_NON_ELECTIVE
+    - CLASS_MEDICAL
+  workload_assumptions:
+    - WARD_ADULT_NON_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_ADULT_NON_ELECTIVE_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_NON_ELECTIVE_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: adult non-elective surgical
+  classification_ids:
+    - CLASS_AGE_ADULT
+    - CLASS_NON_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - WARD_ADULT_NON_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_ADULT_NON_ELECTIVE_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: ADULT_NON_ELECTIVE_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: paediatric elective medical
+  classification_ids:
+    - CLASS_AGE_CHILD
+    - CLASS_ELECTIVE
+    - CLASS_MEDICAL
+  workload_assumptions:
+    - WARD_PAED_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_PAEDIATRIC_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: paediatric elective surgical
+  classification_ids:
+    - CLASS_AGE_CHILD
+    - CLASS_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - WARD_PAED_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_PAEDIATRIC_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: paediatric non-elective medical
+  classification_ids:
+    - CLASS_AGE_CHILD
+    - CLASS_NON_ELECTIVE
+    - CLASS_MEDICAL
+  workload_assumptions:
+    - WARD_PAED_NON_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_PAEDIATRIC_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+
+- functional_area: BEDS_INPATIENT_WARD
+  subgroup: paediatric non-elective surgical
+  classification_ids:
+    - CLASS_AGE_CHILD
+    - CLASS_NON_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - WARD_PAED_NON_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+  formula_id: 
+    - FRM_BED_OCCUPANCY
+  operational_assumptions:
+    - WARD_PAEDIATRIC_OCC
+    - WARD_ANNUAL_OPERATIONAL_DAYS
+  capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+
 - functional_area: SPACES_HAEM_ONC_TRT
   subgroup: All groups
   classification_ids:
@@ -383,6 +563,26 @@
     - MATERNITY_BIRTH_ROOM_OCC
     - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
   capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_BIRTH_ROOMS
+
+- functional_area: THEATRES_OBSTETRIC_PROC
+  subgroup: All groups
+  classification_ids:
+    - Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_ELECTIVE_CSECTION
+    - Non-Elective C-section:
+      - CLASS_MATERNITY
+      - CLASS_BIRTH_EVENT
+      - CLASS_BIRTH_NON_ELECTIVE_CSECTION
+  workload_assumptions: 
+    - OBSTETRIC_THEATRE_PROC_TIME 
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - OBSTETRIC_THEATRE_UTIL
+    - OBSTETRIC_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: OBSTETRIC_PROC_THEATRES
 
 - functional_area: THEATRES_OBSTETRIC_PROC
   subgroup: All groups
