@@ -603,3 +603,124 @@
     - OBSTETRIC_THEATRE_UTIL
     - OBSTETRIC_THEATRE_ANNUAL_OPERATIONAL_HOURS
   capacity_output: OBSTETRIC_PROC_THEATRES
+
+- functional_area: THEATRES_DAYCASE_PROC
+  subgroup: Adult surgical
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_ADULT
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - DAYCASE_THEATRE_ADULT_SURGICAL_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - DAYCASE_THEATRE_UTIL
+    - DAYCASE_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_SURGICAL_DAYCASE_PROC_THEATRES
+
+- functional_area: THEATRES_DAYCASE_PROC
+  subgroup: Paediatric
+  classification_ids:
+    - CLASS_DAYCASE
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_CHILD
+  workload_assumptions:
+    - DAYCASE_THEATRE_PAED_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - DAYCASE_THEATRE_UTIL
+    - DAYCASE_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: PAEDIATRIC_DAYCASE_PROC_THEATRES
+
+- functional_area: THEATRES_INPATIENT_PROC
+  subgroup: Adult elective surgical
+  classification_ids:
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_ADULT
+    - CLASS_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - INPATIENT_THEATRE_ADULT_ELEC_SURGICAL_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - INPATIENT_THEATRE_UTIL
+    - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_ELECTIVE_SURGICAL_INPATIENT_PROC_THEATRES
+
+- functional_area: THEATRES_INPATIENT_PROC
+  subgroup: Adult non-elective surgical
+  classification_ids:
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_ADULT
+    - CLASS_NON_ELECTIVE
+    - CLASS_SURGICAL
+  workload_assumptions:
+    - INPATIENT_THEATRE_ADULT_NON_ELECTIVE_SURGICAL_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - INPATIENT_THEATRE_UTIL
+    - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: ADULT_NON_ELECTIVE_SURGICAL_INPATIENT_PROC_THEATRES
+
+- functional_area: THEATRES_INPATIENT_PROC
+  subgroup: Paediatric elective
+  classification_ids:
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_CHILD
+    - CLASS_ELECTIVE
+  workload_assumptions:
+    - INPATIENT_THEATRE_CHILD_ELEC_SURGICAL_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - INPATIENT_THEATRE_UTIL
+    - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: PAEDIATRIC_ELECTIVE_INPATIENT_PROC_THEATRES
+
+- functional_area: THEATRES_INPATIENT_PROC
+  subgroup: Paediatric non-elective
+  classification_ids:
+    - CLASS_HAS_PROCEDURE
+    - CLASS_AGE_CHILD
+    - CLASS_NON_ELECTIVE
+  workload_assumptions:
+    - INPATIENT_THEATRE_CHILD_NON_ELECTIVE_SURGICAL_PROC_TIME
+  formula_id: 
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - INPATIENT_THEATRE_UTIL
+    - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: PAEDIATRIC_NON_ELECTIVE_INPATIENT_PROC_THEATRES
+
+- functional_area: LABS_CARDIAC_CATH_PROC
+  subgroup: All groups
+  classification_ids:
+    - (CLASS_CARDIOLOGY AND CLASS_HAS_PROCEDURE) OR
+    - (CLASS_CARDIAC_CATH)
+  workload_assumptions:
+    - LABS_CARDIAC_CATH_PROC_TIME
+  formula_id:
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - LABS_CARDIAC_CATH_UTIL
+    - LABS_CARDIAC_CATH_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: CARDIAC_CATH_PROC_LABS
+
+- functional_area: ROOMS_INT_RADIOLOGY_PROC
+  subgroup: All groups
+  classification_ids:
+    - CLASS_INT_RADIOLOGY
+    - CLASS_HAS_PROCEDURE
+  workload_assumptions:
+    - INT_RADIOLOGY_PROC_TIME
+  formula_id:
+    - FRM_TIME_UTIL
+  operational_assumptions:
+    - INT_RADIOLOGY_PROC_UTIL
+    - INT_RADIOLOGY_PROC_ANNUAL_OPERATIONAL_HOURS
+  capacity_output: INT_RADIOLOGY_PROC_ROOMS
