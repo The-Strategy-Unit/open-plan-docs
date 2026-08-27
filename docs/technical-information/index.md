@@ -22,4 +22,4 @@ These include:
 
 These elements are combined as shown in the [calculation traceability matrix](/technical-information/calculation-traceability-matrix).
 
-For a descriptive overview of how the tool works, see the [model architecture](/technical-information/model-architecture).
+For a descriptive overview of how the model works, see the [model architecture](/technical-information/model-architecture).

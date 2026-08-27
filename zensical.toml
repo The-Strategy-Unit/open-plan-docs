@@ -75,14 +75,15 @@ nav = [
             {"Conversion Archetypes Catalogue" = "technical-information/conversion-archetypes-catalogue.md"}
         ]}, 
         {"Calculation Traceability Matrix" = "technical-information/calculation-traceability-matrix.md"},
-        {"QA Templates" = "technical-information/qa-templates.md"}
+        {"QA Templates" = "technical-information/qa-templates.md"},
+        {"Episode methodology" = "technical-information/episode-level.md"},
     ]}
 ]
 
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "OpenPlan Hospital Capacity Conversion Tool"
+site_name = "OpenPlan Hospital Capacity Conversion Model: Documentation"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.

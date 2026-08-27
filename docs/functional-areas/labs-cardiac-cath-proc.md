@@ -50,9 +50,9 @@ $$\text{required cardiac cath labs} = \frac{\text{procedure hours}} {\text{annua
 
 | Subgroup   | Assumption               | Category    | Assumption ID                              |
 | ---------- | ------------------------ | ----------- | ------------------------------------------ |
-| all groups | procedure time           | workload    | CARDIAC_CATH_PROC_TIME                     |
-| all groups | utilisation              | operational | CARDIAC_CATH_PROC_UTIL                     |
-| all groups | annual operational hours | operational | CARDIAC_CATH_PROC_ANNUAL_OPERATIONAL_HOURS |
+| all groups | procedure time           | workload    | LABS_CARDIAC_CATH_PROC_TIME                     |
+| all groups | utilisation              | operational | LABS_CARDIAC_CATH_UTIL                     |
+| all groups | annual operational hours | operational | LABS_CARDIAC_CATH_ANNUAL_OPERATIONAL_HOURS |
 
 ---
 #### Known issues / limitations
