@@ -15,10 +15,6 @@ Reusable data elements (like lookups) are held in separate files that are
 audited and version controlled independently.
 These include:
 
-- [Assumptions register](/technical-information/assumptions-register)
-- [Classification register](/technical-information/classification-register)
-- [Functional area catalogue](/technical-information/functional-area-catalogue)
-- [Conversion archetypes catalogue](/technical-information/conversion-archetypes-catalogue)
 
 - [Assumptions register](assumptions-register)
 - [Classification register](classification-register)
