@@ -20,6 +20,11 @@ These include:
 - [Functional area catalogue](/technical-information/functional-area-catalogue)
 - [Conversion archetypes catalogue](/technical-information/conversion-archetypes-catalogue)
 
-These elements are combined as shown in the [calculation traceability matrix](/technical-information/calculation-traceability-matrix).
+- [Assumptions register](assumptions-register)
+- [Classification register](classification-register)
+- [Functional area catalogue](functional-area-catalogue)
+- [Conversion archetypes catalogue](conversion-archetypes-catalogue)
+
+These elements are combined as shown in the [calculation traceability matrix](calculation-traceability-matrix).
 
 For a descriptive overview of how the model works, see the [model architecture](/technical-information/model-architecture).
