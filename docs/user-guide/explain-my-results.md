@@ -34,9 +34,10 @@ You could interpret this as
 you submitted, we can be 80% sure that the true need will fall somewhere between 
 23 and 32 beds.
 
-Here is [an example results workbook](/docs/assets/capacity_conversion_results_formatted.xlsx).
+Here you can download an [example results workbook](/docs/assets/capacity_conversion_results_formatted.xlsx){ .md-button .md-button--primary download="capacity_conversion_results_formatted.xlsx"}.
 
 !!! note
     Each column in this example workbook is independent, so the expected relationships
     between cells in any one row is not preserved. This workbook is included for
     illustrative purposes only.
+
