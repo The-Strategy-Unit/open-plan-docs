@@ -1,0 +1,3 @@
+Subgroup,Classification IDs
+adult minor,"CLASS_AE, CLASS_AGE_ADULT, CLASS_AE_MINOR"
+child minor,"CLASS_AE, CLASS_AGE_CHILD, CLASS_AE_MINOR"

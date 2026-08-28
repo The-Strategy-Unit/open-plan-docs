@@ -1,0 +1,5 @@
+Subgroup,Assumption,Category,Assumption ID
+adult minor,LOS,workload,AE_ADULT_MINOR_LOS
+adult major,utilisation,operational,AE_ADULT_MINOR_UTIL
+child minor,LOS,workload,AE_CHILD_MINOR_LOS
+child major,utilisation,operational,AE_CHILD_MINOR_UTIL
