@@ -12,9 +12,9 @@ workbook.
 
 In this sheet, each row describes a type of resource.
 
-Because the [demand model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) is _probabilistic_ it generates a range of plausible 
-activity predictions, each of which we convert into capacity estimates. 
-This results in many different plausible capacity estimates which we summarise
+Because the [demand model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) is _probabilistic_ it generates a range of 
+activity predictions, each of which we convert into capacity projections. 
+This results in many different capacity estimates which we summarise
 for you into a mean (the average value for that resource across all the estimates) 
 and a _prediction interval_ (via a `p10` and a `p90`) which describes the range 
 of capacity values that contain 80% of capacity estimates generated.
@@ -29,8 +29,14 @@ Let's say for surgical beds you get the following results
 
 
 
-You can interpret this as
-> On average, we'd expect to need about 30 adult surgical beds. Most of the time (8 days out of 10), that need would fall somewhere between 23 and 32 beds.
+You could interpret this as
+> On average, we'd expect to need about 30 adult surgical beds. Given the inputs
+you submitted, we can be 80% sure that the true need will fall somewhere between 
+23 and 32 beds.
 
-To see an example results workbook, click here.
-<Example file for download>
+Here is [an example results workbook](/docs/assets/capacity_conversion_results_formatted.xlsx).
+
+!!! note
+    Each column in this example workbook is independent, so the expected relationships
+    between cells in any one row is not preserved. This workbook is included for
+    illustrative purposes only.
