@@ -15,11 +15,12 @@ Reusable data elements (like lookups) are held in separate files that are
 audited and version controlled independently.
 These include:
 
-- [Assumptions register](/docs/technical-information/assumptions-register)
-- [Classification register](/docs/technical-information/classification-register)
-- [Functional area catalogue](/docs/technical-information/functional-area-catalogue)
-- [Conversion archetypes catalogue](/docs/technical-information/conversion-archetypes-catalogue)
 
-These elements are combined as shown in the [calculation traceability matrix](/docs/technical-information/calculation-traceability-matrix).
+- [Assumptions register](assumptions-register)
+- [Classification register](classification-register)
+- [Functional area catalogue](functional-area-catalogue)
+- [Conversion archetypes catalogue](conversion-archetypes-catalogue)
 
-For a descriptive overview of how the tool works, see the [model architecture](technical-information/model-architecture).
+These elements are combined as shown in the [calculation traceability matrix](calculation-traceability-matrix).
+
+For a descriptive overview of how the model works, see the [model architecture](model-architecture).
