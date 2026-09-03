@@ -83,7 +83,7 @@ nav = [
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "OpenPlan Hospital Capacity Conversion Model: Documentation"
+site_name = "OpenPlan Hospital Capacity Conversion Model<br>Documentation"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
@@ -149,7 +149,7 @@ copyright = "&copy; 2026 <a href='https://www.strategyunitwm.nhs.uk/' target='bl
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
-logo = "assets/su_logo_yellow.svg"
+logo = "assets/SU_NHP_Logo.png"
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
