@@ -16,6 +16,9 @@
 ---
 #### Activity classification logic
 
+Cardiac catheter and interventional radiology activity must be excluded from inpatient procedures activity used for the calculation of theatres, to avoid double-counting.
+
+
 | Subgroup                    | Classification IDs                                                       |
 | --------------------------- | ------------------------------------------------------------------------ |
 | adult elective surgical     | CLASS_HAS_PROCEDURE, CLASS_AGE_ADULT, CLASS_ELECTIVE, CLASS_SURGICAL     |
