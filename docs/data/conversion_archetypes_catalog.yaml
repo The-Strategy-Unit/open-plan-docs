@@ -1,0 +1,81 @@
+- id: FRM_FLOW_SPACE
+  archetype_family: occupancy-based
+  conversion_archetype: flow-space occupancy
+  formula: occupancy_hours / (annual_operational_hours × utilisation)
+  typical_workload_object:
+  - occupancy_hours
+  typical_operational_parameters:
+  - operational hours
+  - utilisation
+  example_functional_areas:
+  - A&E
+  - SDEC
+
+- id: FRM_RECOVERY_OCCUPANCY
+  archetype_family: occupancy-based
+  conversion_archetype: recovery occupancy
+  formula: occupancy_hours / (annual_operational_hours × occupancy)
+  typical_workload_object:
+  - occupancy_hours
+  typical_operational_parameters:
+  - operational hours
+  - occupancy
+  example_functional_areas:
+  - daycase recovery
+  - maternity assessment
+
+- id: FRM_BED_OCCUPANCY
+  archetype_family: occupancy-based
+  conversion_archetype: bed occupancy
+  formula: bed_days / (annual_operational_days × occupancy)
+  typical_workload_object:
+  - ward_bed_days
+  - critical_care_bed_days
+  - assessment_bed_days
+  typical_operational_parameters:
+  - operational days
+  - occupancy
+  example_functional_areas:
+  - inpatient wards
+  - critical care
+  - maternity wards
+
+- id: FRM_TIME_UTIL
+  archetype_family: time-based utilisation
+  conversion_archetype: procedural time utilisation
+  formula: procedure_hours / (annual_operational_hours × utilisation)
+  typical_workload_object:
+  - procedure_hours
+  typical_operational_parameters:
+  - operational hours
+  - utilisation
+  example_functional_areas:
+  - theatres
+  - cath labs
+  - endoscopy procedures
+
+- id: FRM_APPOINTMENT_UTIL
+  archetype_family: time-based utilisation
+  conversion_archetype: appointment-slot utilisation
+  formula: scheduled_time_hours / (annual_operational_hours × utilisation)
+  typical_workload_object:
+  - consultation_hours
+  - procedure_hours
+  typical_operational_parameters:
+  - operational hours
+  - utilisation
+  example_functional_areas:
+  - OP consultations
+  - OP procedures
+
+- id: FRM_SESSION_CAPACITY
+  archetype_family: throughput-based
+  conversion_archetype: session capacity
+  formula: treatment_sessions / annual_session_capacity_per_bed
+  typical_workload_object:
+  - treatment_sessions
+  typical_operational_parameters:
+  - sessions per day
+  - operational days
+  example_functional_areas:
+  - renal daycase
