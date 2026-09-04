@@ -24,9 +24,9 @@ This roadmap is updated quarterly.
 
 - Queueing theory method adoption.
 - Substituting central assumptions with data/user knowledge.
-- Critical care data incorporation.
+- Incorporation of critical care data.
 
 ## 🔬 Exploring
 
 - Baseline capacity conversion with comparison to baseline year resources.
-- Diagnostic imaging data incorporation.
+- Incorporation of diagnostic imaging data.
