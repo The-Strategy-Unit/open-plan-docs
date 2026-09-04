@@ -3,3 +3,42 @@
 {% block announce %}
   <div class="md-typeset" style="margin: 0; padding: 0;">🚧 Work in Progress: Content may change.</div>
 {% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <style>
+    /* target the inner wrapper directly and stack text elements vertically */
+    .md-header__title .md-ellipsis {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      white-space: normal !important; /* Prevents text clipping */
+      line-height: 1.2 !important;
+    }
+    
+    /* Inherit the exact typography structure from the main site name */
+    .md-header__subtitle {
+      display: block !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      font-size: 0.8rem !important; /* Increased from 0.65rem for better visibility */
+      opacity: 0.8; /* Slightly higher opacity so the larger text stands out cleanly */
+      margin-top: 3px !important; /* Added a tiny bit more spacing for the larger font */
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Look for the specific text element wrapper
+      var titleTextNode = document.querySelector(".md-header__topic .md-ellipsis");
+      if (titleTextNode) {
+        var subtitle = document.createElement("span");
+        subtitle.className = "md-header__subtitle";
+        
+        // Dynamically loads from TOML site_description or defaults to Documentation
+        subtitle.innerText = "{{ config.site_description | default('Documentation') }}";
+        
+        titleTextNode.appendChild(subtitle);
+      }
+    });
+  </script>
+{% endblock %}
