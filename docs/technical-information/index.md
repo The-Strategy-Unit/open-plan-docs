@@ -23,4 +23,4 @@ These include:
 
 These elements are combined as shown in the [calculation traceability matrix](calculation-traceability-matrix).
 
-For a descriptive overview of how the model works, see the [model architecture](model-architecture).
+For a descriptive overview of how the model works, see the [model architecture](technicalmodel-architecture).
