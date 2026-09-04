@@ -83,13 +83,13 @@ nav = [
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "OpenPlan Hospital Capacity Conversion Tool"
+site_name = "OpenPlan Hospital Capacity Conversion Model"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "Model Documentation"
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -107,7 +107,7 @@ site_author = "Paul Seamer paulseamer@nhs.net"
 #
 # Read more: https://zensical.org/docs/setup/repository/
 repo_url = "https://github.com/The-Strategy-Unit/open-plan-docs"
-repo_name = "The-Strategy-Unit/open-plan-docs"
+repo_name = ""
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
@@ -149,7 +149,7 @@ copyright = "&copy; 2026 <a href='https://www.strategyunitwm.nhs.uk/' target='bl
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
-logo = "assets/su_logo_yellow.svg"
+logo = "assets/SU_NHP_Logo.png"
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"

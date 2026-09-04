@@ -216,7 +216,7 @@
 
 - id: CLASS_OP_FACE_TO_FACE
   type: attendance_type
-  definition: null
+  definition: atentype NOT IN 21, 22
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -224,7 +224,7 @@
 
 - id: CLASS_OP_FIRST
   type: attendance_type
-  definition: null
+  definition: atentype IN 1, 21
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -232,7 +232,7 @@
 
 - id: CLASS_OP_FOLLOW_UP
   type: attendance_type
-  definition: null
+  definition: atentype NOT IN 1, 21
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -240,7 +240,7 @@
 
 - id: CLASS_OP_VIRTUAL
   type: attendance_type
-  definition: null
+  definition: atentype IN 21, 22
   logic: null
   variables: null
   parent: CLASS_OP_ATTEND
@@ -258,10 +258,13 @@
 - id: CLASS_MATERNITY
   type: scope
   definition: Maternity admissions
-  logic: null
-  variables: null
+  logic: admimeth starts with a 3 OR tretspef is 501 or 560; AND sex is "2"; AND age is between 13 and 55
+  variables: 
+  - tretspef
+  - admimeth
+  - sex
   parent: null
-  notes: null
+  notes: See NHP definition of maternity activity at https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#group
 
 - id: CLASS_NO_BIRTH_EVENT
   type: null

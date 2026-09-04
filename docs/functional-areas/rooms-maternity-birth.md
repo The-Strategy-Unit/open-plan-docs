@@ -48,7 +48,7 @@ $$\text{required birthing rooms} = \frac{\text{birth room bed days}} {\text{annu
 | ---------------------- | ----------------------- | ----------- | ---------------------------------------------- |
 | normal delivery        | LOS                     | workload    | MATERNITY_NORMAL_DELIVERY_BIRTH_ROOM_LOS       |
 | assisted delivery      | LOS                     | workload    | MATERNITY_ASSISTED_DELIVERY_BIRTH_ROOM_LOS     |
-| non-elective C-section | LOS                     | workload    | MATERNITY_NONELECTIVE_C_SECTION_BIRTH_ROOM_LOS |
+| non-elective C-section | LOS                     | workload    | MATERNITY_NON_ELECTIVE_C_SECTION_BIRTH_ROOM_LOS |
 | all groups             | occupancy               | operational | MATERNITY_BIRTH_ROOM_OCC                       |
 | all groups             | annual operational days | operational | MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS   |
 

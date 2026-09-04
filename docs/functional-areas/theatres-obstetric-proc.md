@@ -20,8 +20,8 @@ Cases requiring an obstetric theatre are defined as: maternity spells with a bir
 
 | Branch                 | Classification IDs                                              |
 | ---------------------- | --------------------------------------------------------------- |
-| elective C-section     | CLASS_MATERNITY, CLASS_BIRTH_EVENT, CLASS_ELECTIVE_CSECTION,    |
-| non-elective C-section | CLASS_MATERNITY, CLASS_BIRTH_EVENT, CLASS_NON_ELECTIVE_CSECTION |
+| elective C-section     | CLASS_MATERNITY, CLASS_BIRTH_EVENT, CLASS_BIRTH_ELECTIVE_CSECTION    |
+| non-elective C-section | CLASS_MATERNITY, CLASS_BIRTH_EVENT, CLASS_BIRTH_NON_ELECTIVE_CSECTION |
 
 Obstetric theatre procedures = branch 1 OR branch 2
 
