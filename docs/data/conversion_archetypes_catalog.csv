@@ -1,7 +1,0 @@
-id,archetype_family,conversion_archetype,formula,typical_workload_object,typical_operational_parameters,example_functional_areas
-FRM_FLOW_SPACE,occupancy-based,flow-space occupancy,occupancy_hours / (annual_operational_hours Ã— utilisation),occupancy_hours,"operational hours, utilisation","A&E, SDEC"
-FRM_RECOVERY_OCCUPANCY,occupancy-based,recovery occupancy,occupancy_hours / (annual_operational_hours Ã— occupancy),occupancy_hours,"operational hours, occupancy","daycase recovery, maternity assessment"
-FRM_BED_OCCUPANCY,occupancy-based,bed occupancy,bed_days / (annual_operational_days Ã— occupancy),"ward_bed_days, critical_care_bed_days, assessment_bed_days","operational days, occupancy","inpatient wards, critical care, maternity wards"
-FRM_TIME_UTIL,time-based utilisation,procedural time utilisation,procedure_hours / (annual_operational_hours Ã— utilisation),procedure_hours,"operational hours, utilisation","theatres, cath labs, endoscopy procedures"
-FRM_APPOINTMENT_UTIL,time-based utilisation,appointment-slot utilisation,scheduled_time_hours / (annual_operational_hours Ã— utilisation),"consultation_hours, procedure_hours","operational hours, utilisation","OP consultations, OP procedures"
-FRM_SESSION_CAPACITY,throughput-based,session capacity,treatment_sessions / annual_session_capacity_per_bed,treatment_sessions,"sessions per day, operational days",renal daycase
