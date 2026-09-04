@@ -29,10 +29,14 @@ Minors are defined with: Acuity IN {3,4,5}. Null or unknown acuity values are as
 | 4     | Standard level       |
 | 5     | Low acuity level     |
 
-| Subgroup    | Classification IDs                        |
-| ----------- | ----------------------------------------- |
-| adult minor | CLASS_AE, CLASS_AGE_ADULT, CLASS_AE_MINOR |
-| child minor | CLASS_AE, CLASS_AGE_CHILD, CLASS_AE_MINOR |
+<div class="compact-table" markdown="1">
+{{ pd_read_yaml("docs/data/calculation_traceability_matrix.yaml")
+.fillna("")
+.query("subgroup in ['adult minor', 'child minor']")
+.filter(items=['subgroup', 'classification_ids'])
+.rename(columns={'subgroup':'Subgroup','classification_ids':'Classification IDs'}) 
+| convert_to_md_table }}
+</div>
 
 ---
 #### Workload derivation
@@ -49,13 +53,13 @@ $$\text{required AE bays} = \frac{\text{occupancy hours}}{\text{annual operation
 ---
 #### Assumptions
 
-| Subgroup    | Assumption               | Category    | Assumption ID                    |
-| ----------- | ------------------------ | ----------- | -------------------------------- |
-| adult minor | LOS                      | workload    | AE_ADULT_MINOR_LOS               |
-| adult minor | utilisation              | operational | AE_ADULT_MINOR_UTIL              |
-| child minor | LOS                      | workload    | AE_CHILD_MINOR_LOS               |
-| child minor | utilisation              | operational | AE_CHILD_MINOR_UTIL              |
-| all groups  | annual operational hours | operational | AE_BAYS_ANNUAL_OPERATIONAL_HOURS |
+<div class="compact-table" markdown="1">
+{{ pd_read_csv("docs/data/assumptions_register.csv")
+   .fillna("")
+   [["Subgroup", "Metric", "Assumption Category", "Assumption ID"]]
+   [pd_read_csv("docs/data/assumptions_register.csv").fillna("")["Assumption ID"].str.contains('|'.join(['MINOR', 'BAYS']))]
+   | convert_to_md_table }}
+</div>
 
 ---
 #### Known issues / limitations
