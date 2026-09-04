@@ -94,12 +94,12 @@ site_description = "Model Documentation"
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "Paul Seamer paulseamer@nhs.net"
+site_author = "The Strategy Unit https://www.strategyunitwm.nhs.uk"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://the-strategy-unit.github.io/open-plan-docs/"
 
 # The repo_url setting adds a repository link (with icon) to the top-right
 # of the header. Zensical's default repo icon is a generic git icon, so it
