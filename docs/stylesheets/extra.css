@@ -69,6 +69,22 @@
   /* white-space: nowrap; */
 }
 
+/*
+ * Inline "chip" / tag styling
+ * Used for formatting the appearance of YAML list cells
+ * See _cell_to_chips in main.py
+ */
+.chip {
+  display: inline-block;
+  background: #eef1f4;
+  color: #24292f;
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+  margin: 0.12em 0.2em 0.12em 0;
+  font-size: 0.85em;
+  font-family: SFMono-Regular, Consolas, monospace;
+  white-space: nowrap;
+}
 
 /* ==========================================================================
    Main header
