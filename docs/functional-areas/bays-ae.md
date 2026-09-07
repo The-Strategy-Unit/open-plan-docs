@@ -35,6 +35,7 @@ Minors are defined with: Acuity IN {3,4,5}. Null or unknown acuity values are as
 .query("subgroup in ['adult minor', 'child minor']")
 .filter(items=['subgroup', 'classification_ids'])
 .rename(columns={'subgroup':'Subgroup','classification_ids':'Classification IDs'}) 
+| format_list_cells
 | convert_to_md_table }}
 </div>
 
@@ -58,6 +59,7 @@ $$\text{required AE bays} = \frac{\text{occupancy hours}}{\text{annual operation
    .fillna("")
    [["Subgroup", "Metric", "Assumption Category", "Assumption ID"]]
    [pd_read_csv("docs/data/assumptions_register.csv").fillna("")["Assumption ID"].str.contains('|'.join(['MINOR', 'BAYS']))]
+   | format_list_cells
    | convert_to_md_table }}
 </div>
 
