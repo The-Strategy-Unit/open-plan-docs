@@ -7,11 +7,152 @@
   padding: 0.2rem 0.2rem !important;
   /* white-space: nowrap; */
   min-width: 2rem !important;
+
+  /*
+   * If a particular table should never wrap cell contents, this can be
+   * re-enabled. It is left disabled by default because nowrap can make
+   * tables much wider than the viewport.
+   */
+  /* white-space: nowrap; */
 }
 
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 2rem;   /* increase from default */
+
+/* ==========================================================================
+   Main header
+   ==========================================================================
+
+   These rules adjust Zensical's standard header so that the custom two-logo
+   lockup and the OpenPlan title sit comfortably on the same horizontal row.
+   ========================================================================== */
+
+.md-header__inner {
+  /*
+   * Vertically centre the major items in the header row:
+   * logos, title, theme control, search and GitHub/source controls.
+   */
+  align-items: center;
+}
+
+
+/* ==========================================================================
+   "Docs" badge
+   ==========================================================================
+
+   Small pill displayed alongside the product/site title.
+
+   The badge is deliberately visually secondary to the product name, while
+   making it immediately clear that this is the documentation site.
+   ========================================================================== */
+
+.md-header__badge {
+  /*
+   * inline-flex allows the badge to remain in the text flow while also
+   * allowing its contents to be vertically centred.
+   */
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  padding: 2px 9px;
+  border-radius: 999px;
+
+  /*
+   * Use Zensical theme variables rather than fixed colours so the badge
+   * continues to work with the configured colour palette.
+   */
+  background: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+
+  white-space: nowrap;
+  vertical-align: middle;
+
+  /* Separate the badge visually from the site title. */
+  margin-left: 8px;
+}
+
+
+/* ==========================================================================
+   Header title alignment
+   ==========================================================================
+
+   Zensical's header title contains several nested wrappers because it can
+   switch between the site title and the current page title as the user
+   scrolls.
+
+   With the taller custom logo lockup, Zensical's default positioning makes
+   the title appear too close to the top of the header. These overrides make
+   the nested title containers fill the available header height and vertically
+   centre their contents.
+
+   NOTE:
+   These classes are part of Zensical's header-title behaviour. If a future
+   Zensical upgrade changes title animation or scrolling behaviour, this is
+   one of the first sections to re-test.
+   ========================================================================== */
+
+.md-header__title,
+.md-header__ellipsis,
+.md-header__topic {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__topic:first-child {
+  /*
+   * Keep the site title compact if it wraps or contains more than one line.
+   */
+  line-height: 1.2;
+}
+
+
+/* ==========================================================================
+   Two-logo lockup
+   ==========================================================================
+
+   The site is jointly branded with:
+     - The Strategy Unit
+     - NHS New Hospital Programme
+
+   Zensical assumes that `.md-logo` contains ONE image. Our custom
+   `partials/logo.html` instead renders both images inside `.brand-logos`.
+
+   Logo dimensions are controlled through CSS custom properties below.
+   Change these values rather than adding one-off heights elsewhere in the
+   stylesheet.
+
+   The two logos deliberately have separate height values because equal
+   mathematical heights do not necessarily produce equal visual weight.
+   ========================================================================== */
+
+:root {
+  /* Horizontal space between logo, divider and second logo. */
+  --logo-gap: 0.5rem;
+
+  /* Strategy Unit logo height. */
+  --logo-su-height: 2rem;
+
+  /* New Hospital Programme logo height. */
+  --logo-nhp-height: 1.8rem;
+
+  /* Height of the subtle vertical separator between the organisations. */
+  --logo-divider-height: 1.4rem;
+}
+
+
+/*
+ * Container around both logos and the divider.
+ *
+ * flex keeps the two images on one horizontal line and vertically centres
+ * logos that intentionally have slightly different heights.
+ */
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: var(--logo-gap);
   width: auto;
 }
 
