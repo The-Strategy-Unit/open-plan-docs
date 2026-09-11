@@ -35,6 +35,7 @@ Minors are defined with: Acuity IN {3,4,5}. Null or unknown acuity values are as
 .query("subgroup in ['adult minor', 'child minor']")
 .filter(items=['subgroup', 'classification_ids'])
 .rename(columns={'subgroup':'Subgroup','classification_ids':'Classification IDs'}) 
+|format_list_cells
 | convert_to_md_table }}
 </div>
 
@@ -91,6 +92,7 @@ to all the FAs after confirming the restructure approach. -->
 {{ assumptions_register
    .filter(items=["Subgroup", "Metric", "Assumption Category", "Assumption ID"])
    [assumptions_register["Assumption ID"].isin(assumptions)]
+   |format_list_cells
    | convert_to_md_table }}
 
 </div>
