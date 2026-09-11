@@ -35,7 +35,6 @@ Minors are defined with: Acuity IN {3,4,5}. Null or unknown acuity values are as
 .query("subgroup in ['adult minor', 'child minor']")
 .filter(items=['subgroup', 'classification_ids'])
 .rename(columns={'subgroup':'Subgroup','classification_ids':'Classification IDs'}) 
-| format_list_cells
 | convert_to_md_table }}
 </div>
 
@@ -54,15 +53,47 @@ $$\text{required AE bays} = \frac{\text{occupancy hours}}{\text{annual operation
 ---
 #### Assumptions
 
+<!-- This approach has been created to try to programmatically identify the
+relevant assumptions for this page from its title and the CTM, then gather their related info
+from the assumptions register. Hopefully we can abstract this logic out to apply 
+to all the FAs after confirming the restructure approach. -->
 <div class="compact-table" markdown="1">
-{{ pd_read_csv("docs/data/assumptions_register.csv")
-   .fillna("")
-   [["Subgroup", "Metric", "Assumption Category", "Assumption ID"]]
-   [pd_read_csv("docs/data/assumptions_register.csv").fillna("")["Assumption ID"].str.contains('|'.join(['MINOR', 'BAYS']))]
-   | format_list_cells
-   | convert_to_md_table }}
-</div>
 
+{% set functional_area = page.url
+   | replace("functional-areas/", "")
+   | replace("/", "")
+   | upper
+   | replace("-", "_") %}
+
+{% set ctm_data = pd_read_yaml("docs/data/calculation_traceability_matrix.yaml") %}
+
+{% set ctm_rows = ctm_data
+   .query("functional_area == '" ~ functional_area ~ "'")
+   .to_dict("records") %}
+
+{% set assumptions = [] %}
+
+{% for row in ctm_rows %}
+  {% for assumption in row.workload_assumptions %}
+    {% if assumption %}
+      {% set _ = assumptions.append(assumption) %}
+    {% endif %}
+  {% endfor %}
+  {% for assumption in row.operational_assumptions %}
+    {% if assumption %}
+      {% set _ = assumptions.append(assumption) %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% set assumptions_register = pd_read_csv("docs/data/assumptions_register.csv").fillna("") %}
+
+{{ assumptions_register
+   .filter(items=["Subgroup", "Metric", "Assumption Category", "Assumption ID"])
+   [assumptions_register["Assumption ID"].isin(assumptions)]
+   | convert_to_md_table }}
+
+</div>
 ---
 #### Known issues / limitations
 * Type 02 mono-specialty A&E out-of-scope in current development plan.
