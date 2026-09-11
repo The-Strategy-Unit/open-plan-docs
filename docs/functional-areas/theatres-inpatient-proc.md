@@ -52,7 +52,8 @@ $$\text{required inpatient theatres} = \frac{\text{procedure hours}} {\text{annu
 
 ---
 #### Dependencies
-* No dependencies.
+
+Cardiac catheter and interventional radiology activity must be excluded from inpatient procedures activity used for the calculation of theatres, to avoid double-counting.
 
 ---
 #### Future enhancements
