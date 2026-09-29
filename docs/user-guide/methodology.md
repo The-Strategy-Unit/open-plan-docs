@@ -17,7 +17,7 @@ be needed to meet that demand.
  
 The essential components needed to perform a conversion are:
 
-- A [funtional area](../technical-information/functional-area-catalogue) (a resource and the context in which it is being used
+- A [functional area](../technical-information/functional-area-catalogue) &mdash; a resource and the context in which it is being used
 (e.g. `BEDS_DAYCASE_RECOVERY` is hospital beds that are being used for the recovery
 period following daycase procedures)
 - [Subgroups/classifications](../technical-information/classification-register) of the row-level activity data
