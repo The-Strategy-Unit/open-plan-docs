@@ -24,7 +24,7 @@ Outpatient attendances with a valid procedure code.
 
 Primary workload object: procedure hours
 
-$$\text{effective procedure time minutes} = \text{procedure time minutes} + (\text{DNA rate} \times \text{DNA time minutes})$$
+$$\text{effective procedure time minutes} = \text{procedure time minutes} + \left(\frac{\text{DNA rate}}{1-\text{DNA rate}}\times \text{DNA time}\right)$$
 
 $$\text{procedure hours} = \frac{\text{attendances} \times \text{effective procedure time minutes}} {60}$$
 
