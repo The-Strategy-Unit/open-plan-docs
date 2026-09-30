@@ -4,7 +4,7 @@ icon: lucide/rocket
 
 # Welcome!
  
-This site documents the **OpenPlan Hospital Capacity Conversion Model**, a modular
+This site documents the **OpenPlan Hospital Capacity Model**, a modular
 framework for converting healthcare activity into estimates of capacity requirements.
  
 :lucide-rocket: If you want to know how to use the model, see our [quick start guide](user-guide/quick-start).

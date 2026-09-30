@@ -264,7 +264,7 @@
   - admimeth
   - sex
   parent: null
-  notes: See NHP definition of maternity activity at https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#group
+  notes: See Demand Model definition of maternity activity at https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#group
 
 - id: CLASS_NO_BIRTH_EVENT
   type: null

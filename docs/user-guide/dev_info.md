@@ -4,7 +4,7 @@ icon: lucide/computer
 
 # Developer Information
 
-All the code for the OpenPlan Capacity Conversion Tool is open source.
+All the code for the OpenPlan Hospital Capacity Model is open source.
 
 You can view the code (written in Python) for the Tool here:
 

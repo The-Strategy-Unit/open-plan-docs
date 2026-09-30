@@ -5,9 +5,9 @@ hide:
 
 # Converting spell level modelling to episode level capacity estimates
 
-The NHP model operates at a spell level and takes specialty, procedures, and diagnostic information from [the last episode in spell](https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#filtering). However, we need to model capacity at an episode level, because working at spell level means that we lose the detail of specialty attribution, procedure activity, and diagnostic information from earlier episodes.
+The OpenPlan Demand Model operates at a spell level and takes specialty, procedures, and diagnostic information from [the last episode in spell](https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#filtering). However, we need to model capacity at an episode level, because working at spell level means that we lose the detail of specialty attribution, procedure activity, and diagnostic information from earlier episodes.
 
-This document outlines how we link spell level outputs from the NHP capacity model to episode level functional areas, so that we can deliver capacity conversion at the required level of detail.
+This document outlines how we link spell level outputs from the OpenPlan Capacity Model to episode level functional areas, so that we can deliver capacity conversion at the required level of detail.
 
 We first work out from the baseline data what percentage of the spell was spent in different functional areas.
 
@@ -58,7 +58,7 @@ We first work out from the baseline data what percentage of the spell was spent 
   </tbody>
 </table>
 
-Below is a simplified example of model results in a single iteration of the model (there are usually 256). The NHP model can change the length of a spell, the point of delivery, duplicate spells, or remove them entirely.
+Below is a simplified example of model results in a single iteration of the model (there are usually 256). The Demand Model can change the length of a spell, the point of delivery, duplicate spells, or remove them entirely.
 
 * Spell B has been duplicated
 * Spell C is not in the modelled horizon year
