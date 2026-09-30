@@ -14,7 +14,7 @@ icon: lucide/book-a
 | `FRM`    | formula |
 | `INT`    | interventional |
 | `IR`    | interventional radiology |
-| `LAB`    | laboratorye |
+| `LAB`    | laboratory |
 | `LOS`    | length of stay |
 | `OCC`       | occupancy  |
 | `OP`    | outpatient |
@@ -28,7 +28,7 @@ A type of hospital resource whose volume is required to be estiamted from
 predicted activity data, for example critical care beds.
 
 **Datetime** 
-The numeric date and time 'stamp' a demand model scenario is given 
+The numeric date and time 'stamp' a Demand Model scenario is given 
 when run. 
 It can be used as an additional identifier when multiple model scenarios share 
 a name. 
@@ -54,7 +54,7 @@ results were below the value ('p10') or 10 percent were above the value (p90).
 **Probabilistic** 
 A type of model that predicts probabilities of outcomes, 
 rather than specific certainties. 
-The OpenPlan Demand Model is probabilistic in that, given the exact same inputs,
+The OpenPlan Hospital Demand Model is probabilistic in that, given the exact same inputs,
 you would not expect the exact same results.
 
 **Utilisation rate**

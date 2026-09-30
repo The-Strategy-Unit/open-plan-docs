@@ -474,7 +474,10 @@
    * Arrange the drawer heading as:
    *
    *     [ Strategy Unit | NHP logos ]
-   *     OpenPlan Hospital Capacity Conversion Model
+   *     OpenPlan Hospital Capacity Model
+   *
+   * The logo occupies the first row and the site title naturally occupies
+   * the second.
    */
   .md-nav .md-nav__title[for="__drawer"] {
     display: grid;

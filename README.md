@@ -1,7 +1,6 @@
 # OpenPlan Docs
 
-Documentation for Open Plan, the Strategy Unit's open source model for converting hospital activity into capacity requirements.
-Funded by the New Hospital Programme (NHP) and part of the [NHP model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/).
+Documentation for the Strategy Unit's **OpenPlan Hospital Capacity Model** — a common framework for translating hospital demand into capacity requirements. The Capacity Model takes estimated future activity from the upstream [OpenPlan Hospital Demand Model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) and translates it into estimates of the physical capacity required. This work is funded by the **New Hospital Programme (NHP)**.
 
 ## How to contribute
 
