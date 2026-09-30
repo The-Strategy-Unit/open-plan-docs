@@ -340,6 +340,76 @@
   margin-left: 0;
 }
 
+/* ==========================================================================
+   Feedback control
+   ==========================================================================
+
+   Header link to the feedback form. On wide screens it mirrors the compact
+   visual treatment of Zensical's search control. At the compact-navigation
+   breakpoint it becomes an icon-only action to preserve space for the title.
+   ========================================================================== */
+.md-header__feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  height: 1.6rem;
+  min-width: 7rem;
+  padding: 0 0.8rem;
+  margin-left: 0.4rem;
+
+  border-radius: 0.4rem;
+
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color);
+
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: background-color 125ms;
+}
+
+.md-header__feedback-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.md-header__feedback-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.md-header__feedback:hover {
+  background: var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color);
+}
+
+.md-header__feedback:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   GitHub source control
+   ==========================================================================
+
+   Zensical reserves more horizontal space for the repository/source control
+   than this site's compact GitHub icon and statistics require. Reducing the
+   container width leaves more room for the long OpenPlan title without
+   changing the source control itself.
+   ========================================================================== */
+
+.md-header .md-header__source {
+  width: 6rem;
+  margin-left: 0.2rem;
+}
 
 /* ==========================================================================
    Medium / narrow screens
