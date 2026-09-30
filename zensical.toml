@@ -150,7 +150,7 @@ copyright = "&copy; 2026 <a href='https://www.strategyunitwm.nhs.uk/' target='bl
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
-logo = "assets/SU_NHP_Logo.png"
+#logo = "images/logo.png"
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"

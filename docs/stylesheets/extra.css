@@ -1,34 +1,508 @@
+/* ==========================================================================
+   OpenPlan documentation site — custom Zensical styles
+
+   This stylesheet contains a small number of deliberate overrides to the
+   standard Zensical theme.
+
+   In particular, the site uses TWO organisational logos rather than the
+   single logo that Zensical's default header and navigation drawer expect.
+   Some selectors below are therefore intentionally more specific than would
+   normally be necessary. This is required to override Zensical's built-in
+   single-logo sizing rules.
+
+   When upgrading Zensical, check:
+     1. desktop header alignment;
+     2. the breakpoint at which the desktop logos disappear;
+     3. the mobile/tablet navigation drawer logo layout;
+     4. expansion/collapse behaviour of nested navigation items.
+
+   Avoid adding broad overrides to .md-nav__list, .md-nav__item or every
+   .md-nav__title. These can interfere with Zensical's nested navigation
+   layout and previously caused large gaps in the mobile drawer.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Compact tables
+   ==========================================================================
+
+   Opt-in styling for tables that contain a lot of columns or dense numeric
+   information.
+
+   This is deliberately scoped to elements inside `.compact-table`, so the
+   default Zensical table styling is preserved everywhere else.
+
+   To use it, apply the `compact-table` class to the containing Markdown/HTML
+   element rather than reducing the size of every table site-wide.
+   ========================================================================== */
+
 .compact-table table {
-  font-size: 0.6rem !important; /* smaller font, default is ~0.9rem */
+  /*
+   * Zensical's normal table text is approximately 0.9rem. These tables are
+   * intentionally much denser, so a substantially smaller size is used.
+   *
+   * !important is used because the theme's table styles may otherwise have
+   * sufficient specificity to override this opt-in utility class.
+   */
+  font-size: 0.6rem !important;
 }
 
 .compact-table th,
 .compact-table td {
+  /*
+   * Reduce cell padding to match the smaller type and allow wide tables to
+   * fit more information onto the screen.
+   */
   padding: 0.2rem 0.2rem !important;
-  /* white-space: nowrap; */
+
+  /*
+   * A small minimum width prevents very short values or headings from
+   * collapsing columns excessively.
+   */
   min-width: 2rem !important;
+
+  /*
+   * If a particular table should never wrap cell contents, this can be
+   * re-enabled. It is left disabled by default because nowrap can make
+   * tables much wider than the viewport.
+   */
+  /* white-space: nowrap; */
 }
 
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 2rem;   /* increase from default */
+/*
+ * Inline "chip" / tag styling
+ * Used for formatting the appearance of YAML list cells
+ * See _cell_to_chips in main.py
+ */
+.chip {
+  display: inline-block;
+  background: #eef1f4;
+  color: #24292f;
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+  margin: 0.12em 0.2em 0.12em 0;
+  font-size: 0.85em;
+  font-family: SFMono-Regular, Consolas, monospace;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Main header
+   ==========================================================================
+
+   These rules adjust Zensical's standard header so that the custom two-logo
+   lockup and the OpenPlan title sit comfortably on the same horizontal row.
+   ========================================================================== */
+
+.md-header__inner {
+  /*
+   * Vertically centre the major items in the header row:
+   * logos, title, theme control, search and GitHub/source controls.
+   */
+  align-items: center;
+}
+
+
+/* ==========================================================================
+   "Docs" badge
+   ==========================================================================
+
+   Small pill displayed alongside the product/site title.
+
+   The badge is deliberately visually secondary to the product name, while
+   making it immediately clear that this is the documentation site.
+   ========================================================================== */
+
+.md-header__badge {
+  /*
+   * inline-flex allows the badge to remain in the text flow while also
+   * allowing its contents to be vertically centred.
+   */
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+
+  padding: 2px 9px;
+  border-radius: 999px;
+
+  /*
+   * Use Zensical theme variables rather than fixed colours so the badge
+   * continues to work with the configured colour palette.
+   */
+  background: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+
+  white-space: nowrap;
+  vertical-align: middle;
+
+  /* Separate the badge visually from the site title. */
+  margin-left: 8px;
+}
+
+
+/* ==========================================================================
+   Header title alignment
+   ==========================================================================
+
+   Zensical's header title contains several nested wrappers because it can
+   switch between the site title and the current page title as the user
+   scrolls.
+
+   With the taller custom logo lockup, Zensical's default positioning makes
+   the title appear too close to the top of the header. These overrides make
+   the nested title containers fill the available header height and vertically
+   centre their contents.
+
+   NOTE:
+   These classes are part of Zensical's header-title behaviour. If a future
+   Zensical upgrade changes title animation or scrolling behaviour, this is
+   one of the first sections to re-test.
+   ========================================================================== */
+
+.md-header__title,
+.md-header__ellipsis,
+.md-header__topic {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__topic:first-child {
+  /*
+   * Keep the site title compact if it wraps or contains more than one line.
+   */
+  line-height: 1.2;
+}
+
+
+/* ==========================================================================
+   Two-logo lockup
+   ==========================================================================
+
+   The site is jointly branded with:
+     - The Strategy Unit
+     - NHS New Hospital Programme
+
+   Zensical assumes that `.md-logo` contains ONE image. Our custom
+   `partials/logo.html` instead renders both images inside `.brand-logos`.
+
+   Logo dimensions are controlled through CSS custom properties below.
+   Change these values rather than adding one-off heights elsewhere in the
+   stylesheet.
+
+   The two logos deliberately have separate height values because equal
+   mathematical heights do not necessarily produce equal visual weight.
+   ========================================================================== */
+
+:root {
+  /* Horizontal space between logo, divider and second logo. */
+  --logo-gap: 0.5rem;
+
+  /* Strategy Unit logo height. */
+  --logo-su-height: 2rem;
+
+  /* New Hospital Programme logo height. */
+  --logo-nhp-height: 1.8rem;
+
+  /* Height of the subtle vertical separator between the organisations. */
+  --logo-divider-height: 1.4rem;
+}
+
+
+/*
+ * Container around both logos and the divider.
+ *
+ * flex keeps the two images on one horizontal line and vertically centres
+ * logos that intentionally have slightly different heights.
+ */
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: var(--logo-gap);
   width: auto;
 }
 
- .chip {
-    display: inline-block;
-    background: #eef1f4;
-    color: #24292f;
-    border-radius: 999px;
-    padding: 0.15em 0.7em;
-    margin: 0.12em 0.2em 0.12em 0;
-    font-size: 0.85em;
-    font-family: SFMono-Regular, Consolas, monospace;
-    white-space: nowrap;
-  }
-  
-.md-header__button.md-logo img {
-    width: 180px;
-    height: auto;
+
+/*
+ * Shared base styling for each individual logo image.
+ *
+ * `max-width: none` is intentional: Zensical applies size restrictions aimed
+ * at a single logo, whereas our two images need to retain their individually
+ * specified heights and natural aspect ratios.
+ */
+.md-logo .brand-logo {
+  display: block;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
 }
 
+
+/* --------------------------------------------------------------------------
+   Individual logo heights
+
+   These selectors are deliberately more specific than simply
+   `.brand-logo--su` / `.brand-logo--nhp`.
+
+   Zensical includes a default rule similar to:
+
+       .md-header__button.md-logo img {
+         height: 1.2rem;
+       }
+
+   which assumes a single standard-sized logo. The more specific selectors
+   below override that rule for both the desktop header and navigation drawer.
+   -------------------------------------------------------------------------- */
+
+.md-header__button.md-logo .brand-logo--su,
+.md-nav__button.md-logo .brand-logo--su {
+  height: var(--logo-su-height);
+  width: auto;
+}
+
+.md-header__button.md-logo .brand-logo--nhp,
+.md-nav__button.md-logo .brand-logo--nhp {
+  height: var(--logo-nhp-height);
+  width: auto;
+}
+
+
+/*
+ * Subtle divider between the two organisations.
+ *
+ * `currentColor` means the divider inherits the surrounding theme colour,
+ * while low opacity keeps it visually quiet.
+ */
+.brand-logo-divider {
+  display: block;
+
+  /* Keep the divider at exactly 1px even inside a flex container. */
+  flex: 0 0 1px;
+  width: 1px;
+
+  height: var(--logo-divider-height);
+
+  background: currentColor;
+  opacity: 0.2;
+}
+
+
+/* ==========================================================================
+   Desktop logo link
+   ==========================================================================
+
+   `.md-header__button.md-logo` is the outer clickable link generated by
+   Zensical around the logo partial.
+
+   It contains our entire two-logo lockup, so it needs to behave as one
+   non-shrinking unit within the header.
+   ========================================================================== */
+
+.md-header .md-header__button.md-logo {
+  /*
+   * Do not allow the branding to be squeezed as the header becomes narrower.
+   * At the responsive breakpoint below we hide the lockup entirely instead.
+   */
+  flex: 0 0 auto;
+
+  /* Space between the logo lockup and the OpenPlan site title. */
+  margin-right: 1.25rem;
+
+  /*
+   * Remove Zensical's normal logo-button padding because spacing is managed
+   * explicitly by the lockup and header.
+   */
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* ==========================================================================
+   Site title sizing
+   ========================================================================== */
+
+.md-header__title {
+  /*
+   * `min-width: 0` is important for flex layouts: it allows the title to
+   * shrink/wrap rather than forcing the entire header wider than the viewport.
+   */
+  min-width: 0;
+
+  /*
+   * Remove the default left offset because spacing from the logo is already
+   * provided by `.md-header__button.md-logo`.
+   */
+  margin-left: 0;
+}
+
+
+/* ==========================================================================
+   Medium / narrow screens
+   ==========================================================================
+
+   76.25em is approximately 1220px when the browser base font size is 16px.
+
+   At this width the full desktop header begins to become crowded by:
+     - two organisational logos;
+     - the long OpenPlan product name;
+     - theme/search controls;
+     - GitHub repository information.
+
+   Rather than continually shrinking the branding, we progressively simplify
+   the header:
+     1. repository text is hidden;
+     2. the desktop logo lockup is hidden;
+     3. the same branding remains available in the navigation drawer.
+
+   This breakpoint intentionally corresponds to the layout at which Zensical
+   begins relying more heavily on its drawer navigation rather than waiting
+   for a very narrow phone-sized viewport.
+   ========================================================================== */
+
+@media screen and (max-width: 76.25em) {
+
+  /*
+   * Hide the textual GitHub repository name/stats in the main header.
+   * The source/GitHub control can remain accessible without consuming a large
+   * amount of horizontal space.
+   */
+  .md-header .md-source__repository {
+    display: none;
+  }
+
+
+  /*
+   * Remove the two-logo lockup from the compact header.
+   *
+   * We deliberately hide it rather than shrinking it to an unreadable size.
+   * The logos are instead shown prominently in the navigation drawer below.
+   */
+  .md-header .md-header__button.md-logo {
+    display: none;
+  }
+
+
+  /* ========================================================================
+     Navigation drawer branding
+     ========================================================================
+
+     Zensical's drawer title normally assumes a SINGLE square logo and applies
+     approximately the following defaults:
+
+         display: flex;
+         align-items: center;
+
+     and:
+
+         .md-logo {
+           width: 1.6rem;
+           height: 1.6rem;
+         }
+
+     Those defaults work for a small icon, but not for two horizontally
+     arranged organisational logos.
+
+     The following selectors intentionally target ONLY the drawer title whose
+     `for` attribute is `__drawer`. This avoids changing nested navigation
+     titles such as "User Guide", "Functional Areas" and "Technical
+     Information".
+
+     Do not simplify this to a broad `.md-nav__title` selector: doing so can
+     interfere with nested navigation layout.
+     ======================================================================== */
+
+
+  /*
+   * Change the main drawer title from Zensical's horizontal flex layout into
+   * a single-column grid:
+   *
+   *     [ Strategy Unit | NHP logos ]
+   *     OpenPlan Hospital Capacity Conversion Model
+   *
+   * The logo occupies the first row and the site title naturally occupies
+   * the second.
+   */
+  .md-nav .md-nav__title[for="__drawer"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+
+    gap: 0.6rem;
+    padding: 0.8rem;
+  }
+
+
+  /*
+   * Remove Zensical's fixed 1.6rem × 1.6rem logo box.
+   *
+   * Without this override the complete two-logo lockup is forced into a tiny
+   * square, making both organisational logos unreadable.
+   */
+  .md-nav .md-nav__title[for="__drawer"] .md-logo {
+    width: auto;
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /*
+   * Restore our normal horizontal two-logo lockup inside the first row of the
+   * drawer's grid.
+   */
+  .md-nav
+    .md-nav__title[for="__drawer"]
+    .md-logo
+    .brand-logos {
+    display: flex;
+    align-items: center;
+    gap: var(--logo-gap);
+    width: fit-content;
+  }
+
+
+  /*
+   * Zensical also applies `height: 100%` to images inside its drawer logo,
+   * again based on the assumption of one square logo.
+   *
+   * These selectors explicitly restore the independently configured heights
+   * from the custom properties defined near the top of the stylesheet.
+   */
+  .md-nav
+    .md-nav__title[for="__drawer"]
+    .md-logo
+    .brand-logo--su {
+    width: auto;
+    height: var(--logo-su-height);
+    max-width: none;
+  }
+
+  .md-nav
+    .md-nav__title[for="__drawer"]
+    .md-logo
+    .brand-logo--nhp {
+    width: auto;
+    height: var(--logo-nhp-height);
+    max-width: none;
+  }
+
+
+  /*
+   * Keep the divider visually proportional to the resized drawer logos.
+   *
+   * Its height still comes from the same shared custom property used by the
+   * desktop lockup, so logo sizing remains controlled in one place.
+   */
+  .md-nav
+    .md-nav__title[for="__drawer"]
+    .brand-logo-divider {
+    height: var(--logo-divider-height);
+  }
+}
