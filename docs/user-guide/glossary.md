@@ -14,7 +14,7 @@ icon: lucide/book-a
 | `FRM`    | formula |
 | `INT`    | interventional |
 | `IR`    | interventional radiology |
-| `LAB`    | laboratorye |
+| `LAB`    | laboratory |
 | `LOS`    | length of stay |
 | `OCC`       | occupancy  |
 | `OP`    | outpatient |
