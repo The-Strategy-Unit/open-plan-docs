@@ -102,7 +102,6 @@
   align-items: center;
 }
 
-
 /* ==========================================================================
    "Docs" badge
    ==========================================================================
@@ -412,45 +411,59 @@
 }
 
 /* ==========================================================================
-   Medium / narrow screens
+   Responsive header
    ==========================================================================
 
-   76.25em is approximately 1220px when the browser base font size is 16px.
+  Match Zensical's compact-navigation breakpoint exactly.
 
-   At this width the full desktop header begins to become crowded by:
-     - two organisational logos;
-     - the long OpenPlan product name;
-     - theme/search controls;
-     - GitHub repository information.
+  The seemingly unusual value (76.234375rem) is intentional. Using a rounded
+  value such as 76.25rem causes these custom overrides to activate slightly
+  before Zensical switches to its compact navigation, producing a narrow
+  intermediate layout at exactly 1220px.
 
-   Rather than continually shrinking the branding, we progressively simplify
-   the header:
-     1. repository text is hidden;
-     2. the desktop logo lockup is hidden;
-     3. the same branding remains available in the navigation drawer.
+     - GitHub repository metadata is hidden, leaving the source icon;
+     - Give feedback becomes an icon-only action;
+     - the desktop two-logo lockup is hidden;
+     - the same organisational branding remains available in the drawer.
 
-   This breakpoint intentionally corresponds to the layout at which Zensical
-   begins relying more heavily on its drawer navigation rather than waiting
-   for a very narrow phone-sized viewport.
+   Search is deliberately not overridden here. Zensical manages its own
+   responsive search behaviour and reduces the search control to an icon at a
+   narrower breakpoint. Keeping that behaviour in the theme avoids duplicating
+   framework logic in this stylesheet.
    ========================================================================== */
 
-@media screen and (max-width: 76.25em) {
+@media screen and (max-width: 76.234375rem) {
 
-  /*
-   * Hide the textual GitHub repository name/stats in the main header.
-   * The source/GitHub control can remain accessible without consuming a large
-   * amount of horizontal space.
-   */
+  /* Retain the GitHub/source icon but remove repository metadata. */
   .md-header .md-source__repository {
     display: none;
   }
 
 
+  /* Reduce the labelled feedback control to an icon-only action. */
+  .md-header__feedback {
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin-left: 0.2rem;
+    gap: 0;
+    background: transparent;
+  }
+
+  .md-header__feedback-label {
+    display: none;
+  }
+
+  .md-header__feedback-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+
   /*
-   * Remove the two-logo lockup from the compact header.
-   *
-   * We deliberately hide it rather than shrinking it to an unreadable size.
-   * The logos are instead shown prominently in the navigation drawer below.
+   * Hide rather than shrink the two organisational logos to an unreadable
+   * size. The same branding remains available in the navigation drawer.
    */
   .md-header .md-header__button.md-logo {
     display: none;
@@ -461,72 +474,39 @@
      Navigation drawer branding
      ========================================================================
 
-     Zensical's drawer title normally assumes a SINGLE square logo and applies
-     approximately the following defaults:
+     Zensical's drawer title assumes a single square logo. The selectors below
+     intentionally target ONLY the drawer title whose `for` attribute is
+     `__drawer`, allowing the two-logo lockup to use its natural dimensions
+     without affecting nested navigation titles.
 
-         display: flex;
-         align-items: center;
-
-     and:
-
-         .md-logo {
-           width: 1.6rem;
-           height: 1.6rem;
-         }
-
-     Those defaults work for a small icon, but not for two horizontally
-     arranged organisational logos.
-
-     The following selectors intentionally target ONLY the drawer title whose
-     `for` attribute is `__drawer`. This avoids changing nested navigation
-     titles such as "User Guide", "Functional Areas" and "Technical
-     Information".
-
-     Do not simplify this to a broad `.md-nav__title` selector: doing so can
+     Do not broaden these selectors to every `.md-nav__title`: doing so can
      interfere with nested navigation layout.
      ======================================================================== */
 
-
   /*
-   * Change the main drawer title from Zensical's horizontal flex layout into
-   * a single-column grid:
+   * Arrange the drawer heading as:
    *
    *     [ Strategy Unit | NHP logos ]
    *     OpenPlan Hospital Capacity Conversion Model
-   *
-   * The logo occupies the first row and the site title naturally occupies
-   * the second.
    */
   .md-nav .md-nav__title[for="__drawer"] {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     align-items: start;
-
     gap: 0.6rem;
     padding: 0.8rem;
   }
 
-
-  /*
-   * Remove Zensical's fixed 1.6rem × 1.6rem logo box.
-   *
-   * Without this override the complete two-logo lockup is forced into a tiny
-   * square, making both organisational logos unreadable.
-   */
+  /* Remove Zensical's fixed square logo box in the main drawer title. */
   .md-nav .md-nav__title[for="__drawer"] .md-logo {
     width: auto;
     height: auto;
-
     margin: 0;
     padding: 0;
   }
 
-
-  /*
-   * Restore our normal horizontal two-logo lockup inside the first row of the
-   * drawer's grid.
-   */
+  /* Restore the horizontal two-logo lockup inside the drawer. */
   .md-nav
     .md-nav__title[for="__drawer"]
     .md-logo
@@ -537,13 +517,9 @@
     width: fit-content;
   }
 
-
   /*
-   * Zensical also applies `height: 100%` to images inside its drawer logo,
-   * again based on the assumption of one square logo.
-   *
-   * These selectors explicitly restore the independently configured heights
-   * from the custom properties defined near the top of the stylesheet.
+   * Zensical applies drawer image sizing for a single logo. Reassert the
+   * independently configured dimensions for each organisational mark.
    */
   .md-nav
     .md-nav__title[for="__drawer"]
@@ -563,13 +539,6 @@
     max-width: none;
   }
 
-
-  /*
-   * Keep the divider visually proportional to the resized drawer logos.
-   *
-   * Its height still comes from the same shared custom property used by the
-   * desktop lockup, so logo sizing remains controlled in one place.
-   */
   .md-nav
     .md-nav__title[for="__drawer"]
     .brand-logo-divider {
