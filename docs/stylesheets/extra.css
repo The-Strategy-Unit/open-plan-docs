@@ -21,7 +21,6 @@
    layout and previously caused large gaps in the mobile drawer.
    ========================================================================== */
 
-
 /* ==========================================================================
    Compact tables
    ==========================================================================
@@ -141,7 +140,6 @@
   margin-left: 8px;
 }
 
-
 /* ==========================================================================
    Header title alignment
    ==========================================================================
@@ -176,7 +174,6 @@
   line-height: 1.2;
 }
 
-
 /* ==========================================================================
    Two-logo lockup
    ==========================================================================
@@ -210,7 +207,6 @@
   --logo-divider-height: 1.4rem;
 }
 
-
 /*
  * Container around both logos and the divider.
  *
@@ -223,7 +219,6 @@
   gap: var(--logo-gap);
   width: auto;
 }
-
 
 /*
  * Shared base styling for each individual logo image.
@@ -238,7 +233,6 @@
   max-width: none;
   object-fit: contain;
 }
-
 
 /* --------------------------------------------------------------------------
    Individual logo heights
@@ -268,7 +262,6 @@
   width: auto;
 }
 
-
 /*
  * Subtle divider between the two organisations.
  *
@@ -287,7 +280,6 @@
   background: currentColor;
   opacity: 0.2;
 }
-
 
 /* ==========================================================================
    Desktop logo link
@@ -319,7 +311,6 @@
   display: flex;
   align-items: center;
 }
-
 
 /* ==========================================================================
    Site title sizing
@@ -433,12 +424,10 @@
    ========================================================================== */
 
 @media screen and (max-width: 76.234375rem) {
-
   /* Retain the GitHub/source icon but remove repository metadata. */
   .md-header .md-source__repository {
     display: none;
   }
-
 
   /* Reduce the labelled feedback control to an icon-only action. */
   .md-header__feedback {
@@ -460,7 +449,6 @@
     height: 1.2rem;
   }
 
-
   /*
    * Hide rather than shrink the two organisational logos to an unreadable
    * size. The same branding remains available in the navigation drawer.
@@ -468,7 +456,6 @@
   .md-header .md-header__button.md-logo {
     display: none;
   }
-
 
   /* ========================================================================
      Navigation drawer branding
@@ -507,10 +494,7 @@
   }
 
   /* Restore the horizontal two-logo lockup inside the drawer. */
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logos {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logos {
     display: flex;
     align-items: center;
     gap: var(--logo-gap);
@@ -521,27 +505,19 @@
    * Zensical applies drawer image sizing for a single logo. Reassert the
    * independently configured dimensions for each organisational mark.
    */
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logo--su {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logo--su {
     width: auto;
     height: var(--logo-su-height);
     max-width: none;
   }
 
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logo--nhp {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logo--nhp {
     width: auto;
     height: var(--logo-nhp-height);
     max-width: none;
   }
 
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .brand-logo-divider {
+  .md-nav .md-nav__title[for="__drawer"] .brand-logo-divider {
     height: var(--logo-divider-height);
   }
 }
