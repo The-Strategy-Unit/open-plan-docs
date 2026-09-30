@@ -4,7 +4,7 @@ icon: lucide/road
 # Development roadmap
 
 The roadmap is for anyone who needs to know about planned changes to the 
-OpenPlan Capacity Conversion Tool. 
+OpenPlan Hospital Capacity Model. 
 It contains high-level, indicative areas of development that may
 be subject to change in timing and/or scope.
 

@@ -12,7 +12,7 @@ workbook. Each row represents a different type of resource.
 
 ## Understanding the estimates
 
-The OpenPlan [demand model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) 
+The OpenPlan Hospital [Demand Model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) 
 is _probabilistic_, which means it produces a range of 
 possible activity estimates rather than a single value. 
 We convert each of these into an estimate of the capacity required.
@@ -26,7 +26,7 @@ We summarise these capacity estimates using three values:
 Together, P10 and P90 describe the middle 80% of the capacity estimates generated 
 by the model.
 
-For more information on uncertainty use in the OpenPlan demand model, see [the explanation here](https://connect.strategyunitwm.nhs.uk/nhp/project_information/modelling_methodology/modelling_uncertainty.html).
+For more information on uncertainty use in the OpenPlan Hospital Demand Model, see [the explanation here](https://connect.strategyunitwm.nhs.uk/nhp/project_information/modelling_methodology/modelling_uncertainty.html).
 
 ## Example 
 
