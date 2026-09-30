@@ -26,7 +26,7 @@ Outpatient face-to-face consultations sub-divided by first and follow-up.
 
 Primary workload object: consultation hours
 
-$$\text{effective consult time minutes} = \text{consult time minutes} + (\text{DNA rate} \times \text{DNA time minutes})$$
+$$\text{effective consult time minutes} = \text{consult time minutes} + \left(\frac{\text{DNA rate}}{1-\text{DNA rate}}\times \text{DNA time}\right)$$
 
 $$\text{consultation hours} = \frac{\text{attendances} \times \text{effective consult time minutes}} {60}$$
 
