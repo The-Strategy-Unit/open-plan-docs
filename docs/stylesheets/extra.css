@@ -340,6 +340,26 @@
   margin-left: 0;
 }
 
+/* ==========================================================================
+   User Guide customisation
+   ========================================================================== */
+
+/* User Guide: hide TOC at every width, retaining its space */
+.md-main__inner:has(#user-guide) .md-sidebar--secondary {
+  visibility: hidden;
+}
+
+/* User Guide: retain desktop navigation space */
+@media (min-width: 76.25em) {
+  .md-main__inner:has(#user-guide) .md-sidebar--primary {
+    visibility: hidden;
+  }
+}
+
+/* User Guide: space between task icons and heading text */
+.md-content:has(#user-guide) h3 .twemoji {
+  margin-inline-end: 0.4em;
+}
 
 /* ==========================================================================
    Medium / narrow screens
