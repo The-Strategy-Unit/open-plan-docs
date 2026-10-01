@@ -1,7 +1,3 @@
----
-icon: lucide/computer
----
-
 # Developer Information
 
 All the code for the OpenPlan Hospital Capacity Model is open source.

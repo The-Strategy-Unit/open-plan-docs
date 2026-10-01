@@ -24,8 +24,7 @@ nav = [
         {"Explain my Results" = "user-guide/explain-my-results.md"},
         {"FAQs" = "user-guide/faq.md"},
         {"Glossary" = "user-guide/glossary.md"},
-        {"Contact Us" = "user-guide/contact-us.md"},
-        {"Developer Info" = "user-guide/dev_info.md"}
+        {"Contact Us" = "user-guide/contact-us.md"}
     ]},
     {"Functional Areas" = [
         "functional-areas/index.md",
@@ -76,7 +75,8 @@ nav = [
         ]}, 
         {"Calculation Traceability Matrix" = "technical-information/calculation-traceability-matrix.md"},
         {"QA Templates" = "technical-information/qa-templates.md"},
-        {"Episode methodology" = "technical-information/episode-level.md"}
+        {"Episode methodology" = "technical-information/episode-level.md"},
+        {"Developer Info" = "technical-information/dev_info.md"}
     ]},
         {"Development Roadmap" = ["roadmap/index.md"]}
 ]
