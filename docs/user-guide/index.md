@@ -5,7 +5,7 @@ icon: lucide/signpost-big
 
 This guide explains how to use the [OpenPlan Capacity App&nbsp;↗](https://connect.strategyunitwm.nhs.uk/openplan/capacity-conversion/), how the Capacity Model works and how to interpret your results.
 
-### :lucide-rocket: [Convert a demand scenario](quick-start/)
+### :lucide-rocket: [Convert a demand scenario](convert-scenario/)
 
 Learn how to use the OpenPlan Capacity App.
 
@@ -13,7 +13,7 @@ Learn how to use the OpenPlan Capacity App.
 
 Learn how hospital activity, pathway assumptions and operational assumptions are used to estimate capacity requirements.
 
-### :lucide-chart-no-axes-column: [Understand your results](explain-my-results/)
+### :lucide-chart-no-axes-column: [Understand your results](understand-results/)
 
 Explore the results workbook and understand the capacity estimates.
 
