@@ -3,7 +3,7 @@ icon: lucide/signpost-big
 ---
 # User Guide
 
-This guide explains how to use the [OpenPlan Capacity App&nbsp;↗](https://connect.strategyunitwm.nhs.uk/openplan/capacity-conversion/), how the model works and how to interpret your results.
+This guide explains how to use the [OpenPlan Capacity App&nbsp;↗](https://connect.strategyunitwm.nhs.uk/openplan/capacity-conversion/), how the Capacity Model works and how to interpret your results.
 
 ### :lucide-rocket: [Convert a demand scenario](quick-start/)
 
