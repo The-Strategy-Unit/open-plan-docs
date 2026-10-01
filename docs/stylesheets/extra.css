@@ -21,7 +21,6 @@
    layout and previously caused large gaps in the mobile drawer.
    ========================================================================== */
 
-
 /* ==========================================================================
    Compact tables
    ==========================================================================
@@ -102,7 +101,6 @@
   align-items: center;
 }
 
-
 /* ==========================================================================
    "Docs" badge
    ==========================================================================
@@ -142,7 +140,6 @@
   margin-left: 8px;
 }
 
-
 /* ==========================================================================
    Header title alignment
    ==========================================================================
@@ -177,7 +174,6 @@
   line-height: 1.2;
 }
 
-
 /* ==========================================================================
    Two-logo lockup
    ==========================================================================
@@ -211,7 +207,6 @@
   --logo-divider-height: 1.4rem;
 }
 
-
 /*
  * Container around both logos and the divider.
  *
@@ -224,7 +219,6 @@
   gap: var(--logo-gap);
   width: auto;
 }
-
 
 /*
  * Shared base styling for each individual logo image.
@@ -239,7 +233,6 @@
   max-width: none;
   object-fit: contain;
 }
-
 
 /* --------------------------------------------------------------------------
    Individual logo heights
@@ -269,7 +262,6 @@
   width: auto;
 }
 
-
 /*
  * Subtle divider between the two organisations.
  *
@@ -288,7 +280,6 @@
   background: currentColor;
   opacity: 0.2;
 }
-
 
 /* ==========================================================================
    Desktop logo link
@@ -321,7 +312,6 @@
   align-items: center;
 }
 
-
 /* ==========================================================================
    Site title sizing
    ========================================================================== */
@@ -340,6 +330,21 @@
   margin-left: 0;
 }
 
+/* ==========================================================================
+   Home page customisation
+   ========================================================================== */
+
+/* Home page: hide TOC at every width, retaining its space */
+.md-main__inner:has(#welcome-to-openplan) .md-sidebar--secondary {
+  visibility: hidden;
+}
+
+/* Home page: retain desktop navigation space */
+@media (min-width: 76.25em) {
+  .md-main__inner:has(#welcome-to-openplan) .md-sidebar--primary {
+    visibility: hidden;
+  }
+}
 
 /* ==========================================================================
    Medium / narrow screens
@@ -365,7 +370,6 @@
    ========================================================================== */
 
 @media screen and (max-width: 76.25em) {
-
   /*
    * Hide the textual GitHub repository name/stats in the main header.
    * The source/GitHub control can remain accessible without consuming a large
@@ -374,7 +378,6 @@
   .md-header .md-source__repository {
     display: none;
   }
-
 
   /*
    * Remove the two-logo lockup from the compact header.
@@ -385,7 +388,6 @@
   .md-header .md-header__button.md-logo {
     display: none;
   }
-
 
   /* ========================================================================
      Navigation drawer branding
@@ -416,7 +418,6 @@
      interfere with nested navigation layout.
      ======================================================================== */
 
-
   /*
    * Change the main drawer title from Zensical's horizontal flex layout into
    * a single-column grid:
@@ -437,7 +438,6 @@
     padding: 0.8rem;
   }
 
-
   /*
    * Remove Zensical's fixed 1.6rem × 1.6rem logo box.
    *
@@ -452,21 +452,16 @@
     padding: 0;
   }
 
-
   /*
    * Restore our normal horizontal two-logo lockup inside the first row of the
    * drawer's grid.
    */
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logos {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logos {
     display: flex;
     align-items: center;
     gap: var(--logo-gap);
     width: fit-content;
   }
-
 
   /*
    * Zensical also applies `height: 100%` to images inside its drawer logo,
@@ -475,24 +470,17 @@
    * These selectors explicitly restore the independently configured heights
    * from the custom properties defined near the top of the stylesheet.
    */
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logo--su {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logo--su {
     width: auto;
     height: var(--logo-su-height);
     max-width: none;
   }
 
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .md-logo
-    .brand-logo--nhp {
+  .md-nav .md-nav__title[for="__drawer"] .md-logo .brand-logo--nhp {
     width: auto;
     height: var(--logo-nhp-height);
     max-width: none;
   }
-
 
   /*
    * Keep the divider visually proportional to the resized drawer logos.
@@ -500,9 +488,7 @@
    * Its height still comes from the same shared custom property used by the
    * desktop lockup, so logo sizing remains controlled in one place.
    */
-  .md-nav
-    .md-nav__title[for="__drawer"]
-    .brand-logo-divider {
+  .md-nav .md-nav__title[for="__drawer"] .brand-logo-divider {
     height: var(--logo-divider-height);
   }
 }
