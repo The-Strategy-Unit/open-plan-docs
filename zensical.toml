@@ -23,8 +23,7 @@ nav = [
         {"Methodology" = "user-guide/methodology.md"},
         {"Understand your Results" = "user-guide/understand-results.md"},
         {"FAQs" = "user-guide/faq.md"},
-        {"Glossary" = "user-guide/glossary.md"},
-        {"Contact Us" = "user-guide/contact-us.md"}
+        {"Glossary" = "user-guide/glossary.md"}
     ]},
     {"Functional Areas" = [
         "functional-areas/index.md",
