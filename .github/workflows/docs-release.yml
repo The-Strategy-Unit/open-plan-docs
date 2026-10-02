@@ -1,0 +1,36 @@
+name: Deploy to prod
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies & build site
+        run: |
+          uv run --group dev zensical build
+
+      - name: Deploy static site to Posit Connect
+        env:
+          CONNECT_SERVER: ${{ secrets.CONNECT_SERVER }}
+          CONNECT_API_KEY: ${{ secrets.CONNECT_API_KEY }}
+        run: |
+          uvx --from rsconnect-python rsconnect deploy html \
+            ./site \
+            --title "OpenPlan Hospital Capacity Conversion: Model Documentation" \
+            --app-id bd1cb3e3-3c80-47a3-b7ca-6b1702fc9f42
+            
