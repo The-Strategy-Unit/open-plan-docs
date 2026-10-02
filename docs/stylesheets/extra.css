@@ -383,6 +383,11 @@
   margin-left: 0;
 }
 
+.md-typeset figure figcaption .caption-note {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
 /* ==========================================================================
    Feedback control
    ==========================================================================
