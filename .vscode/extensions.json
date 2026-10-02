@@ -2,7 +2,10 @@
   "recommendations": [
     "charliermarsh.ruff",
     "darkriszty.markdown-table-prettify", /* aligns MD tables */
+    "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
     "mechatroner.rainbow-csv",
+    "monosans.djlint",
     "ms-python.debugpy",
     "ms-python.python",
     "ms-python.vscode-pylance",
