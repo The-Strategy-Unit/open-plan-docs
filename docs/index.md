@@ -14,4 +14,4 @@ framework for converting healthcare activity into estimates of capacity requirem
 :lucide-sigma: If you would like the detail on how the model works, have a look at the
 [technical information](technical-information).
 
-To contact us about this model, please use the 'Give Feedback' button located on the interface.
+Have a question or suggestion? Use **Give feedback** to contact us about the model.
