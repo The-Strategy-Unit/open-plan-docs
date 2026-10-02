@@ -350,6 +350,8 @@
 .md-content:has(#user-guide) h3 .twemoji {
   margin-inline-end: 0.4em;
 }
+
+/* ==========================================================================
    Home page customisation
    ========================================================================== */
 
@@ -363,6 +365,22 @@
   .md-main__inner:has(#welcome-to-openplan) .md-sidebar--primary {
     visibility: hidden;
   }
+}
+
+/* Home page: space between task icons and heading text */
+.md-content:has(#welcome-to-openplan) h3 .twemoji {
+  margin-inline-end: 0.4em;
+}
+
+/* ==========================================================================
+   Figure caption style
+   ========================================================================== */
+
+.md-typeset figure figcaption {
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 0;
 }
 
 /* ==========================================================================
