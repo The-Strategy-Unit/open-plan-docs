@@ -20,4 +20,4 @@ Once you have made your changes, view them locally with the command `uv run zens
 
 ## Publishing
 
-This website is automatically [published to GitHub pages](https://the-strategy-unit.github.io/open-plan-docs/) via a GitHub workflow on merge to the `main` branch.
+This website is automatically [published](https://connect.strategyunitwm.nhs.uk/capacity-model-docs/) via a GitHub release.
