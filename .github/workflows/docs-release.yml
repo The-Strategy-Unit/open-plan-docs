@@ -31,6 +31,6 @@ jobs:
         run: |
           uvx --from rsconnect-python rsconnect deploy html \
             ./site \
-            --title "OpenPlan Hospital Capacity Conversion: Model Documentation" \
+            --title "OpenPlan Hospital Capacity Model Documentation" \
             --app-id bd1cb3e3-3c80-47a3-b7ca-6b1702fc9f42
             
