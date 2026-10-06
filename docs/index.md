@@ -4,7 +4,7 @@ The **OpenPlan Hospital Capacity Model** translates estimates of future hospital
 
 Developed to support the **New Hospital Programme**, it provides a a standardised, transparent and auditable approach to capacity planning, with fully documented assumptions about how future services will be delivered and operated.
 
-This site documents the model’s methods and assumptions. To run the model and download results, use the [OpenPlan Capacity App&nbsp;↗](https://connect.strategyunitwm.nhs.uk/openplan/capacity-conversion/).
+This site documents the model’s methods and assumptions. To run the model and download results, use the [OpenPlan Capacity App&nbsp;↗](https://connect.strategyunitwm.nhs.uk/openplan/capacity-model/).
 
 ### :lucide-route: [Understand the model](user-guide/methodology)
 Start with an overview of how demand is translated into capacity.
