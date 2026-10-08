@@ -269,7 +269,7 @@
 - id: CLASS_NO_BIRTH_EVENT
   type: null
   definition: No birth event recorded
-  logic: null
+  logic: NOT CLASS_BIRTH_EVENT
   variables: null
   parent: CLASS_MATERNITY
   notes: null
@@ -277,7 +277,7 @@
 - id: CLASS_BIRTH_EVENT
   type: null
   definition: Birth event recorded
-  logic: null
+  logic: epitype is in ["2", "5"], delplac_1 is NOT in ["1", "5", "6"], classpat is NOT in ["3", "4"], epistat == "3"
   variables: null
   parent: CLASS_MATERNITY
   notes: null
