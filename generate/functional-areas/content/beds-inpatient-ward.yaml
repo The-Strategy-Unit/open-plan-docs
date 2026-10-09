@@ -1,0 +1,50 @@
+functional_area_id: BEDS_INPATIENT_WARD
+title: Inpatient ward beds
+definition: An inpatient ward bed is a hospital bed used for the ongoing care, treatment, and overnight stay of patients admitted to a hospital ward.
+activity_classification: Includes elective and non-elective inpatient activity. Ward capacity required is based on the bed-days remaining after assessment and critical care allocations have been deducted.
+notes: |-
+  * Ward capacity is dependent on the correctness of upstream assessment bed-day and critical care bed-day allocations.
+  * Zero-day admissions require explicit conversion into fractional bed-days because they do not generate overnight bed-days.
+workload_derivation: |-
+  Ward bed requirements are calculated from inpatient bed-days remaining after workload allocated to specialist settings such as assessment beds and critical care has been removed. Ward beds also include an adjustment for zero-day admissions as these admissions don't generate overnight bed-days.
+
+  For each subgroup, convert zero-day spells into bed-days using the assumed zero-day length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Zero-day bed-days}
+      =
+      \text{Zero-day spells}
+      \times
+      \frac{\text{Zero-day length of stay (minutes)}}{1{,}440}
+      $$
+  
+  Add these to overnight bed-days, then deduct bed-days allocated to specialist settings.
+
+  - Assessment bed-days are deducted only from non-elective subgroups.
+  - Critical care bed-days are deducted where workload has been allocated to critical care.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Ward bed-days}
+      &= \text{Overnight bed-days} \\
+      &\quad + \text{Zero-day bed-days} \\
+      &\quad - \text{Assessment bed-days} \\
+      &\quad - \text{Critical care bed-days}
+      \end{aligned}
+      $$
+
+capacity_conversion: |-
+  For each subgroup, divide ward bed-days by the service's annual operating days and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required ward beds}
+      =
+      \frac{\text{Ward bed-days}}
+      {\text{Annual operational days} \times \text{Occupancy rate}}
+      $$

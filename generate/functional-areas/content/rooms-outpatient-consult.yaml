@@ -1,0 +1,44 @@
+functional_area_id: ROOMS_OUTPATIENT_CONSULT
+title: Outpatient consultation rooms
+definition: An outpatient consultation room is a clinical space where patients meet healthcare professionals for assessments, advice, diagnosis, follow-up care, and treatment planning without being admitted to hospital.
+activity_classification: Includes both first and follow-up face-to-face outpatient consultations.
+notes: Consultation durations are represented using subgroup-level averages and may not reflect variation between specialties.
+workload_derivation: |-
+  Separately for first and follow-up consultations, calculate the effective consultation time by adding an allowance for time lost to appointments where patients do not attend (DNA).
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Effective consult time (minutes)}
+      &= \text{Consult time (minutes)} \\
+      &\quad + \left(
+      \frac{\text{DNA rate}}{1-\text{DNA rate}}
+      \times \text{DNA time (minutes)}
+      \right)
+      \end{aligned}
+      $$
+
+  Multiply attended consultations by the effective consultation time, then convert minutes into hours.
+
+  !!! quote ""
+
+      $$
+      \text{Consultation hours}
+      =
+      \frac{\text{Attendances}
+      \times
+      \text{Effective consult time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Divide total consultation hours by the service's annual operating hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required consultation rooms}
+      =
+      \frac{\text{Consultation hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

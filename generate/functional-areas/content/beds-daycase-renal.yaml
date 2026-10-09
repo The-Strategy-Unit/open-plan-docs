@@ -1,0 +1,33 @@
+functional_area_id: BEDS_DAYCASE_RENAL
+title: Daycase renal beds
+definition: A renal daycase bed is a treatment space for scheduled renal therapies, such as dialysis,
+  where patients receive treatment without staying overnight.
+activity_classification: |-
+  Renal daycase activity includes spells in renal medicine (treatment specialty 361) meeting either of these criteria:
+
+  * Elective admissions with no overnight stay.
+  * Regular day or night admissions.
+notes: |-
+  * Renal activity is modelled separately from general daycase activity.
+  * Annual session capacity incorporates scheduling, operational days and utilisation, including time for cleaning, setup and turnover.
+workload_derivation: |-
+  One renal daycase spell is assumed to represent one treatment session.
+
+  !!! quote ""
+
+      $$
+      \text{Treatment sessions}
+      =
+      \text{Renal daycase spells}
+      $$
+
+capacity_conversion: |-
+  Divide treatment sessions by the annual session capacity per bed to calculate the required number of renal daycase beds.
+
+  !!! quote ""
+
+      $$
+      \text{Required renal daycase beds}
+      =
+      \frac{\text{Treatment sessions}} {\text{Annual session capacity per bed}}
+      $$

@@ -1,0 +1,785 @@
+functional_areas:
+  - id: BAYS_AE
+    output_type: bays
+    care_setting: AE
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_FLOW_SPACE
+    calculations:
+      - subgroup_id: adult_minor
+        subgroup_label: Adult minor
+        classification:
+          all_of:
+            - CLASS_AE
+            - CLASS_AGE_ADULT
+            - CLASS_AE_MINOR
+        assumption_ids:
+          - AE_ADULT_MINOR_LOS
+          - AE_ADULT_MINOR_UTIL
+          - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_MINOR_AE_BAYS
+      - subgroup_id: child_minor
+        subgroup_label: Child minor
+        classification:
+          all_of:
+            - CLASS_AE
+            - CLASS_AGE_CHILD
+            - CLASS_AE_MINOR
+        assumption_ids:
+          - AE_CHILD_MINOR_LOS
+          - AE_CHILD_MINOR_UTIL
+          - AE_BAYS_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: CHILD_MINOR_AE_BAYS
+
+  - id: BEDS_AE
+    output_type: beds
+    care_setting: AE
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_FLOW_SPACE
+    calculations:
+      - subgroup_id: adult_major
+        subgroup_label: Adult major
+        classification:
+          all_of:
+            - CLASS_AE
+            - CLASS_AGE_ADULT
+            - CLASS_AE_MAJOR
+        assumption_ids:
+          - AE_ADULT_MAJOR_LOS
+          - AE_ADULT_MAJOR_UTIL
+          - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_MAJOR_AE_BEDS
+      - subgroup_id: child_major
+        subgroup_label: Child major
+        classification:
+          all_of:
+            - CLASS_AE
+            - CLASS_AGE_CHILD
+            - CLASS_AE_MAJOR
+        assumption_ids:
+          - AE_CHILD_MAJOR_LOS
+          - AE_CHILD_MAJOR_UTIL
+          - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: CHILD_MAJOR_AE_BEDS
+      - subgroup_id: resus
+        subgroup_label: Resus
+        classification:
+          all_of:
+            - CLASS_AE
+            - CLASS_AE_RESUS
+        assumption_ids:
+          - AE_RESUS_LOS
+          - AE_RESUS_UTIL
+          - AE_BEDS_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: RESUS_AE_BEDS
+
+  - id: BEDS_CRITICAL_CARE
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: bed_days
+    archetype_id: FRM_BED_OCCUPANCY
+    calculations:
+      - subgroup_id: adult
+        subgroup_label: Adult
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+        assumption_ids:
+          - CRITICAL_CARE_ADULT_PERCENT_OVERNIGHT_BED_DAYS
+          - CRITICAL_CARE_ADULT_OCC
+          - CRITICAL_CARE_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_CRITICAL_CARE_BEDS
+      - subgroup_id: paediatric
+        subgroup_label: Paediatric
+        classification:
+          all_of:
+            - CLASS_AGE_PAEDIATRIC
+        assumption_ids:
+          - CRITICAL_CARE_PAEDIATRIC_PERCENT_OVERNIGHT_BED_DAYS
+          - CRITICAL_CARE_PAEDIATRIC_OCC
+          - CRITICAL_CARE_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_CRITICAL_CARE_BEDS
+
+  - id: BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_RECOVERY_OCCUPANCY
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_ENDOSCOPY
+        assumption_ids:
+          - DAYCASE_ENDOSCOPY_RECOVERY_LOS
+          - DAYCASE_ENDOSCOPY_RECOVERY_OCC
+          - DAYCASE_ENDOSCOPY_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: DAYCASE_ENDOSCOPY_RECOVERY_BEDS
+
+  - id: BEDS_DAYCASE_RECOVERY
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_RECOVERY_OCCUPANCY
+    calculations:
+      - subgroup_id: adult_medical
+        subgroup_label: Adult medical
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_AGE_ADULT
+            - CLASS_MEDICAL
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_RECOVERY_ADULT_MEDICAL_LOS
+          - DAYCASE_RECOVERY_ADULT_MEDICAL_OCC
+          - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_MEDICAL_DAYCASE_RECOVERY_BEDS
+      - subgroup_id: adult_surgical
+        subgroup_label: Adult surgical
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_AGE_ADULT
+            - CLASS_SURGICAL
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_RECOVERY_ADULT_SURGICAL_LOS
+          - DAYCASE_RECOVERY_ADULT_SURGICAL_OCC
+          - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_SURGICAL_DAYCASE_RECOVERY_BEDS
+      - subgroup_id: paediatric_medical
+        subgroup_label: Paediatric medical
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_AGE_CHILD
+            - CLASS_MEDICAL
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_LOS
+          - DAYCASE_RECOVERY_PAEDIATRIC_MEDICAL_OCC
+          - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: PAEDIATRIC_MEDICAL_DAYCASE_RECOVERY_BEDS
+      - subgroup_id: paediatric_surgical
+        subgroup_label: Paediatric surgical
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_AGE_CHILD
+            - CLASS_SURGICAL
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - BEDS_DAYCASE_ENDOSCOPY_RECOVERY
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_LOS
+          - DAYCASE_RECOVERY_PAEDIATRIC_SURGICAL_OCC
+          - DAYCASE_RECOVERY_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: PAEDIATRIC_SURGICAL_DAYCASE_RECOVERY_BEDS
+
+  - id: BEDS_DAYCASE_RENAL
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: treatment_sessions
+    archetype_id: FRM_SESSION_CAPACITY
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          any_of:
+            - all_of:
+                - CLASS_ELECTIVE
+                - CLASS_ZERO_LOS
+                - CLASS_RENAL
+            - all_of:
+                - CLASS_REGULAR_DAY_NIGHT
+                - CLASS_RENAL
+        assumption_ids:
+          - DAYCASE_RENAL_ANNUAL_SESSION_CAPACITY_PER_BED
+        capacity_output: DAYCASE_RENAL_BEDS
+
+  - id: BEDS_INPATIENT_ASSESSMENT
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: bed_days
+    archetype_id: FRM_BED_OCCUPANCY
+    calculations:
+      - subgroup_id: adult
+        subgroup_label: Adult
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+            - CLASS_NON_ELECTIVE
+            - any_of:
+                - CLASS_MEDICAL
+                - CLASS_SURGICAL
+        assumption_ids:
+          - INPATIENT_ASSESSMENT_ADULT_NON_ELECTIVE_MEDICAL_LOS
+          - INPATIENT_ASSESSMENT_ADULT_NON_ELECTIVE_SURGICAL_LOS
+          - INPATIENT_ASSESSMENT_ADULT_OCC
+          - INPATIENT_ASSESSMENT_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_INPATIENT_ASSESSMENT_BEDS
+      - subgroup_id: paediatric
+        subgroup_label: Paediatric
+        classification:
+          all_of:
+            - CLASS_AGE_PAEDIATRIC
+            - CLASS_NON_ELECTIVE
+            - any_of:
+                - CLASS_MEDICAL
+                - CLASS_SURGICAL
+        assumption_ids:
+          - INPATIENT_ASSESSMENT_PAEDIATRIC_NON_ELECTIVE_MEDICAL_LOS
+          - INPATIENT_ASSESSMENT_PAEDIATRIC_NON_ELECTIVE_SURGICAL_LOS
+          - INPATIENT_ASSESSMENT_PAEDIATRIC_OCC
+          - INPATIENT_ASSESSMENT_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_INPATIENT_ASSESSMENT_BEDS
+
+  - id: BEDS_INPATIENT_WARD
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: bed_days
+    archetype_id: FRM_BED_OCCUPANCY
+    calculations:
+      - subgroup_id: adult_elective_medical
+        subgroup_label: Adult elective medical
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+            - CLASS_ELECTIVE
+            - CLASS_MEDICAL
+        deduct_workload_from:
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_ADULT_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+          - WARD_ADULT_ELECTIVE_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_ELECTIVE_INPATIENT_WARD_BEDS
+      - subgroup_id: adult_elective_surgical
+        subgroup_label: Adult elective surgical
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+            - CLASS_ELECTIVE
+            - CLASS_SURGICAL
+        deduct_workload_from:
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_ADULT_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+          - WARD_ADULT_ELECTIVE_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_ELECTIVE_INPATIENT_WARD_BEDS
+      - subgroup_id: adult_non_elective_medical
+        subgroup_label: Adult non-elective medical
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+            - CLASS_NON_ELECTIVE
+            - CLASS_MEDICAL
+        deduct_workload_from:
+          - BEDS_INPATIENT_ASSESSMENT
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_ADULT_NON_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+          - WARD_ADULT_NON_ELECTIVE_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_NON_ELECTIVE_INPATIENT_WARD_BEDS
+      - subgroup_id: adult_non_elective_surgical
+        subgroup_label: Adult non-elective surgical
+        classification:
+          all_of:
+            - CLASS_AGE_ADULT
+            - CLASS_NON_ELECTIVE
+            - CLASS_SURGICAL
+        deduct_workload_from:
+          - BEDS_INPATIENT_ASSESSMENT
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_ADULT_NON_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+          - WARD_ADULT_NON_ELECTIVE_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ADULT_NON_ELECTIVE_INPATIENT_WARD_BEDS
+      - subgroup_id: paediatric_elective_medical
+        subgroup_label: Paediatric elective medical
+        classification:
+          all_of:
+            - CLASS_AGE_CHILD
+            - CLASS_ELECTIVE
+            - CLASS_MEDICAL
+        deduct_workload_from:
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_PAEDIATRIC_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+          - WARD_PAEDIATRIC_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+      - subgroup_id: paediatric_elective_surgical
+        subgroup_label: Paediatric elective surgical
+        classification:
+          all_of:
+            - CLASS_AGE_CHILD
+            - CLASS_ELECTIVE
+            - CLASS_SURGICAL
+        deduct_workload_from:
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_PAEDIATRIC_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+          - WARD_PAEDIATRIC_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+      - subgroup_id: paediatric_non_elective_medical
+        subgroup_label: Paediatric non-elective medical
+        classification:
+          all_of:
+            - CLASS_AGE_CHILD
+            - CLASS_NON_ELECTIVE
+            - CLASS_MEDICAL
+        deduct_workload_from:
+          - BEDS_INPATIENT_ASSESSMENT
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_PAEDIATRIC_NON_ELECTIVE_MEDICAL_ZERO_DAY_LOS
+          - WARD_PAEDIATRIC_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+      - subgroup_id: paediatric_non_elective_surgical
+        subgroup_label: Paediatric non-elective surgical
+        classification:
+          all_of:
+            - CLASS_AGE_CHILD
+            - CLASS_NON_ELECTIVE
+            - CLASS_SURGICAL
+        deduct_workload_from:
+          - BEDS_INPATIENT_ASSESSMENT
+          - BEDS_CRITICAL_CARE
+        assumption_ids:
+          - WARD_PAEDIATRIC_NON_ELECTIVE_SURGICAL_ZERO_DAY_LOS
+          - WARD_PAEDIATRIC_OCC
+          - WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: PAEDIATRIC_INPATIENT_WARD_BEDS
+
+  - id: BEDS_MATERNITY_ASSESSMENT
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_RECOVERY_OCCUPANCY
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_ZERO_LOS
+            - CLASS_NO_BIRTH_EVENT
+        assumption_ids:
+          - MATERNITY_ASSESSMENT_ZERO_DAY_LOS
+          - MATERNITY_ASSESSMENT_OCC
+          - MATERNITY_ASSESSMENT_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: MATERNITY_ASSESSMENT_BEDS
+
+  - id: LABS_CARDIAC_CATH_PROC
+    output_type: laboratories
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          any_of:
+            - all_of:
+                - CLASS_CARDIOLOGY
+                - CLASS_HAS_PROCEDURE
+            - CLASS_CARDIAC_CATH
+        assumption_ids:
+          - LABS_CARDIAC_CATH_PROC_TIME
+          - LABS_CARDIAC_CATH_UTIL
+          - LABS_CARDIAC_CATH_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: CARDIAC_CATH_PROC_LABS
+
+  - id: ROOMS_ENDOSCOPY_PROC
+    output_type: rooms
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_ENDOSCOPY
+        assumption_ids:
+          - ENDOSCOPY_PROC_TIME
+          - ENDOSCOPY_PROC_UTIL
+          - ENDOSCOPY_PROC_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ENDOSCOPY_PROC_ROOMS
+
+  - id: ROOMS_INT_RADIOLOGY_PROC
+    output_type: rooms
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_INT_RADIOLOGY
+            - CLASS_HAS_PROCEDURE
+        assumption_ids:
+          - INT_RADIOLOGY_PROC_TIME
+          - INT_RADIOLOGY_PROC_UTIL
+          - INT_RADIOLOGY_PROC_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: INT_RADIOLOGY_PROC_ROOMS
+
+  - id: ROOMS_MATERNITY_BIRTH
+    output_type: rooms
+    care_setting: Inpatients
+    primary_workload_object: bed_days
+    archetype_id: FRM_BED_OCCUPANCY
+    calculations:
+      - subgroup_id: normal_delivery
+        subgroup_label: Normal delivery
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_NORMAL
+        assumption_ids:
+          - MATERNITY_NORMAL_DELIVERY_BIRTH_ROOM_LOS
+          - MATERNITY_BIRTH_ROOM_OCC
+          - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: NORMAL_DELIVERY_MATERNITY_BIRTH_ROOMS
+      - subgroup_id: assisted_delivery
+        subgroup_label: Assisted delivery
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_ASSISTED
+        assumption_ids:
+          - MATERNITY_ASSISTED_DELIVERY_BIRTH_ROOM_LOS
+          - MATERNITY_BIRTH_ROOM_OCC
+          - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ASSISTED_DELIVERY_MATERNITY_BIRTH_ROOMS
+      - subgroup_id: non_elective_c_section
+        subgroup_label: Non-elective C-section
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_NON_ELECTIVE_C_SECTION
+        assumption_ids:
+          - MATERNITY_NON_ELECTIVE_C_SECTION_BIRTH_ROOM_LOS
+          - MATERNITY_BIRTH_ROOM_OCC
+          - MATERNITY_BIRTH_ROOM_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_BIRTH_ROOMS
+
+  - id: ROOMS_OUTPATIENT_CONSULT
+    output_type: rooms
+    care_setting: Outpatients
+    primary_workload_object: consultation_hours
+    archetype_id: FRM_APPOINTMENT_UTIL
+    calculations:
+      - subgroup_id: first_attendance
+        subgroup_label: First attendance
+        classification:
+          all_of:
+            - CLASS_OP_ATTEND
+            - CLASS_OP_FACE_TO_FACE
+            - CLASS_OP_GROUP_FIRST
+        assumption_ids:
+          - OP_CONSULT_FIRST_TIME
+          - OP_CONSULT_FIRST_DNA_RATE
+          - OP_CONSULT_FIRST_DNA_TIME
+          - OP_CONSULT_UTIL
+          - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: FIRST_OP_CONSULT_ROOMS
+      - subgroup_id: follow_up_attendance
+        subgroup_label: Follow-up attendance
+        classification:
+          all_of:
+            - CLASS_OP_ATTEND
+            - CLASS_OP_FACE_TO_FACE
+            - CLASS_OP_GROUP_FOLLOW_UP
+        assumption_ids:
+          - OP_CONSULT_FOLLOW_UP_TIME
+          - OP_CONSULT_FOLLOW_UP_DNA_RATE
+          - OP_CONSULT_FOLLOW_UP_DNA_TIME
+          - OP_CONSULT_UTIL
+          - OP_CONSULT_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: FOLLOW_UP_OP_CONSULT_ROOMS
+
+  - id: ROOMS_OUTPATIENT_PROC
+    output_type: rooms
+    care_setting: Outpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_APPOINTMENT_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_OP_ATTEND
+            - CLASS_OP_FACE_TO_FACE
+            - CLASS_OP_GROUP_PROCEDURE
+        assumption_ids:
+          - OP_PROC_TIME
+          - OP_PROC_DNA_RATE
+          - OP_PROC_DNA_TIME
+          - OP_PROC_UTIL
+          - OP_PROC_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: OP_PROC_ROOMS
+
+  - id: ROOMS_OUTPATIENT_VIRTUAL_CONSULT
+    output_type: rooms
+    care_setting: Outpatients
+    primary_workload_object: consultation_hours
+    archetype_id: FRM_APPOINTMENT_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_OP_ATTEND
+            - CLASS_OP_VIRTUAL
+            - any_of:
+                - CLASS_OP_GROUP_FIRST
+                - CLASS_OP_GROUP_FOLLOW_UP
+        assumption_ids:
+          - OP_VIRTUAL_CONSULT_TIME
+          - OP_VIRTUAL_CONSULT_DNA_RATE
+          - OP_VIRTUAL_CONSULT_DNA_TIME
+          - OP_VIRTUAL_CONSULT_UTIL
+          - OP_VIRTUAL_CONSULT_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: OP_VIRTUAL_CONSULT_ROOMS
+
+  - id: SPACES_SDEC
+    output_type: spaces
+    care_setting: AE
+    primary_workload_object: occupancy_hours
+    archetype_id: FRM_FLOW_SPACE
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_SDEC
+        assumption_ids:
+          - SDEC_SPACES_LOS
+          - SDEC_SPACES_UTIL
+          - SDEC_SPACES_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: SDEC_SPACES
+
+  - id: THEATRES_DAYCASE_PROC
+    output_type: theatres
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: adult_surgical
+        subgroup_label: Adult surgical
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_ADULT
+            - CLASS_SURGICAL
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - ROOMS_ENDOSCOPY_PROC
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_THEATRE_ADULT_SURGICAL_PROC_TIME
+          - DAYCASE_THEATRE_UTIL
+          - DAYCASE_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_SURGICAL_DAYCASE_PROC_THEATRES
+      - subgroup_id: paediatric
+        subgroup_label: Paediatric
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_CHILD
+        exclude_functional_areas:
+          - BEDS_DAYCASE_RENAL
+          - ROOMS_ENDOSCOPY_PROC
+          - SPACES_HAEM_ONC
+        assumption_ids:
+          - DAYCASE_THEATRE_PAEDIATRIC_PROC_TIME
+          - DAYCASE_THEATRE_UTIL
+          - DAYCASE_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: PAEDIATRIC_DAYCASE_PROC_THEATRES
+
+  - id: THEATRES_INPATIENT_PROC
+    output_type: theatres
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: adult_elective_surgical
+        subgroup_label: Adult elective surgical
+        classification:
+          all_of:
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_ADULT
+            - CLASS_ELECTIVE
+            - CLASS_SURGICAL
+        assumption_ids:
+          - INPATIENT_THEATRE_ADULT_ELECTIVE_SURGICAL_PROC_TIME
+          - INPATIENT_THEATRE_UTIL
+          - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_ELECTIVE_SURGICAL_INPATIENT_PROC_THEATRES
+      - subgroup_id: adult_non_elective_surgical
+        subgroup_label: Adult non-elective surgical
+        classification:
+          all_of:
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_ADULT
+            - CLASS_NON_ELECTIVE
+            - CLASS_SURGICAL
+        assumption_ids:
+          - INPATIENT_THEATRE_ADULT_NON_ELECTIVE_SURGICAL_PROC_TIME
+          - INPATIENT_THEATRE_UTIL
+          - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: ADULT_NON_ELECTIVE_SURGICAL_INPATIENT_PROC_THEATRES
+      - subgroup_id: paediatric_elective
+        subgroup_label: Paediatric elective
+        classification:
+          all_of:
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_CHILD
+            - CLASS_ELECTIVE
+        assumption_ids:
+          - INPATIENT_THEATRE_PAEDIATRIC_ELECTIVE_SURGICAL_PROC_TIME
+          - INPATIENT_THEATRE_UTIL
+          - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: PAEDIATRIC_ELECTIVE_INPATIENT_PROC_THEATRES
+      - subgroup_id: paediatric_non_elective
+        subgroup_label: Paediatric non-elective
+        classification:
+          all_of:
+            - CLASS_HAS_PROCEDURE
+            - CLASS_AGE_CHILD
+            - CLASS_NON_ELECTIVE
+        assumption_ids:
+          - INPATIENT_THEATRE_PAEDIATRIC_NON_ELECTIVE_SURGICAL_PROC_TIME
+          - INPATIENT_THEATRE_UTIL
+          - INPATIENT_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: PAEDIATRIC_NON_ELECTIVE_INPATIENT_PROC_THEATRES
+
+  - id: THEATRES_OBSTETRIC_PROC
+    output_type: theatres
+    care_setting: Inpatients
+    primary_workload_object: procedure_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          any_of:
+            # Elective C-section
+            - all_of:
+                - CLASS_MATERNITY
+                - CLASS_BIRTH_EVENT
+                - CLASS_BIRTH_ELECTIVE_C_SECTION
+            # Non-Elective C-section
+            - all_of:
+                - CLASS_MATERNITY
+                - CLASS_BIRTH_EVENT
+                - CLASS_BIRTH_NON_ELECTIVE_C_SECTION
+        assumption_ids:
+          - OBSTETRIC_THEATRE_PROC_TIME
+          - OBSTETRIC_THEATRE_UTIL
+          - OBSTETRIC_THEATRE_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: OBSTETRIC_PROC_THEATRES
+
+  - id: BEDS_MATERNITY_WARD
+    output_type: beds
+    care_setting: Inpatients
+    primary_workload_object: bed_days
+    archetype_id: FRM_BED_OCCUPANCY
+    calculations:
+      - subgroup_id: normal_delivery
+        subgroup_label: Normal delivery
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_NORMAL
+        assumption_ids:
+          - MATERNITY_WARD_NORMAL_DELIVERY_ZERO_DAY_LOS
+          - MATERNITY_WARD_OCC
+          - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: NORMAL_DELIVERY_MATERNITY_WARD_BEDS
+      - subgroup_id: assisted_delivery
+        subgroup_label: Assisted delivery
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_ASSISTED
+        assumption_ids:
+          - MATERNITY_WARD_ASSISTED_DELIVERY_ZERO_DAY_LOS
+          - MATERNITY_WARD_OCC
+          - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ASSISTED_DELIVERY_MATERNITY_WARD_BEDS
+      - subgroup_id: elective_c_section
+        subgroup_label: Elective C-section
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_ELECTIVE_C_SECTION
+        assumption_ids:
+          - MATERNITY_WARD_ELECTIVE_C_SECTION_ZERO_DAY_LOS
+          - MATERNITY_WARD_OCC
+          - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: ELECTIVE_C_SECTION_MATERNITY_WARD_BEDS
+      - subgroup_id: non_elective_c_section
+        subgroup_label: Non-Elective C-section
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_BIRTH_NON_ELECTIVE_C_SECTION
+        assumption_ids:
+          - MATERNITY_WARD_NON_ELECTIVE_C_SECTION_ZERO_DAY_LOS
+          - MATERNITY_WARD_OCC
+          - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: NON_ELECTIVE_C_SECTION_MATERNITY_WARD_BEDS
+      - subgroup_id: no_birth
+        subgroup_label: No birth event
+        classification:
+          all_of:
+            - CLASS_MATERNITY
+            - CLASS_NO_BIRTH_EVENT
+            - CLASS_NON_ZERO_LOS
+        assumption_ids:
+          - MATERNITY_WARD_OCC
+          - MATERNITY_WARD_ANNUAL_OPERATIONAL_DAYS
+        capacity_output: NO_BIRTH_MATERNITY_WARD_BEDS
+
+  - id: SPACES_HAEM_ONC
+    output_type: spaces
+    care_setting: Inpatients
+    primary_workload_object: treatment_hours
+    archetype_id: FRM_TIME_UTIL
+    calculations:
+      - subgroup_id: all_groups
+        subgroup_label: All groups
+        classification:
+          all_of:
+            - CLASS_DAYCASE
+            - CLASS_HAEM_ONC
+            - CLASS_HAS_PROCEDURE
+        assumption_ids:
+          - HAEM_ONC_TREATMENT_TIME
+          - HAEM_ONC_TREATMENT_UTIL
+          - HAEM_ONC_ANNUAL_OPERATIONAL_HOURS
+        capacity_output: HAEM_ONC_TRT_SPACES

@@ -220,6 +220,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "pandas" },
+    { name = "pyyaml" },
     { name = "tabulate" },
 ]
 
@@ -232,6 +233,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pandas", specifier = ">=3.0.3" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "tabulate", specifier = ">=0.10.0" },
 ]
 

@@ -60,7 +60,15 @@ nav = [
             {"Theatres Daycase Proc" = "functional-areas/theatres-daycase-proc.md"},
             {"Theatres Inpatient Proc" = "functional-areas/theatres-inpatient-proc.md"},
             {"Theatres Obstetric Proc" = "functional-areas/theatres-obstetric-proc.md"},
-        ]} 
+        ]},
+        {"Preview" = [
+            {"Daycase renal beds" = "functional-areas-preview/beds-daycase-renal.md"},
+            {"Maternity birthing rooms" = "functional-areas-preview/rooms-maternity-birth.md"},
+            {"Daycase procedure theatres" = "functional-areas-preview/theatres-daycase-proc.md"},
+            {"Inpatient assessment beds" = "functional-areas-preview/beds-inpatient-assessment.md"},
+            {"Outpatient consultation rooms" = "functional-areas-preview/rooms-outpatient-consult.md"},
+            {"Inpatient ward beds" = "functional-areas-preview/beds-inpatient-ward.md"}
+        ]},
     ]},
         {"Technical Information" = [
         "technical-information/index.md",
