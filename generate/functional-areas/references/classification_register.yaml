@@ -1,0 +1,399 @@
+classifications:
+  - id: CLASS_AE_MINOR
+    type: casemix
+    definition: Minor attendances
+    logic: acuity IN 3,4,5 or acuity IS NULL / unknown
+    variables:
+      - acuity
+    parent: CLASS_AE
+    notes: >-
+      Ambulatory patients with less severe conditions.
+
+  - id: CLASS_AE_MAJOR
+    type: casemix
+    definition: Major attendances
+    logic: acuity = 2
+    variables:
+      - acuity
+    parent: CLASS_AE
+    notes: >-
+      Serious illnesses and injuries requiring trolley-based care.
+
+  - id: CLASS_AE_RESUS
+    type: casemix
+    definition: Resus attendances
+    logic: acuity = 1
+    variables:
+      - acuity
+    parent: CLASS_AE
+    notes: >-
+      Critical illness or life-threatening emergencies.
+
+  - id: CLASS_AGE_ADULT
+    type: age
+    definition: Adult patients
+    logic: age >= 18 years
+    variables:
+      - age
+    parent: null
+    notes: >-
+      Age at attendance or admission, expressed in years.
+
+  - id: CLASS_AGE_CHILD
+    type: age
+    definition: Children
+    logic: age < 18 years
+    variables:
+      - age
+    parent: null
+    notes: >-
+      Age at attendance or admission, expressed in years.
+
+  - id: CLASS_AE
+    type: scope
+    definition: Core A&E attendances
+    logic: aedepttype = 1
+    variables:
+      - aedepttype
+    parent: null
+    notes: >-
+      Consultant-led A&E services operating 24 hours a day, seven days a week, with full
+      resuscitation facilities. Excludes type 2 mono-specialty units.
+
+  - id: CLASS_DAYCASE
+    type: scope
+    definition: Core daycase spells
+    logic: admimeth starts with 1 AND classpat = 2
+    variables:
+      - admimeth
+      - classpat
+    parent: null
+    notes: >-
+      Core daycase spells.
+
+  - id: CLASS_MEDICAL
+    type: specialty
+    definition: Medical specialties
+    logic: tretspef IN medical specialties - see daycase_tretspef_mapping.xlsx file
+    variables:
+      - tretspef
+    parent: null
+    notes: >-
+      Medical treatment specialties.
+
+  - id: CLASS_SURGICAL
+    type: specialty
+    definition: Surgical specialties
+    logic: tretspef IN surgical specialties - see daycase_tretspef_mapping.xlsx file
+    variables:
+      - tretspef
+    parent: null
+    notes: >-
+      Surgical treatment specialties.
+
+  - id: CLASS_ENDOSCOPY
+    type: procedures
+    definition: Endoscopy procedures
+    logic: primaryprocedure IN G14,G15,G16,G17,G18,G19,G20 (Oesophagoscopy); G42,G43,G44,G45,G46 (OGD); G54,G55 (Duodenoscopy); G64,G65 (Jejunoscopy); G79,G80 (Ileoscopy); H23,H24,H25,H26,H27,H28,H37,H69,H70,H71 (Sigmoidoscopy); J38,J39,J40,J41,J42,J43,J44,J45 (ERCP); H20,H21,H22,H68 (Colonoscopy); E48,E49,E50,E51 (Bronchoscopy);
+    variables:
+      - primaryprocedure
+    parent: null
+    notes: >-
+      Endoscopy procedures.
+
+  - id: CLASS_AGE_NEONATAL
+    type: age
+    definition: Neonate or newborn
+    logic: age < 29 days
+    variables:
+      - age
+    parent: null
+    notes: >-
+      Age at attendance or admission. The neonatal threshold is expressed in days.
+
+  - id: CLASS_AGE_PAEDIATRIC
+    type: age
+    definition: Children (excl. neonates)
+    logic: age >= 29 days AND age < 18 years
+    variables:
+      - age
+    parent: null
+    notes: >-
+      Age at attendance or admission. The lower threshold is expressed in days and the upper
+      threshold in years.
+
+  - id: CLASS_WELL_BABIES
+    type: null
+    definition: Birth episodes
+    logic: null
+    variables: null
+    parent: null
+    notes: >-
+      Birth episodes for healthy or well babies.
+
+  - id: CLASS_CRITICAL_CARE
+    type: scope
+    definition: null
+    logic: null
+    variables: null
+    parent: null
+    notes: null
+
+  - id: CLASS_ELECTIVE
+    type: admission_type
+    definition: Elective admissions
+    logic: admimeth LIKE 1* AND classpat = 1
+    variables:
+      - admimeth
+      - classpat
+    parent: null
+    notes: null
+
+  - id: CLASS_REGULAR_DAY_NIGHT
+    type: admission_type
+    definition: Regular day/night admissions
+    logic: classpat IN 3, 4
+    variables:
+      - classpat
+    parent: null
+    notes: >-
+      Patients admitted for a planned series of treatments, such as renal dialysis.
+
+  - id: CLASS_RENAL
+    type: specialty
+    definition: Renal medicine specialty
+    logic: tretspef = 361
+    variables:
+      - tretspef
+    parent: null
+    notes: >-
+      Renal medicine, including dialysis treatment.
+
+  - id: CLASS_ZERO_LOS
+    type: segmentation
+    definition: Zero day length-of-stay spells
+    logic: speldur = 0
+    variables:
+      - speldur
+    parent: null
+    notes: null
+
+  - id: CLASS_NON_ELECTIVE
+    type: admission_type
+    definition: Non-elective admissions
+    logic: admimeth LIKE 2* AND classpat = 1
+    variables:
+      - admimeth
+      - classpat
+    parent: null
+    notes: null
+
+  - id: CLASS_HAS_PROCEDURE
+    type: segmentation
+    definition: Spell with recorded procedure
+    logic: has_procedure = 1
+    variables:
+      - has_procedure
+    parent: null
+    notes: null
+
+  - id: CLASS_CARDIAC_CATH
+    type: procedures
+    definition: Cardiac catheter-based procedures
+    logic: primaryprocedure IN K63 (Contrast radiology of heart); K75 (Angioplasty); K60 (Cardiac pacemaker); K62 (Therapeutic transluminal operations on heart); K59 (Cardioverter defibrillator introduced through the vein); K57 (Other therapeutic transluminal operations on heart); K73 (Other cardiac pacemaker system through vein); K49 (Transluminal balloon angioplasty);
+    variables:
+      - primaryprocedure
+    parent: null
+    notes: null
+
+  - id: CLASS_CARDIOLOGY
+    type: specialty
+    definition: Cardiology or paediatric cardiology specialties
+    logic: tretspef IN 320, 321
+    variables:
+      - tretspef
+    parent: null
+    notes: null
+
+  - id: CLASS_INT_RADIOLOGY
+    type: specialty
+    definition: Interventional radiology or paediatric interventional radiology
+    logic: tretspef IN 811, 280
+    variables:
+      - tretspef
+    parent: null
+    notes: null
+
+  - id: CLASS_OP_ATTEND
+    type: scope
+    definition: Outpatient activity within the Demand Model scope
+    logic: atentype IN (1, 2, 21, 22) AND sex IN (1, 2) AND age BETWEEN 0 AND 90
+    variables:
+      - atentype
+      - sex
+      - age
+    parent: null
+    notes: >-
+      Age bounds are inclusive.
+
+  - id: CLASS_OP_FACE_TO_FACE
+    type: attendance_type
+    definition: Face-to-face outpatient activity
+    logic: attendance = 1
+    variables:
+      - attendance
+      - atentype
+    parent: CLASS_OP_ATTEND
+    notes: >-
+      attendance is calculated as 1 - is_tele_appointment. Within the outpatient scope,
+      atentype 1 or 2 gives attendance = 1.
+
+  - id: CLASS_OP_VIRTUAL
+    type: attendance_type
+    definition: Virtual outpatient activity
+    logic: tele_attendance = 1
+    variables:
+      - tele_attendance
+      - atentype
+    parent: CLASS_OP_ATTEND
+    notes: >-
+      tele_attendance equals is_tele_appointment. Within the outpatient scope, atentype 21 or
+      22 gives tele_attendance = 1.
+
+  - id: CLASS_OP_GROUP_PROCEDURE
+    type: segmentation
+    definition: Outpatient activity assigned to the procedure group
+    logic: group = "procedure"
+    variables:
+      - group
+      - has_procedures
+      - sushrg
+      - atentype
+    parent: CLASS_OP_ATTEND
+    notes: >-
+      Assigned when has_procedures is true: the appointment is face-to-face and sushrg is
+      non-null and does not start with U or WF. Procedure grouping takes precedence over first
+      or follow-up grouping.
+
+  - id: CLASS_OP_GROUP_FIRST
+    type: segmentation
+    definition: Outpatient activity assigned to the first-attendance group
+    logic: group = "first"
+    variables:
+      - group
+      - has_procedures
+      - is_first
+      - atentype
+    parent: CLASS_OP_ATTEND
+    notes: >-
+      Assigned when has_procedures is false or null and is_first is true. Within the
+      outpatient scope, atentype 1 or 21 gives is_first = true. Includes face-to-face and
+      virtual activity.
+
+  - id: CLASS_OP_GROUP_FOLLOW_UP
+    type: segmentation
+    definition: Outpatient activity assigned to the follow-up group
+    logic: group = "followup"
+    variables:
+      - group
+      - has_procedures
+      - is_first
+      - atentype
+    parent: CLASS_OP_ATTEND
+    notes: >-
+      Assigned when has_procedures is false or null and is_first is false. Within the
+      outpatient scope, atentype 2 or 22 gives is_first = false. Includes face-to-face and
+      virtual activity.
+
+  - id: CLASS_HAEM_ONC
+    type: specialty
+    definition: Haematology and oncology specialties
+    logic: tretspef IN 253, 303, 260, 370, 800
+    variables:
+      - tretspef
+    parent: null
+    notes: >-
+      Includes systemic anti-cancer therapy (SACT), such as chemotherapy and immunotherapy,
+      and blood transfusions.
+
+  - id: CLASS_MATERNITY
+    type: scope
+    definition: Maternity admissions
+    logic: (admimeth starts with 3 OR tretspef IN (501, 560)) AND sex = "2" AND age BETWEEN 13 AND 55
+    variables:
+      - tretspef
+      - admimeth
+      - sex
+      - age
+    parent: null
+    notes: >-
+      See the Demand Model definition of maternity activity:
+      https://connect.strategyunitwm.nhs.uk/nhp/project_information/data_extraction/inpatients.html#group
+
+  - id: CLASS_NO_BIRTH_EVENT
+    type: null
+    definition: No birth event recorded
+    logic: null
+    variables: null
+    parent: CLASS_MATERNITY
+    notes: null
+
+  - id: CLASS_BIRTH_EVENT
+    type: null
+    definition: Birth event recorded
+    logic: null
+    variables: null
+    parent: CLASS_MATERNITY
+    notes: null
+
+  - id: CLASS_BIRTH_NORMAL
+    type: segmentation
+    definition: R24 normal delivery
+    logic: null
+    variables: null
+    parent: CLASS_BIRTH_EVENT
+    notes: null
+
+  - id: CLASS_BIRTH_ASSISTED
+    type: segmentation
+    definition: R19 breech extraction or R20 other breech or R21 forceps cephalic or R22 vacuum or R23 cephalic vaginal w. abnormal present. head
+    logic: null
+    variables: null
+    parent: CLASS_BIRTH_EVENT
+    notes: null
+
+  - id: CLASS_BIRTH_ELECTIVE_C_SECTION
+    type: segmentation
+    definition: R17 elective caesarean
+    logic: null
+    variables: null
+    parent: CLASS_BIRTH_EVENT
+    notes: null
+
+  - id: CLASS_BIRTH_NON_ELECTIVE_C_SECTION
+    type: segmentation
+    definition: R18 other caesarean
+    logic: null
+    variables: null
+    parent: CLASS_BIRTH_EVENT
+    notes: null
+
+  - id: CLASS_NON_ZERO_LOS
+    type: segmentation
+    definition: Spells with an overnight stay
+    logic: speldur > 0
+    variables:
+      - speldur
+    parent: null
+    notes: null
+
+  - id: CLASS_SDEC
+    type: scope
+    definition: SDEC (Same Day Emergency Care) attendances
+    logic: aedepttype = 5
+    variables:
+      - aedepttype
+    parent: null
+    notes: >-
+      See the ongoing SDEC classification issue:
+      https://github.com/The-Strategy-Unit/open-plan-docs/issues/18

@@ -85,6 +85,21 @@
   white-space: nowrap;
 }
 
+/* Formula panels
+* Equations inside neutral callouts
+*/
+.md-typeset .admonition.quote .arithmatex {
+  font-size: 0.8em;
+  margin-bottom: 0em;
+}
+
+/* Technical-details tables
+* Allow long text to wrap inside
+*/
+.md-typeset details td {
+  overflow-wrap: anywhere;
+}
+
 /* ==========================================================================
    Main header
    ==========================================================================
@@ -350,7 +365,7 @@
 .md-content:has(#user-guide) h3 .twemoji {
   margin-inline-end: 0.4em;
 }
-   Home page customisation
+Home page customisation
    ========================================================================== */
 
 /* Home page: hide TOC at every width, retaining its space */

@@ -1,0 +1,30 @@
+functional_area_id: BEDS_INPATIENT_ASSESSMENT
+title: Inpatient assessment beds
+definition: An inpatient assessment bed is a hospital bed used for the short-term assessment, monitoring, and initial management of patients who require evaluation before admission, transfer, or discharge decisions are made.
+activity_classification: |-
+  All non-elective inpatient spells are assumed to consume assessment-bed capacity prior to transfer to downstream inpatient services.
+notes: |-
+  * Assessment bed-days are deducted from downstream inpatient ward workload to avoid double-counting.
+workload_derivation: |-
+  Convert non-elective medical and surgical spells into assessment bed-days using their respective length-of-stay assumptions, then sum these separately for adults and children.
+
+  !!! quote ""
+
+      $$
+      \text{Assessment bed-days}
+      =
+      \text{Non-elective spells}
+      \times
+      \frac{\text{Assessment length of stay (minutes)}}{1{,}440}
+      $$
+
+capacity_conversion: |-
+  Separately for adults and children, divide assessment bed-days by the service's annual operating days and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$\text{Required assessment beds}
+      = 
+      \frac{\text{Assessment bed-days}}
+      {\text{Annual operational days} \times \text{Occupancy rate}}
+      $$

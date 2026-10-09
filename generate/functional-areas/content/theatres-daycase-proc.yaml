@@ -1,0 +1,34 @@
+functional_area_id: THEATRES_DAYCASE_PROC
+title: Daycase procedure theatres
+definition: A theatre for daycase procedures is a dedicated procedural operating space used to perform
+  planned same-day surgical interventions that do not require an overnight hospital stay.
+activity_classification: |-
+  Includes all daycase spells with a recorded procedure, grouped into:
+
+  * Adult surgical activity, and
+  * Paediatric activity.
+notes: '* Apply specialist exclusions to avoid double-counting.'
+workload_derivation: |-
+  The primary procedure from each qualifying daycase spell is used to estimate theatre hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures} 
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Divide total procedure hours by the service's annual operating hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required daycase theatres}
+      =
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$
