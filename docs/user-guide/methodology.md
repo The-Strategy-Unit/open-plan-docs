@@ -118,7 +118,7 @@ essential part of assessing whether the estimates reflect the service
 model being planned.
 
 The [assumptions register](../technical-information/assumptions-register/)
-provides the complete list of assumptions. The functional-area methods
+provides the complete list of assumptions. The functional area methods
 pages explain how they are used in each calculation.
 
 ## How the model handles uncertainty
