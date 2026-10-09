@@ -2,6 +2,12 @@
 
 Documentation for the Strategy Unit's **OpenPlan Hospital Capacity Model** — a common framework for translating hospital demand into capacity requirements. The Capacity Model takes estimated future activity from the upstream [OpenPlan Hospital Demand Model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/) and translates it into estimates of the physical capacity required. This work is funded by the **New Hospital Programme (NHP)**.
 
+## Generated functional area documentation
+
+Functional area preview pages are generated from shared reference files and page-specific narrative content.
+
+See [the generation README](generate/functional-areas/README.md) for instructions on editing sources, generating pages, running checks and adding new areas.
+
 ## How to contribute
 
 ### External contributors
