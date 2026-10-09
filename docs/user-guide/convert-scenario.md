@@ -7,7 +7,7 @@ icon: lucide/rocket
 ## What inputs are needed from me?
  
 - the name and 'datetime' of an OpenPlan (formerly 'NHP') Hospital Demand Model scenario you have
-created using version 4.4 or later of the OpenPlan [Demand Model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/).
+created using version 6.0 or later of the OpenPlan [Demand Model](https://connect.strategyunitwm.nhs.uk/nhp/project_information/).
  
 ## What does the tool produce?
  
