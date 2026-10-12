@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1704.539"
+   height="1318.1609"
+   viewBox="0 0 170.4539 131.81609"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="demand-model-dark.svg"
+   inkscape:export-filename="model-diagrams.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="1"
+     inkscape:cx="987"
+     inkscape:cy="694"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:connector-spacing="0">
+    <sodipodi:guide
+       position="151.93071,148.87063"
+       orientation="0,1"
+       id="guide1"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8"
+       width="25.886362"
+       height="14.886362"
+       x="9.6580353"
+       y="63.377281"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-86-5"
+       width="25.886362"
+       height="14.886362"
+       x="134.30482"
+       y="42.555191"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-7"
+       width="25.886362"
+       height="14.886362"
+       x="134.30482"
+       y="63.377281"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-6"
+       width="25.886362"
+       height="14.886362"
+       x="134.37801"
+       y="84.272545"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-86-2"
+       width="25.886362"
+       height="14.886362"
+       x="71.98143"
+       y="42.555191"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-94"
+       width="25.886362"
+       height="14.886362"
+       x="71.98143"
+       y="63.377281"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-2"
+       width="25.886362"
+       height="14.886362"
+       x="9.6580353"
+       y="84.199371"
+       rx="3"
+       ry="3" />
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="25.886362"
+       height="14.886362"
+       x="9.6580353"
+       y="42.555191"
+       rx="3"
+       ry="3"
+       inkscape:export-filename="fig1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="12.733292"
+       y="50.798477"
+       id="text3">Population size</text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="42.156502"
+       y="28.480137"
+       id="text3-9-4"><tspan
+         sodipodi:role="line"
+         id="tspan57"
+         x="42.156502"
+         y="28.480137">Non-demographic</tspan><tspan
+         sodipodi:role="line"
+         id="tspan58"
+         x="42.156502"
+         y="32.007923">change</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="74.791389"
+       y="28.395473"
+       id="text3-9-4-3"><tspan
+         sodipodi:role="line"
+         id="tspan55"
+         x="74.791389"
+         y="28.395473">Demand-supply</tspan><tspan
+         sodipodi:role="line"
+         id="tspan56"
+         x="74.791389"
+         y="31.92326">imbalances</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="108.00203"
+       y="28.395473"
+       id="text3-9-4-3-5"><tspan
+         sodipodi:role="line"
+         id="tspan51"
+         x="108.00203"
+         y="28.395473">Need-supply</tspan><tspan
+         sodipodi:role="line"
+         id="tspan52"
+         x="108.00203"
+         y="31.92326">imbalances</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="140.76675"
+       y="28.480137"
+       id="text3-9-4-3-5-4"><tspan
+         sodipodi:role="line"
+         id="tspan53"
+         x="140.76675"
+         y="28.480137">Activity</tspan><tspan
+         sodipodi:role="line"
+         id="tspan54"
+         x="140.76675"
+         y="32.007923">mitigators</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0"
+       width="25.886362"
+       height="14.886362"
+       x="40.819733"
+       y="63.377281"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11"
+       transform="translate(48.472603,70.140307)"><tspan
+         x="0"
+         y="0"
+         id="tspan35">Clinical
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan36">standards</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-86"
+       width="25.886362"
+       height="14.886362"
+       x="40.819733"
+       y="42.555191"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-2"
+       transform="translate(48.385114,49.318217)"><tspan
+         x="0"
+         y="0"
+         id="tspan37">Medical
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan38">interventions</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9"
+       width="25.886362"
+       height="14.886362"
+       x="40.838028"
+       y="84.199371"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1"
+       transform="translate(48.393581,90.678728)"><tspan
+         x="0"
+         y="0"
+         id="tspan39">Patient
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan40">expectations</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="15.671234"
+       y="69.856667"
+       id="text3-1"><tspan
+         sodipodi:role="line"
+         id="tspan61"
+         x="15.671234"
+         y="69.856667">Population</tspan><tspan
+         sodipodi:role="line"
+         id="tspan62"
+         x="15.671234"
+         y="73.384453">age profile</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="14.267168"
+       y="90.962387"
+       id="text3-1-6"><tspan
+         sodipodi:role="line"
+         id="tspan63"
+         x="14.267168"
+         y="90.962387">Age-specific</tspan><tspan
+         sodipodi:role="line"
+         id="tspan64"
+         x="14.267168"
+         y="94.490173">health status</tspan></text>
+    <rect
+       style="fill:#0072b2;fill-opacity:1;stroke:#0072b2;stroke-width:0.252591;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-8"
+       width="6.4266109"
+       height="56.593903"
+       x="40.690063"
+       y="42.545559"
+       rx="2.5889394"
+       ry="2.9428349" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-5"
+       transform="translate(75.39112,69.894773)"><tspan
+         x="0"
+         y="0"
+         id="tspan41">Repatriation / 
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan42">expatriation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-5);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.3;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-2-6"
+       transform="translate(76.536941,49.034583)"><tspan
+         x="0"
+         y="0"
+         id="tspan43">Waiting list
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan44">management</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-1"
+       width="25.886362"
+       height="14.886362"
+       x="72.018021"
+       y="84.272545"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1-7"
+       transform="translate(78.923039,88.988014)"><tspan
+         x="0"
+         y="0"
+         id="tspan45">Private
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan46">funding
+</tspan><tspan
+         x="0"
+         y="7.0555753"
+         id="tspan47">dynamics</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.1;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-1-9-67-5-3"
+       width="170.3539"
+       height="131.71608"
+       x="0.05000066"
+       y="0.050000001"
+       inkscape:export-filename="fig1.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-8"
+       width="25.886362"
+       height="14.886362"
+       x="103.14314"
+       y="63.377281"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-25"
+       transform="translate(108.4169,71.620567)"><tspan
+         x="0"
+         y="0"
+         id="tspan48">Inequalities</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-86-0"
+       width="25.886362"
+       height="14.886362"
+       x="103.14314"
+       y="42.555191"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-5);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-2-4"
+       transform="translate(108.25463,50.798476)"><tspan
+         x="0"
+         y="0"
+         id="tspan49">Gaps in care</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#777b7e;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-3"
+       width="25.886362"
+       height="14.886362"
+       x="103.19801"
+       y="84.272545"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1-1"
+       transform="translate(109.35091,90.907128)"><tspan
+         x="0"
+         y="0"
+         id="tspan50">Treatment
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan65">thresholds</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-7"
+       transform="translate(139.38245,69.856673)"><tspan
+         x="0"
+         y="0"
+         id="tspan66">Activity type
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan67">changes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-5);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-2-9"
+       transform="translate(140.80203,49.318217)"><tspan
+         x="0"
+         y="0"
+         id="tspan68">Activity
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan69">avoidance</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1-9"
+       transform="translate(138.06568,90.751898)"><tspan
+         x="0"
+         y="0"
+         id="tspan70">Efficiency 
+</tspan><tspan
+         x="0"
+         y="3.5277876"
+         id="tspan71">improvements</tspan></text>
+    <rect
+       style="fill:#e69f00;fill-opacity:1;stroke:#e69f00;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-6-3"
+       width="35.866001"
+       height="14.866328"
+       x="129.38818"
+       y="111.04211"
+       rx="3"
+       ry="3" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 9.6012212,35.961885 v 0"
+       id="path20"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 22.601216,60.202044 v 0"
+       id="path22"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 53.602519,34.829618 v 0"
+       id="path37"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0" />
+    <path
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 53.602519,34.961909 v 0"
+       id="path38"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 53.219431,99.638948 v 0"
+       id="path45"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       id="rect47"
+       style="fill:none;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 53.781657,99.168238 v 7.880212 H 22.621231 v -7.880212"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="rect47-6"
+       style="fill:none;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 116.08626,99.168238 v 7.879472 H 84.927313 v -7.879472"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="rect47-6-1"
+       style="fill:none;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 53.765082,42.457712 v -7.93957 H 84.92461 v 7.93957"
+       sodipodi:nodetypes="cccc" />
+    <path
+       id="rect47-6-1-1"
+       style="fill:none;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 116.08896,42.457712 v -7.873563 h 31.15905 v 7.873563"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82222px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1-9-6-2"
+       transform="translate(131.9062,114.81212)"><tspan
+         x="0"
+         y="0"
+         id="tspan72">Modelled future activity</tspan></text>
+    <rect
+       style="fill:#e69f00;fill-opacity:1;stroke:#e69f00;stroke-width:0.26;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-8-0-9-6-3-6"
+       width="35.866001"
+       height="14.866328"
+       x="4.6682153"
+       y="5.9553738"
+       rx="3"
+       ry="3" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-1-9-6-2-7"
+       transform="translate(11.941654,9.725395)"><tspan
+         x="0"
+         y="0"
+         id="tspan73">Baseline activity</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 22.601217,57.609938 v 5.6"
+       id="path64-8" />
+    <path
+       style="fill:#80b3ff;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 22.601217,78.42018 v 5.599984"
+       id="path64-1" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 53.762914,78.42018 v 5.600004"
+       id="path64-27" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 53.762914,57.609938 v 5.6"
+       id="path64-3" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 84.924611,57.609938 v 5.6"
+       id="path64-85" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 84.924611,78.42018 v 5.599994"
+       id="path64-92" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 116.08631,78.42018 v 5.599994"
+       id="path64-31" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 116.08631,57.609938 v 5.599997"
+       id="path64-11" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 147.248,57.609938 v 5.6"
+       id="path64-277" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 147.248,78.42018 v 5.599994"
+       id="path64-86" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246944;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 147.248,99.288878 V 110.91207"
+       id="path64-26" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="14.071032"
+       y="28.480137"
+       id="text3-9"><tspan
+         sodipodi:role="line"
+         id="tspan59"
+         x="14.071032"
+         y="28.480137">Demographic</tspan><tspan
+         sodipodi:role="line"
+         id="tspan60"
+         x="14.071032"
+         y="32.007923">change</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.82223px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82);display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       x="72.082886"
+       y="48.170776"
+       id="text3-11-8"
+       transform="rotate(-90,66.548722,21.828316)"><tspan
+         x="0"
+         y="0"
+         id="tspan74">Estimated from past trends</tspan></text>
+    <g
+       id="g2"
+       transform="translate(-13.167835,-10.013282)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         x="72.082886"
+         y="48.170776"
+         id="text3-11-1-9-6-9-24"
+         transform="translate(145.0439,129.79309)"><tspan
+           x="0"
+           y="0"
+           id="tspan75">- spells
+</tspan><tspan
+           x="0"
+           y="3.0868"
+           id="tspan76">- attendances</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         x="72.082886"
+         y="48.170776"
+         id="text3-11-1-9-6-9-4-5"
+         transform="translate(161.66572,129.79309)"><tspan
+           x="0"
+           y="0"
+           id="tspan77">- bed-days
+</tspan><tspan
+           x="0"
+           y="3.0868"
+           id="tspan78">- procedures</tspan></text>
+    </g>
+    <g
+       id="g2-1"
+       transform="translate(-137.88781,-114.80674)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         x="72.082886"
+         y="48.170776"
+         id="text3-11-1-9-6-9-24-5"
+         transform="translate(145.0439,129.79309)"><tspan
+           x="0"
+           y="0"
+           id="tspan79">- spells
+</tspan><tspan
+           x="0"
+           y="3.0868"
+           id="tspan80">- attendances</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.46944px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre-wrap;shape-inside:url(#rect2-82-8);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         x="72.082886"
+         y="48.170776"
+         id="text3-11-1-9-6-9-4-5-2"
+         transform="translate(161.66572,129.79309)"><tspan
+           x="0"
+           y="0"
+           id="tspan81">- bed-days
+</tspan><tspan
+           x="0"
+           y="3.0868"
+           id="tspan82">- procedures</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246803;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 22.601217,35.204655 v 7.350539"
+       id="path64-26-4" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#777b7e;stroke-width:0.246803;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 22.601217,20.821702 v 3.783173"
+       id="path64-26-4-8" />
+  </g>
+</svg>
