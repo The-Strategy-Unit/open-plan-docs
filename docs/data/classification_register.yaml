@@ -54,13 +54,13 @@
 
 - id: CLASS_DAYCASE
   type: scope
-  definition: Core daycase spells
+  definition: Core daycase admissions
   logic: admimeth starts with 1 AND classpat = 2
   variables:
   - admimeth
   - classpat
   parent: null
-  notes: Core daycase spells
+  notes: Core daycase admissions
 
 - id: CLASS_MEDICAL
   type: specialty
@@ -152,7 +152,7 @@
 
 - id: CLASS_ZERO_LOS
   type: segmentation
-  definition: Zero day length-of-stay spells
+  definition: Zero day length-of-stay episodes
   logic: speldur = 0
   variables:
   - speldur
@@ -171,7 +171,7 @@
 
 - id: CLASS_HAS_PROCEDURE
   type: segmentation
-  definition: Spell with recorded procedure
+  definition: Activity with recorded procedure
   logic: has_procedure = 1
   variables:
   - has_procedure
@@ -316,7 +316,7 @@
 
 - id: CLASS_NON_ZERO_LOS
   type: segmentation
-  definition: Spells with an overnight stay
+  definition: Episodes with an overnight stay
   logic: speldur > 0
   variables:
   - speldur
