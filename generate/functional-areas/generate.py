@@ -395,7 +395,7 @@ def main():
             output.mkdir(parents=True, exist_ok=True)
             for slug, page in generated:
                 (output / (slug + ".md")).write_text(page, encoding="utf-8")
-                print("Generated docs/functional-areas/preview/" + slug + ".md")
+                print("Generated docs/functional-areas-preview/" + slug + ".md")
         print(f"Validated {len(refs[3])} areas and {len(generated)} pilot pages.")
     except (ValueError, KeyError, TypeError, yaml.YAMLError) as error:
         raise SystemExit("Generation failed: " + str(error))
