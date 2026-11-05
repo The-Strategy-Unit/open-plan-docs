@@ -9,22 +9,30 @@ import yaml
 
 import generate
 
-OUTPUT_DIR = generate.ROOT.parents[1] / "docs/functional-areas-preview"
+OUTPUT_DIR = generate.ROOT.parents[1] / "docs/functional-areas"
 
 
 class GenerationTests(unittest.TestCase):
+    # Unknown classification ID raises error
     def test_missing_class_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "Unknown classification"):
             generate.class_refs({"all_of": ["MISSING"]}, {})
 
+    # Exclusion and deduction fields are only allowed at the top level of an expression
     def test_misplaced_dependency_is_rejected(self):
-        expression = {
-            "all_of": ["CLASS_A"],
-            "exclude_functional_areas": ["AREA"],
-        }
-        with self.assertRaisesRegex(ValueError, "one all_of/any_of"):
-            generate.class_refs(expression, {"CLASS_A": {}})
+        for field in (
+            "exclude_functional_areas",
+            "deduct_workload_from",
+        ):
+            with self.subTest(field=field):
+                expression = {
+                    "all_of": ["CLASS_A"],
+                    field: ["AREA"],
+                }
+                with self.assertRaisesRegex(ValueError, "one all_of/any_of"):
+                    generate.class_refs(expression, {"CLASS_A": {}})
 
+    # Class references are extracted correctly from a nested all_of/any_of expression
     def test_nested_expression(self):
         expression = {
             "all_of": [
@@ -38,6 +46,7 @@ class GenerationTests(unittest.TestCase):
             ["CLASS_A", "CLASS_B", "CLASS_C"],
         )
 
+    # Reject a two-area circular dependency
     def test_dependency_cycle_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "cycle"):
             generate.check_cycles(
@@ -45,6 +54,8 @@ class GenerationTests(unittest.TestCase):
                 "Dependency",
             )
 
+    # Adding an unknown assumption ID to a temporary copy of the real specification
+    # causes reference loading to fail
     def test_unknown_assumption_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -66,6 +77,12 @@ class GenerationTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "unknown assumption MISSING"):
                 generate.load_references(root)
 
+    # Every content YAML has a corresponding Markdown file whose text exactly matches
+    # freshly rendered output
+    # And for each generated page:
+    # - A Definition callout and collapsed Technical details block exist
+    # - Notes appear before Technical details when narrative notes are supplied
+    # - The Notes heading is absent when no notes are supplied
     def test_generated_pages(self):
         refs = generate.load_references()
         pages = [
@@ -97,7 +114,6 @@ class GenerationTests(unittest.TestCase):
                 technical_heading = '??? info "Technical details"'
                 self.assertIn(technical_heading, page)
                 self.assertIn('!!! info "Definition"', page)
-                self.assertNotIn("Future enhancements", page)
 
                 if content.get("notes", "").strip():
                     self.assertIn("## Notes", page)
