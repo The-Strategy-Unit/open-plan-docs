@@ -243,37 +243,50 @@ def render(content, refs, titles, root=ROOT):
             return " and ".join(names)
         return ", ".join(names[:-1]) + " and " + names[-1]
 
+    
     descriptions = []
-    for field, lead in [
-        ("exclude_functional_areas", "Exclude activity qualifying for"),
-        ("deduct_workload_from", "Deduct allocated workload from"),
+    for field, heading, lead in [
+        (
+            "exclude_functional_areas",
+            "Exclusions",
+            "Activity qualifying for",
+        ),
+        (
+            "deduct_workload_from",
+            "Workload deductions",
+            "Allocated workload from",
+        ),
     ]:
         groups = {}
         for calculation in calculations:
             targets = tuple(calculation.get(field, []))
             if targets:
                 groups.setdefault(targets, []).append(calculation["subgroup_label"])
-        for targets, labels in groups.items():
-            qualifier = (
-                ""
-                if len(labels) == len(calculations)
-                else "For " + ", ".join(labels) + ": "
-            )
-            descriptions.append(
-                "**"
-                + (
-                    "Exclusions"
-                    if field == "exclude_functional_areas"
-                    else "Workload deductions"
+
+        if groups:
+            statements = []
+            for targets, labels in groups.items():
+                qualifier = (
+                    f"**{', '.join(labels)}:** "
+                    if len(labels) != len(calculations)
+                    else ""
                 )
-                + ":** "
-                + qualifier
-                + lead
-                + " "
-                + join_names([area_name(t) for t in targets])
-                + "."
-            )
+                statements.append(
+                    f"{qualifier}{lead} "
+                    + join_names([area_name(t) for t in targets])
+                    + "."
+                )
+
+            if len(statements) == 1:
+                descriptions.append(f"**{heading}:** {statements[0]}")
+            else:
+                descriptions.append(
+                    f"**{heading}:**\n\n"
+                    + "\n".join(f"* {statement}" for statement in statements)
+                )
+
     scope = "\n\n" + "\n\n".join(descriptions) if descriptions else ""
+
 
     details = [
         "**Capacity outputs**",
@@ -359,13 +372,17 @@ def render(content, refs, titles, root=ROOT):
         ),
         scope=scope,
         assumptions=table(["Subgroup", "Assumption", "Type"], assumption_rows),
-        notes_section=("## Notes\n\n" + notes.strip()) if notes.strip() else "",
+        notes_section=("\n\n## Notes\n\n" + notes.strip() + "\n")
+        if notes.strip()
+        else "\n",
         technical_details="\n".join(
             "    " + line if line else "" for line in "\n\n".join(details).splitlines()
         ),
     )
     return (
-        Template((root / "templates/fun_area_page.md").read_text()).substitute(context).rstrip()
+        Template((root / "templates/fun_area_page.md").read_text())
+        .substitute(context)
+        .rstrip()
         + "\n"
     )
 
@@ -391,11 +408,11 @@ def main():
         for warning in refs[-1]:
             print("Warning: " + warning, file=sys.stderr)
         if not args.check:
-            output = ROOT.parents[1] / "docs/functional-areas-preview"
+            output = ROOT.parents[1] / "docs/functional-areas"
             output.mkdir(parents=True, exist_ok=True)
             for slug, page in generated:
                 (output / (slug + ".md")).write_text(page, encoding="utf-8")
-                print("Generated docs/functional-areas-preview/" + slug + ".md")
+                print("Generated docs/functional-areas/" + slug + ".md")
         print(f"Validated {len(refs[3])} areas and {len(generated)} pilot pages.")
     except (ValueError, KeyError, TypeError, yaml.YAMLError) as error:
         raise SystemExit("Generation failed: " + str(error))
