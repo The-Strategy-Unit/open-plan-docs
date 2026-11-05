@@ -394,6 +394,4 @@ classifications:
     variables:
       - aedepttype
     parent: null
-    notes: >-
-      See the ongoing SDEC classification issue:
-      https://github.com/The-Strategy-Unit/open-plan-docs/issues/18
+    notes: null
