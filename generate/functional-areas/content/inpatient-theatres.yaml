@@ -1,0 +1,42 @@
+functional_area_id: INPATIENT_THEATRES
+title: Inpatient theatres
+
+definition:
+  An inpatient procedure theatre is a dedicated operating space used to perform
+  surgical interventions requiring hospital admission and ongoing inpatient care
+  following the procedure.
+
+activity_classification: |-
+  Activity includes elective and non-elective inpatient spells with a valid procedure, grouped into:
+
+  * Adult elective surgical activity
+  * Adult non-elective surgical activity
+  * Paediatric elective activity
+  * Paediatric non-elective activity
+
+  Adult activity is limited to surgical treatment specialties. Paediatric activity is not restricted by treatment specialty.
+
+workload_derivation: |-
+  For each subgroup, convert qualifying procedures into procedure hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures}
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  For each subgroup, calculate the required number of inpatient theatres by dividing procedure hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required inpatient theatres}
+      =
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

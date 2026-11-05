@@ -1,0 +1,86 @@
+conversion_archetypes:
+  - id: FRM_FLOW_SPACE
+    operational_constraint: concurrent occupancy over operational periods
+    archetype_family: occupancy-based
+    conversion_archetype: flow-space occupancy
+    formula: occupancy_hours / (annual_operational_hours × utilisation)
+    typical_workload_object:
+      - occupancy_hours
+    typical_operational_parameters:
+      - operational hours
+      - utilisation
+    example_functional_areas:
+      - A&E
+      - SDEC
+
+  - id: FRM_RECOVERY_OCCUPANCY
+    operational_constraint: temporary occupancy with intra-day turnover
+    archetype_family: occupancy-based
+    conversion_archetype: recovery occupancy
+    formula: occupancy_hours / (annual_operational_hours × occupancy)
+    typical_workload_object:
+      - occupancy_hours
+    typical_operational_parameters:
+      - operational hours
+      - occupancy
+    example_functional_areas:
+      - daycase recovery
+      - maternity assessment
+
+  - id: FRM_BED_OCCUPANCY
+    operational_constraint: continuous occupancy over 24-hour operational periods
+    archetype_family: occupancy-based
+    conversion_archetype: bed occupancy
+    formula: bed_days / (annual_operational_days × occupancy)
+    typical_workload_object:
+      - bed_days
+    typical_operational_parameters:
+      - operational days
+      - occupancy
+    example_functional_areas:
+      - inpatient wards
+      - critical care
+      - maternity wards
+
+  - id: FRM_TIME_UTIL
+    operational_constraint: available operational time, adjusted for utilisation
+    archetype_family: time-based utilisation
+    conversion_archetype: time utilisation
+    formula: workload_hours / (annual_operational_hours × utilisation)
+    typical_workload_object:
+      - procedure_hours
+      - treatment_hours
+    typical_operational_parameters:
+      - operational hours
+      - utilisation
+    example_functional_areas:
+      - theatres
+      - cath labs
+      - endoscopy procedures
+
+  - id: FRM_APPOINTMENT_UTIL
+    operational_constraint: available appointment time, adjusted for utilisation
+    archetype_family: time-based utilisation
+    conversion_archetype: appointment-slot utilisation
+    formula: scheduled_time_hours / (annual_operational_hours × utilisation)
+    typical_workload_object:
+      - consultation_hours
+      - procedure_hours
+    typical_operational_parameters:
+      - operational hours
+      - utilisation
+    example_functional_areas:
+      - OP consultations
+      - OP procedures
+
+  - id: FRM_SESSION_CAPACITY
+    operational_constraint: treatment session throughput per bed per operational day
+    archetype_family: throughput-based
+    conversion_archetype: session capacity
+    formula: treatment_sessions / annual_session_capacity_per_bed
+    typical_workload_object:
+      - treatment_sessions
+    typical_operational_parameters:
+      - annual session capacity per bed
+    example_functional_areas:
+      - renal daycase

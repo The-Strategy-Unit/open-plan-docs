@@ -1,0 +1,53 @@
+functional_area_id: OUTPATIENT_VIRTUAL_CONSULTATION_ROOMS
+title: Virtual outpatient consultation rooms
+
+definition:
+  A virtual outpatient consultation room is a space equipped for healthcare
+  professionals to conduct remote consultations with patients without requiring
+  an in-person hospital visit.
+
+activity_classification: |-
+  Activity is limited to virtual outpatient attendances classified in the first or follow-up consultation groups.
+
+notes: |-
+  * Consultation durations are represented using a single average, which may not reflect variation between specialties.
+
+workload_derivation: |-
+  Calculate the effective consultation time by adding an allowance for time lost to appointments where patients do not attend (DNA).
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Effective consult time (minutes)}
+      &= \text{Consult time (minutes)} \\
+      &\quad + \left(
+      \frac{\text{DNA rate}}{1-\text{DNA rate}}
+      \times \text{DNA time (minutes)}
+      \right)
+      \end{aligned}
+      $$
+
+  Multiply attended virtual consultations by the effective consultation time, then convert minutes into hours.
+
+  !!! quote ""
+
+      $$
+      \text{Consultation hours}
+      =
+      \frac{\text{Attendances} \times \text{Effective consult time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of virtual consultation rooms by dividing consultation hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required virtual consultation rooms} \\
+      &=
+      \frac{\text{Consultation hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      \end{aligned}
+      $$

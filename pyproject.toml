@@ -5,12 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "pandas>=3.0.3",
-    "tabulate>=0.10.0",
-]
-
-[dependency-groups]
-dev = [
     "djlint>=1.46.3",
+    "pandas>=3.0.3",
+    "pyyaml>=6.0.3",
+    "tabulate>=0.10.0",
     "zensical>=0.0.45",
 ]

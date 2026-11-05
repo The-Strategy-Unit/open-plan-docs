@@ -1,0 +1,45 @@
+functional_area_id: AE_BEDS
+title: A&E beds
+
+definition:
+  An A&E bed is a trolley-based treatment space within the emergency department
+  used to assess, monitor and manage patients requiring higher-acuity or more
+  prolonged emergency care.
+
+activity_classification: |-
+  Activity is limited to attendances at type-1 emergency departments: consultant-led departments providing a 24-hour service with full resuscitation facilities.
+
+  Major-pathway activity includes attendances with an acuity value of 2. Resuscitation-pathway activity includes attendances with an acuity value of 1.
+
+  Activity is grouped into:
+
+  * Adult major attendances
+  * Child major attendances
+  * Resuscitation attendances
+
+notes: |-
+  * This calculation is based on average demand and an assumed utilisation rate. It may underestimate the capacity required to accommodate peaks in demand.
+
+workload_derivation: |-
+  For each subgroup, convert attendances into occupancy hours using the assumed length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Attendances}
+      \times
+      \frac{\text{Attendance length of stay (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  For each subgroup, calculate the required number of beds by dividing occupancy hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$\text{Required A&E beds}
+      = 
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

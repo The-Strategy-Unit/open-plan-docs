@@ -1,0 +1,40 @@
+functional_area_id: INTERVENTIONAL_RADIOLOGY_ROOMS
+title: Interventional radiology rooms
+
+definition:
+  An interventional radiology procedure room is a specialised clinical room
+  where minimally invasive procedures are performed using imaging such as X-ray,
+  ultrasound, CT or MRI to guide diagnosis and treatment.
+
+activity_classification: |-
+  Activity is limited to spells with a valid procedure in either of the following treatment specialties:
+
+  * Interventional radiology (811)
+  * Paediatric interventional radiology (280)
+
+workload_derivation: |-
+  The primary procedure from each qualifying spell is used to estimate procedure hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures}
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of interventional radiology procedure rooms by dividing procedure hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required interventional radiology rooms} \\
+      &=
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      \end{aligned}
+      $$
