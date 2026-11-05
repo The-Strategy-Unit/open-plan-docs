@@ -253,3 +253,13 @@ However, where the model converts activity to daycase, this changes the function
     </tr>
   </tbody>
 </table>
+
+## Theatres related functional areas
+
+For each episode containing a procedure, we first look up if the procedure code is in the theatre times dataset. This ensures that the procedure is one that occurs in a theatre, as there are procedure codes which may not consume theatre resource.
+
+If an episode has a procedure which appears in the theatre times dataset, we allocate it to the functional area groupings relating to theatres. However, we do not use procedure times from the theatre times dataset, instead using the assumptions provided to calculate the procedure time.
+
+Episodes with procedure codes that are not in the theatre times dataset we assume did not happen in a theatre, and will be allocated to a different functional area grouping.
+
+The advantage of this episode level approach is that we are now able to capture if a patient has different procedures in different episodes.
