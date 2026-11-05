@@ -1,0 +1,44 @@
+functional_area_id: AE_BAYS
+title: A&E bays
+
+definition:
+  An A&E bay is a treatment space within the emergency department used to assess
+  and manage lower-acuity patients requiring ambulatory or chair-based care,
+  typically within the minor injury or illness pathway.
+
+activity_classification: |-
+  Activity is limited to attendances at type-1 emergency departments: consultant-led departments providing a 24-hour service with full resuscitation facilities.
+
+  Minor-pathway activity includes attendances with an acuity value of 3, 4 or 5. Attendances with missing or unknown acuity are also allocated to this pathway.
+
+  Activity is grouped into:
+
+  * Adult minor attendances
+  * Child minor attendances
+
+notes: |-
+  * This calculation is based on average demand and an assumed utilisation rate. It may underestimate the capacity required to accommodate peaks in demand.
+
+workload_derivation: |-
+  Separately for adults and children, convert minor-pathway attendances into occupancy hours using the assumed length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Attendances}
+      \times
+      \frac{\text{Attendance length of stay (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Separately for adults and children, calculate the required number of bays by dividing occupancy hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$\text{Required A&E bays}
+      = 
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

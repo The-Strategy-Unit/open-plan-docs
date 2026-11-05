@@ -1,0 +1,53 @@
+functional_area_id: CARDIAC_CATHETER_LABS
+title: Cardiac catheter laboratories
+
+definition:
+  A cardiac catheter laboratory (cath lab) is a specialised hospital facility
+  used for minimally invasive catheter-based procedures to diagnose and treat
+  heart and blood vessel conditions.
+
+activity_classification: |-
+  Activity includes spells meeting either of the following criteria:
+
+  * A valid procedure code in cardiology (320) or paediatric cardiology (321) treatment specialties.
+  * A primary procedure code in one of the following groups, regardless of treatment specialty:
+      * K63: Contrast radiology of heart
+      * K75: Angioplasty
+      * K60: Cardiac pacemaker
+      * K62: Therapeutic transluminal operations on heart
+      * K59: Cardioverter defibrillator introduced through the vein
+      * K57: Other therapeutic transluminal operations on heart
+      * K73: Other cardiac pacemaker system through vein
+      * K49: Transluminal balloon angioplasty
+
+  Spells meeting both criteria are counted once.
+
+notes: |-
+  * Some included procedures, such as pacemaker insertion, may be undertaken outside a cardiac catheter laboratory depending on local service configuration.
+
+workload_derivation: |-
+  The primary procedure from each qualifying spell is used to estimate procedure hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures}
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of cardiac catheter laboratories by dividing procedure hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required cardiac cath labs} \\
+      &=
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      \end{aligned}
+      $$
