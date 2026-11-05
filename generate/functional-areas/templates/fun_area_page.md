@@ -23,8 +23,6 @@ $capacity_conversion
 Assumptions may apply to an individual subgroup, several subgroups or all groups.
 
 $assumptions
-
 $notes_section
-
 ??? info "Technical details"
 $technical_details
