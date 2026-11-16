@@ -1,0 +1,81 @@
+functional_area_id: MATERNITY_WARD_BEDS
+title: Maternity ward beds
+
+definition:
+  A maternity ward bed is a hospital bed used for the ongoing care, treatment,
+  recovery and overnight stay of pregnant or postnatal patients admitted for
+  maternity care.
+
+activity_classification: |-
+  A maternity spell may require capacity for assessment, delivery and postnatal care, across different functional areas. This calculation estimates maternity ward bed requirements, accounting for workload allocated to birthing rooms.
+
+  Activity includes maternity spells with a recorded birth event, grouped into:
+
+  * Normal delivery
+  * Assisted delivery
+  * Elective C-section
+  * Non-elective C-section
+
+  Overnight maternity spells without a recorded birth event are also included.
+
+workload_derivation: |-
+  For each birth subgroup, convert zero-day spells into bed-days using the assumed zero-day length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Zero-day bed-days}
+      =
+      \text{Zero-day birth spells}
+      \times
+      \frac{\text{Zero-day length of stay (minutes)}}{1{,}440}
+      $$
+
+  Add these to overnight bed-days for birth spells, then deduct time allocated to birthing rooms to avoid double-counting.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Birth-related ward bed-days}
+      &= \text{Birth spell overnight bed-days} \\
+      &\quad + \text{Zero-day bed-days} \\
+      &\quad - \text{Birth-room bed-days}
+      \end{aligned}
+      $$
+
+  For maternity spells without a recorded birth event, use the overnight bed-days directly. Zero-day spells without a birth event are modelled under maternity assessment beds.
+
+  !!! quote ""
+
+      $$
+      \text{No-birth ward bed-days}
+      =
+      \text{No-birth spell overnight bed-days}
+      $$
+
+  Sum birth-related and no-birth ward bed-days to obtain the total maternity ward workload.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Total ward bed-days}
+      &= \text{Birth-related ward bed-days} \\
+      &\quad + \text{No-birth ward bed-days}
+      \end{aligned}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of maternity ward beds by dividing total ward bed-days by the product of the service's annual operating days and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required maternity ward beds} \\
+      &=
+      \frac{\text{Total ward bed-days}}
+      {\text{Annual operational days} \times \text{Occupancy rate}}
+      \end{aligned}
+      $$

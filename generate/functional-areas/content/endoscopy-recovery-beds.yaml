@@ -1,0 +1,50 @@
+functional_area_id: ENDOSCOPY_RECOVERY_BEDS
+title: Endoscopy recovery beds
+
+definition:
+  A daycase endoscopy recovery bed is a short-stay recovery space used to
+  monitor and care for patients following endoscopic procedures before
+  discharge, typically within a dedicated endoscopy recovery area.
+
+activity_classification: |-
+  Activity is limited to daycase spells with a primary procedure code in one of the
+  following groups:
+
+  * Oesophagoscopy: G14, G15, G16, G17, G18, G19, G20
+  * Oesophagogastroduodenoscopy (OGD): G42, G43, G44, G45, G46
+  * Duodenoscopy: G54, G55
+  * Jejunoscopy: G64, G65
+  * Ileoscopy: G79, G80
+  * Sigmoidoscopy: H23, H24, H25, H26, H27, H28, H37, H69, H70, H71
+  * Endoscopic retrograde cholangiopancreatography (ERCP): J38, J39, J40, J41, J42, J43, J44, J45
+  * Colonoscopy: H20, H21, H22, H68
+  * Bronchoscopy: E48, E49, E50, E51
+
+workload_derivation: |-
+  Convert qualifying daycase spells into recovery occupancy hours using the assumed
+  recovery time.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Daycase spells}
+      \times
+      \frac{\text{Recovery time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of recovery beds by dividing occupancy hours by the
+  product of the service's annual operational hours and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required endoscopy recovery beds} \\
+      &=
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Occupancy rate}}
+      \end{aligned}
+      $$

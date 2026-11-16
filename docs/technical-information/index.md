@@ -21,6 +21,6 @@ These include:
 - [Functional area catalogue](functional-area-catalogue)
 - [Conversion archetypes catalogue](conversion-archetypes-catalogue)
 
-These elements are combined as shown in the [calculation traceability matrix](calculation-traceability-matrix).
+These elements are combined as shown in the [functional area specifications](functional-area-specifications) reference file.
 
-For a descriptive overview of how the model works, see the [model architecture](technicalmodel-architecture).
+For a descriptive overview of how the model works, see the [model architecture](model-architecture).

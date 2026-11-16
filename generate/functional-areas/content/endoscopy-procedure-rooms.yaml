@@ -1,0 +1,48 @@
+functional_area_id: ENDOSCOPY_PROCEDURE_ROOMS
+title: Endoscopy procedure rooms
+
+definition:
+  An endoscopy procedure room is a specialised clinical room where minimally
+  invasive procedures are performed using an endoscope to examine, diagnose and
+  sometimes treat conditions inside the body.
+
+activity_classification: |-
+  Activity is limited to daycase spells with a primary procedure code in one of the
+  following groups:
+
+  * Oesophagoscopy: G14, G15, G16, G17, G18, G19, G20
+  * Oesophagogastroduodenoscopy (OGD): G42, G43, G44, G45, G46
+  * Duodenoscopy: G54, G55
+  * Jejunoscopy: G64, G65
+  * Ileoscopy: G79, G80
+  * Sigmoidoscopy: H23, H24, H25, H26, H27, H28, H37, H69, H70, H71
+  * Endoscopic retrograde cholangiopancreatography (ERCP): J38, J39, J40, J41, J42, J43, J44, J45
+  * Colonoscopy: H20, H21, H22, H68
+  * Bronchoscopy: E48, E49, E50, E51
+
+workload_derivation: |-
+  The primary procedure from each qualifying daycase spell is used to estimate procedure
+  hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures}
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of endoscopy procedure rooms by dividing procedure hours
+  by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required endoscopy rooms}
+      =
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

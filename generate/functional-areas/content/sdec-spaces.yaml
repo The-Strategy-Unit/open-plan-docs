@@ -1,0 +1,38 @@
+functional_area_id: SDEC_SPACES
+title: Same day emergency care spaces
+
+definition:
+  A same day emergency care (SDEC) space is a clinical space used to assess,
+  diagnose, monitor and treat patients requiring urgent care without an
+  overnight hospital admission.
+
+activity_classification: |-
+  Activity is limited to attendances recorded under department type '5' in the Emergency Care Data Set (ECDS).
+
+notes: |-
+  * This calculation is based on average demand and an assumed utilisation rate. It may underestimate the capacity required to accommodate peaks in demand.
+
+workload_derivation: |-
+  Convert SDEC attendances into occupancy hours using the assumed length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Attendances}
+      \times
+      \frac{\text{Attendance length of stay (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of SDEC spaces by dividing occupancy hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required SDEC spaces}
+      =
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

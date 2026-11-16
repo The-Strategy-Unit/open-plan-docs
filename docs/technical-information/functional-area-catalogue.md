@@ -11,7 +11,7 @@ You can also explore these on the [Functional Areas tab](../functional-areas/).
 
 <div class="compact-table" markdown="1">
 
-{{ pd_read_csv("docs/data/fun_area_catalog.csv").fillna("") | convert_to_md_table }}
+{{ pd_read_csv("generate/functional-areas/references/fun_area_catalog.csv").fillna("") | convert_to_md_table }}
 
 </div>
 

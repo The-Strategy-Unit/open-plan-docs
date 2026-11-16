@@ -1,0 +1,40 @@
+functional_area_id: DAYCASE_RECOVERY_BEDS
+title: Daycase recovery beds
+
+definition:
+  A daycase recovery bed is a short-stay recovery space used to monitor and care
+  for patients following daycase procedures before discharge, typically within a
+  dedicated surgical or procedural recovery area.
+
+activity_classification: |-
+  Activity is limited to daycase spells in medical and surgical treatment specialties, grouped into:
+
+  * Adult medical activity
+  * Adult surgical activity
+  * Paediatric medical activity
+  * Paediatric surgical activity
+
+workload_derivation: |-
+  For each subgroup, convert qualifying daycase spells into recovery occupancy hours using the assumed recovery time.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Daycase spells}
+      \times
+      \frac{\text{Recovery time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  For each subgroup, calculate the required number of recovery beds by dividing occupancy hours by the product of the service's annual operational hours and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required daycase recovery beds}
+      =
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Occupancy rate}}
+      $$

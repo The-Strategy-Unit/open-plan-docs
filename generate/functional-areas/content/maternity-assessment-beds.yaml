@@ -1,0 +1,39 @@
+functional_area_id: MATERNITY_ASSESSMENT_BEDS
+title: Maternity assessment beds
+
+definition:
+  A maternity assessment bed is a hospital bed used for the assessment,
+  monitoring and short-term care of pregnant or postnatal patients before
+  admission, transfer or discharge decisions are made.
+
+activity_classification: |-
+  A maternity spell may require capacity for assessment, delivery and postnatal care across different functional areas. This calculation estimates assessment-bed requirements.
+
+  Activity is limited to zero-day maternity spells without a recorded birth event.
+
+workload_derivation: |-
+  Convert qualifying zero-day maternity spells into occupancy hours using the assumed length of stay.
+
+  !!! quote ""
+
+      $$
+      \text{Occupancy hours}
+      =
+      \text{Zero-day maternity spells}
+      \times
+      \frac{\text{Zero-day length of stay (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of maternity assessment beds by dividing occupancy hours by the product of the service's annual operational hours and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required maternity assessment beds} \\
+      &=
+      \frac{\text{Occupancy hours}}
+      {\text{Annual operational hours} \times \text{Occupancy rate}}
+      \end{aligned}
+      $$

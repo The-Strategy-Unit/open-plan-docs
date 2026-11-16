@@ -1,0 +1,40 @@
+functional_area_id: CRITICAL_CARE_BEDS
+title: Critical care beds
+
+definition:
+  A critical care bed is a specialised treatment space providing continuous
+  monitoring and advanced care for critically ill patients within adult,
+  paediatric or neonatal critical care settings.
+
+activity_classification: |-
+  Activity is limited to bed-days from ordinary inpatient admissions with a non-zero length of stay, grouped into:
+
+  * Adult admissions
+  * Paediatric admissions
+
+  In the absence of direct critical care data, a subgroup-specific proportion of these bed-days is assumed to be allocated to critical care.
+
+workload_derivation: |-
+  Separately for adults and children, estimate critical care bed-days by multiplying inpatient bed-days from non-zero-length-of-stay admissions by the assumed critical care allocation proportion.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Critical care bed-days}
+      &= \text{Inpatient overnight bed-days} \\
+      &\times \text{Critical care allocation proportion}
+      \end{aligned}
+      $$
+
+capacity_conversion: |-
+  For each subgroup, calculate the required number of critical care beds by dividing critical care bed-days by the product of the service's annual operational days and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required critical care beds}
+      =
+      \frac{\text{Critical care bed-days}}
+      {\text{Annual operational days} \times \text{Occupancy rate}}
+      $$

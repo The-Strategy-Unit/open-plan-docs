@@ -1,0 +1,23 @@
+Functional Area ID,Conversion Archetype,Operational Constraint,Primary Workload Object,Output Type,Care Setting
+AE_BAYS,flow-space occupancy,concurrent occupancy over operational periods,occupancy_hours,bays,AE
+AE_BEDS,flow-space occupancy,concurrent occupancy over operational periods,occupancy_hours,beds,AE
+CARDIAC_CATHETER_LABS,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,laboratories,Inpatients
+CRITICAL_CARE_BEDS,bed occupancy,continuous occupancy over 24-hour operational periods,bed_days,beds,Inpatients
+DAYCASE_RECOVERY_BEDS,recovery occupancy,temporary occupancy with intra-day turnover,occupancy_hours,beds,Inpatients
+DAYCASE_THEATRES,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,theatres,Inpatients
+ENDOSCOPY_PROCEDURE_ROOMS,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,rooms,Inpatients
+ENDOSCOPY_RECOVERY_BEDS,recovery occupancy,temporary occupancy with intra-day turnover,occupancy_hours,beds,Inpatients
+HAEMATOLOGY_ONCOLOGY_TREATMENT_SPACES,time utilisation,"available operational time, adjusted for utilisation",treatment_hours,spaces,Inpatients
+INPATIENT_ASSESSMENT_BEDS,bed occupancy,continuous occupancy over 24-hour operational periods,bed_days,beds,Inpatients
+INPATIENT_THEATRES,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,theatres,Inpatients
+INPATIENT_WARD_BEDS,bed occupancy,continuous occupancy over 24-hour operational periods,bed_days,beds,Inpatients
+INTERVENTIONAL_RADIOLOGY_ROOMS,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,rooms,Inpatients
+MATERNITY_ASSESSMENT_BEDS,recovery occupancy,temporary occupancy with intra-day turnover,occupancy_hours,beds,Inpatients
+MATERNITY_BIRTHING_ROOMS,bed occupancy,continuous occupancy over 24-hour operational periods,bed_days,rooms,Inpatients
+MATERNITY_WARD_BEDS,bed occupancy,continuous occupancy over 24-hour operational periods,bed_days,beds,Inpatients
+OBSTETRIC_THEATRES,time utilisation,"available operational time, adjusted for utilisation",procedure_hours,theatres,Inpatients
+OUTPATIENT_CONSULTATION_ROOMS,appointment-slot utilisation,"available appointment time, adjusted for utilisation",consultation_hours,rooms,Outpatients
+OUTPATIENT_PROCEDURE_ROOMS,appointment-slot utilisation,"available appointment time, adjusted for utilisation",procedure_hours,rooms,Outpatients
+OUTPATIENT_VIRTUAL_CONSULTATION_ROOMS,appointment-slot utilisation,"available appointment time, adjusted for utilisation",consultation_hours,rooms,Outpatients
+RENAL_DAYCASE_BEDS,session capacity,treatment session throughput per bed per operational day,treatment_sessions,beds,Inpatients
+SDEC_SPACES,flow-space occupancy,concurrent occupancy over operational periods,occupancy_hours,spaces,AE

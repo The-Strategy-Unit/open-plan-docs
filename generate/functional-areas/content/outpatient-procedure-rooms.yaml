@@ -1,0 +1,51 @@
+functional_area_id: OUTPATIENT_PROCEDURE_ROOMS
+title: Outpatient procedure rooms
+
+definition:
+  An outpatient procedure room is a clinical room where minor diagnostic or
+  therapeutic procedures are performed on patients who do not require hospital
+  admission.
+
+activity_classification: |-
+  Activity is limited to face-to-face outpatient attendances classified in the procedure group.
+
+notes: |-
+  * Procedure durations are represented using a single average because procedure-level details are not currently available.
+
+workload_derivation: |-
+  Calculate the effective procedure time by adding an allowance for time lost to appointments where patients do not attend (DNA).
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      \text{Effective procedure time (minutes)}
+      &= \text{Procedure time (minutes)} \\
+      &\quad + \left(
+      \frac{\text{DNA rate}}{1-\text{DNA rate}}
+      \times \text{DNA time (minutes)}
+      \right)
+      \end{aligned}
+      $$
+
+  Multiply attended procedure appointments by the effective procedure time, then convert minutes into hours.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \frac{\text{Attendances} \times \text{Effective procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of outpatient procedure rooms by dividing procedure hours by the product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required outpatient procedure rooms}
+      =
+      \frac{\text{Procedure hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      $$

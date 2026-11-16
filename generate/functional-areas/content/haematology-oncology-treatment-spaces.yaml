@@ -1,0 +1,43 @@
+functional_area_id: HAEMATOLOGY_ONCOLOGY_TREATMENT_SPACES
+title: Haematology and oncology treatment spaces
+
+definition:
+  A haematology and oncology treatment space is a clinical space where patients
+  receive procedures and treatments for blood disorders and cancer, such as
+  chemotherapy, transfusions, biopsies or supportive care.
+
+activity_classification: |-
+  Activity is limited to daycase spells with a valid procedure code in the following
+  treatment specialties:
+
+  * Haematology: 253, 303
+  * Oncology: 260, 370, 800
+
+workload_derivation: |-
+  Each qualifying daycase spell is assumed to represent one treatment-space attendance.
+  Convert these spells into treatment hours using the assumed treatment time.
+
+  !!! quote ""
+
+      $$
+      \text{Treatment hours}
+      =
+      \text{Spells}
+      \times
+      \frac{\text{Treatment time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of treatment spaces by dividing treatment hours by the
+  product of the service's annual operational hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \begin{aligned}
+      &\text{Required haematology and oncology treatment spaces} \\
+      &\quad =
+      \frac{\text{Treatment hours}}
+      {\text{Annual operational hours} \times \text{Utilisation rate}}
+      \end{aligned}
+      $$

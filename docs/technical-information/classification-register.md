@@ -9,7 +9,5 @@ Routing logic and cohort/subgroup definitions.
 
 
 <div class="compact-table" markdown="1">
-{{ pd_read_yaml("docs/data/classification_register.yaml").fillna("")
-   | format_list_cells
-   | convert_to_md_table }}
+{{ yaml_selection_to_df("generate/functional-areas/references/classification_register.yaml", "classifications").fillna("") | format_list_cells | convert_to_md_table }}
 </div>

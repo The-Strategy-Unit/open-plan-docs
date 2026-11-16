@@ -1,0 +1,39 @@
+functional_area_id: MATERNITY_BIRTHING_ROOMS
+title: Maternity birthing rooms
+
+definition:
+  A maternity birthing room is a specialised hospital room where patients
+  receive care and support during labour, childbirth, and the immediate
+  postnatal period.
+
+activity_classification: |-
+  A maternity spell may require capacity for assessment, delivery and postnatal care, across different functional areas. This calculation estimates the time spent in a birthing room.
+
+  Spells with a birth event are grouped into normal delivery, assisted delivery and non-elective C-section activity. Elective C-sections generate no time in a birth room.
+
+  Birth spells also generate requirements for [Maternity ward beds](maternity-ward-beds.md), while C-section procedures are modelled under [Obstetric theatres](obstetric-theatres.md).
+
+workload_derivation: |-
+  For each birth subgroup, convert birth spells into birth-room bed-days using the assumed time spent in a birth room.
+
+  !!! quote ""
+
+      $$
+      \text{Birth-room bed-days}
+      =
+      \text{Birth spells}
+      \times
+      \frac{\text{Birth-room length of stay (minutes)}}{1{,}440}
+      $$
+
+capacity_conversion: |-
+  Divide total birth-room bed-days by the service's annual operating days and the assumed occupancy rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required birthing rooms}
+      =
+      \frac{\text{Birth-room bed-days}}
+      {\text{Annual operational days} \times \text{Occupancy rate}}
+      $$

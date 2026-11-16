@@ -1,0 +1,43 @@
+functional_area_id: OBSTETRIC_THEATRES
+title: Obstetric theatres
+
+definition:
+  An obstetric procedure theatre is a dedicated operating space used for
+  childbirth-related surgical and procedural interventions, typically within
+  labour ward or maternity services.
+
+activity_classification: |-
+  A maternity spell may require capacity for assessment, delivery and postnatal care, across different functional areas. This calculation estimates theatre time required for caesarean deliveries.
+
+  Activity is limited to maternity spells with a recorded birth event and a primary procedure code in either of the following groups:
+
+  * R17: Elective caesarean section delivery
+  * R18: Other caesarean section delivery
+
+notes: |-
+  * Obstetric theatres require 24-hour availability to support emergency activity. The model estimates capacity based on assumed planned operating hours, with provision outside these hours treated as emergency reserve capacity.
+
+workload_derivation: |-
+  Convert qualifying caesarean section procedures into procedure hours using the assumed procedure time.
+
+  !!! quote ""
+
+      $$
+      \text{Procedure hours}
+      =
+      \text{Procedures}
+      \times
+      \frac{\text{Procedure time (minutes)}}{60}
+      $$
+
+capacity_conversion: |-
+  Calculate the required number of obstetric theatres by dividing procedure hours by the product of the service's annual planned operating hours and the assumed utilisation rate.
+
+  !!! quote ""
+
+      $$
+      \text{Required obstetric theatres}
+      =
+      \frac{\text{Procedure hours}}
+      {\text{Annual planned operating hours} \times \text{Utilisation rate}}
+      $$
