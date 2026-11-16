@@ -67,7 +67,7 @@ class GenerationTests(unittest.TestCase):
 
             path = root / "references/functional_area_specifications.yaml"
             spec = generate.read_yaml(path)
-            spec["functional_areas"][0]["calculations"][0]["assumption_ids"].append(
+            spec["functional_area_specifications"][0]["calculations"][0]["assumption_ids"].append(
                 "MISSING"
             )
             path.write_text(
