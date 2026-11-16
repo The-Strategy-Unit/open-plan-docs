@@ -98,7 +98,7 @@ def load_references(root=ROOT):
         "Archetypes",
     )
     areas = index(
-        read_yaml(ref / "functional_area_specifications.yaml")["functional_areas"],
+        read_yaml(ref / "functional_area_specifications.yaml")["functional_area_specifications"],
         "id",
         "Functional areas",
     )
